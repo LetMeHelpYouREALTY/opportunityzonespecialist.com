@@ -11,10 +11,7 @@ export default defineConfig({
   sitemap: true, // Generate sitemap (set to "false" to disable)
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('404') && !page.includes('admin'),
-      changefreq: 'weekly',
-      priority: 0.7,
-      lastmod: new Date(),
+      filter: (page) => !page.includes('404') && !page.includes('admin') && !page.includes('theme/'),
     }), 
     mdx(), 
     lit(), 
