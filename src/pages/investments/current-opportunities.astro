@@ -1,0 +1,294 @@
+---
+import Layout from '../../../layouts/Page.astro';
+import '../../../styles/oz-custom.css';
+
+const seo = {
+	title: 'Current Opportunity Zone Investment Opportunities | Accredited Investors',
+	description: 'Access our curated selection of active Opportunity Zone investment opportunities with detailed due diligence and projected returns for accredited investors.',
+};
+---
+
+<Layout {seo}>
+	<!-- Hero Section -->
+	<section class="oz-hero">
+		<div class="oz-hero-content">
+			<h1>Current Investment Opportunities</h1>
+			<p class="subtitle">Exclusive Opportunity Zone investments with detailed due diligence and projected returns</p>
+		</div>
+	</section>
+
+	<!-- Investment Filters -->
+	<section class="oz-services">
+		<div class="oz-services-content">
+			<h2>Filter Investment Opportunities</h2>
+			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0;">
+				<select class="oz-form-input" id="investment-type-filter">
+					<option value="">All Investment Types</option>
+					<option value="real-estate">Real Estate Development</option>
+					<option value="business">Operating Business</option>
+					<option value="fund">Qualified Opportunity Fund</option>
+				</select>
+				
+				<select class="oz-form-input" id="location-filter">
+					<option value="">All Locations</option>
+					<option value="california">California</option>
+					<option value="texas">Texas</option>
+					<option value="florida">Florida</option>
+					<option value="new-york">New York</option>
+				</select>
+				
+				<select class="oz-form-input" id="minimum-investment-filter">
+					<option value="">All Investment Amounts</option>
+					<option value="100k-500k">$100K - $500K</option>
+					<option value="500k-1m">$500K - $1M</option>
+					<option value="1m-5m">$1M - $5M</option>
+					<option value="5m+">$5M+</option>
+				</select>
+				
+				<select class="oz-form-input" id="expected-return-filter">
+					<option value="">All Expected Returns</option>
+					<option value="8-12">8% - 12%</option>
+					<option value="12-15">12% - 15%</option>
+					<option value="15+">15%+</option>
+				</select>
+			</div>
+		</div>
+	</section>
+
+	<!-- Investment Opportunities -->
+	<section class="oz-authority">
+		<div class="oz-authority-content">
+			<h2>Featured Investment Opportunities</h2>
+			<div class="investment-opportunities-grid">
+				<div class="investment-card">
+					<div class="investment-header">
+						<h3>Austin Tech Campus Development</h3>
+						<span class="investment-type">Real Estate Development</span>
+					</div>
+					<div class="investment-details">
+						<p><strong>Location:</strong> Austin, TX - Census Tract 18.01</p>
+						<p><strong>Investment Amount:</strong> $2.5M - $10M</p>
+						<p><strong>Expected IRR:</strong> 14-18%</p>
+						<p><strong>Hold Period:</strong> 7-10 years</p>
+						<p><strong>Project Type:</strong> Mixed-use development with office and retail space</p>
+					</div>
+					<div class="investment-status">
+						<span class="status-badge available">Available</span>
+						<span class="funding-progress">75% Funded</span>
+					</div>
+					<div class="investment-actions">
+						<a href="/contact" class="oz-btn oz-btn-primary">Request Details</a>
+						<a href="/process/due-diligence-resources" class="oz-btn oz-btn-outline">Due Diligence</a>
+					</div>
+				</div>
+
+				<div class="investment-card">
+					<div class="investment-header">
+						<h3>Denver Multi-Family Fund</h3>
+						<span class="investment-type">Qualified Opportunity Fund</span>
+					</div>
+					<div class="investment-details">
+						<p><strong>Location:</strong> Denver, CO - Multiple Tracts</p>
+						<p><strong>Investment Amount:</strong> $100K - $5M</p>
+						<p><strong>Expected IRR:</strong> 12-15%</p>
+						<p><strong>Hold Period:</strong> 10+ years</p>
+						<p><strong>Project Type:</strong> Diversified multi-family residential portfolio</p>
+					</div>
+					<div class="investment-status">
+						<span class="status-badge available">Available</span>
+						<span class="funding-progress">60% Funded</span>
+					</div>
+					<div class="investment-actions">
+						<a href="/contact" class="oz-btn oz-btn-primary">Request Details</a>
+						<a href="/process/due-diligence-resources" class="oz-btn oz-btn-outline">Due Diligence</a>
+					</div>
+				</div>
+
+				<div class="investment-card">
+					<div class="investment-header">
+						<h3>Miami Healthcare Business</h3>
+						<span class="investment-type">Operating Business</span>
+					</div>
+					<div class="investment-details">
+						<p><strong>Location:</strong> Miami, FL - Census Tract 12.02</p>
+						<p><strong>Investment Amount:</strong> $500K - $2M</p>
+						<p><strong>Expected IRR:</strong> 16-20%</p>
+						<p><strong>Hold Period:</strong> 5-7 years</p>
+						<p><strong>Project Type:</strong> Healthcare technology startup expansion</p>
+					</div>
+					<div class="investment-status">
+						<span class="status-badge limited">Limited Availability</span>
+						<span class="funding-progress">90% Funded</span>
+					</div>
+					<div class="investment-actions">
+						<a href="/contact" class="oz-btn oz-btn-primary">Request Details</a>
+						<a href="/process/due-diligence-resources" class="oz-btn oz-btn-outline">Due Diligence</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Investment Process -->
+	<section class="oz-testimonials">
+		<div class="oz-testimonials-content">
+			<h2>Investment Process</h2>
+			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+				<div style="text-align: center;">
+					<div style="width: 4rem; height: 4rem; background: var(--oz-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--oz-white); font-size: 1.5rem; font-weight: 700;">1</div>
+					<h3>Accredited Investor Verification</h3>
+					<p>Complete our accredited investor qualification process to access detailed investment information.</p>
+				</div>
+				
+				<div style="text-align: center;">
+					<div style="width: 4rem; height: 4rem; background: var(--oz-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--oz-white); font-size: 1.5rem; font-weight: 700;">2</div>
+					<h3>Due Diligence Review</h3>
+					<p>Access comprehensive due diligence materials including financial projections, market analysis, and risk assessments.</p>
+				</div>
+				
+				<div style="text-align: center;">
+					<div style="width: 4rem; height: 4rem; background: var(--oz-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--oz-white); font-size: 1.5rem; font-weight: 700;">3</div>
+					<h3>Investment Decision</h3>
+					<p>Review investment terms, legal documentation, and make your investment decision with our guidance.</p>
+				</div>
+				
+				<div style="text-align: center;">
+					<div style="width: 4rem; height: 4rem; background: var(--oz-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--oz-white); font-size: 1.5rem; font-weight: 700;">4</div>
+					<h3>Ongoing Management</h3>
+					<p>Receive regular updates, performance reports, and compliance monitoring throughout your investment.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="oz-cta">
+		<div class="oz-cta-content">
+			<h2>Ready to Access Investment Opportunities?</h2>
+			<p>Join our platform of accredited investors and access exclusive Opportunity Zone investment opportunities with expert guidance and compliance support.</p>
+			<div class="oz-hero .cta-buttons">
+				<a href="/process/investor-qualification" class="oz-btn oz-btn-primary">Verify Accredited Status</a>
+				<a href="/contact" class="oz-btn oz-btn-secondary">Schedule Consultation</a>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.investment-opportunities-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	
+	.investment-card {
+		background: var(--oz-white);
+		border-radius: 0.5rem;
+		box-shadow: var(--oz-shadow);
+		padding: 2rem;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+	
+	.investment-card:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	}
+	
+	.investment-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 1.5rem;
+	}
+	
+	.investment-header h3 {
+		color: var(--oz-navy);
+		margin: 0;
+		flex: 1;
+	}
+	
+	.investment-type {
+		background: var(--oz-gold);
+		color: var(--oz-white);
+		padding: 0.25rem 0.75rem;
+		border-radius: 1rem;
+		font-size: 0.875rem;
+		font-weight: 500;
+	}
+	
+	.investment-details {
+		margin-bottom: 1.5rem;
+	}
+	
+	.investment-details p {
+		margin: 0.5rem 0;
+		color: var(--oz-gray-700);
+	}
+	
+	.investment-status {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 1.5rem;
+		padding: 1rem;
+		background: var(--oz-gray-50);
+		border-radius: 0.375rem;
+	}
+	
+	.status-badge {
+		padding: 0.25rem 0.75rem;
+		border-radius: 1rem;
+		font-size: 0.875rem;
+		font-weight: 500;
+	}
+	
+	.status-badge.available {
+		background: #16B286;
+		color: var(--oz-white);
+	}
+	
+	.status-badge.limited {
+		background: #F59E0B;
+		color: var(--oz-white);
+	}
+	
+	.funding-progress {
+		font-size: 0.875rem;
+		color: var(--oz-gray-600);
+		font-weight: 500;
+	}
+	
+	.investment-actions {
+		display: flex;
+		gap: 1rem;
+	}
+	
+	.investment-actions .oz-btn {
+		flex: 1;
+		text-align: center;
+	}
+	
+	.oz-hero .cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 2rem;
+	}
+	
+	@media (max-width: 768px) {
+		.investment-opportunities-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.investment-header {
+			flex-direction: column;
+			gap: 1rem;
+		}
+		
+		.investment-actions {
+			flex-direction: column;
+		}
+	}
+</style>
