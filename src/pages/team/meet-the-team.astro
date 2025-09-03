@@ -1,0 +1,282 @@
+---
+import Layout from '../../layouts/Page.astro';
+import Header from '../../components/core/Header.astro';
+import Footer from '../../components/core/Footer.astro';
+import Logo from '../../components/Logo.astro';
+import Button from '../../components/buttons/Button.astro';
+import StickyCTA from '../../components/StickyCTA.astro';
+import { nav } from '../../config/nav.js';
+import settings from '../../config/settings.js';
+
+const seo = {
+	...settings,
+	title: 'Meet the Boyle-Duffy Team | West Coast OZ Real Estate Experts',
+	description: 'Meet Kelly Boyle (Northern CA), Eugene Boyle (Southern CA), and Dr. Jan Duffy (Nevada) - the only cross-state Opportunity Zone real estate experts covering every West Coast wealth center.',
+	canonical: 'https://boyle-duffy-oz.com/team/meet-the-team',
+};
+---
+
+<Layout seo={seo}>
+	<Header rightMenu navData={nav} slot="header">
+		<span slot="logo">
+			<Logo />
+		</span>
+		<Button slot="action-item" href="tel:702-222-1964">Call Dr. Jan: 702-222-1964</Button>
+	</Header>
+	<main class="page-content">
+		<section class="hero-section bg-gradient-to-r from-navy-700 to-navy-900 text-white py-20">
+			<div class="container mx-auto px-4 text-center">
+				<h1 class="text-5xl font-bold mb-4">Meet the Boyle-Duffy Team</h1>
+				<p class="text-xl mb-8">The Only Cross-State OZ Real Estate Experts Covering Every West Coast Wealth Center</p>
+				<div class="flex justify-center space-x-4">
+					<Button href="/cross-state-strategies/tax-savings-calculator" variant="primary">Calculate Your OZ Savings</Button>
+					<Button href="/contact" variant="secondary">Schedule Team Consultation</Button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Team Overview -->
+		<section class="py-16 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-12">
+					<h2 class="text-4xl font-bold text-navy-800 mb-6">Unmatched Cross-State Expertise</h2>
+					<p class="text-xl text-gray-700 max-w-4xl mx-auto">
+						The Boyle-Duffy team combines deep local market knowledge with sophisticated cross-state tax strategies. 
+						Our unique approach allows California high-net-worth clients to leverage Nevada Opportunity Zones 
+						for maximum capital gains deferral and tax optimization.
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-3 gap-8 mb-16">
+					<!-- Kelly Boyle -->
+					<div class="bg-white rounded-lg shadow-lg p-8 text-center">
+						<div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-6 flex items-center justify-center">
+							<span class="text-4xl font-bold text-navy-700">KB</span>
+						</div>
+						<h3 class="text-2xl font-bold text-navy-800 mb-2">Kelly Boyle</h3>
+						<p class="text-gold-600 font-semibold mb-4">Northern California Expert</p>
+						<div class="text-left mb-6">
+							<h4 class="font-semibold text-navy-700 mb-3">Territory & Expertise:</h4>
+							<ul class="text-gray-700 space-y-2">
+								<li>• Silicon Valley & Bay Area</li>
+								<li>• Sacramento & Wine Country</li>
+								<li>• Tech Executive Specialization</li>
+								<li>• High-Net-Worth Families</li>
+								<li>• Commercial & Multi-Family</li>
+							</ul>
+						</div>
+						<div class="text-left mb-6">
+							<h4 class="font-semibold text-navy-700 mb-3">Key Markets:</h4>
+							<ul class="text-gray-700 space-y-1">
+								<li>• Palo Alto & Menlo Park</li>
+								<li>• San Francisco Bay Area</li>
+								<li>• Sacramento Metro</li>
+								<li>• Napa & Sonoma Counties</li>
+							</ul>
+						</div>
+						<Button href="/team/kelly-boyle" variant="primary" class="w-full">Learn More About Kelly</Button>
+					</div>
+
+					<!-- Eugene Boyle -->
+					<div class="bg-white rounded-lg shadow-lg p-8 text-center">
+						<div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-6 flex items-center justify-center">
+							<span class="text-4xl font-bold text-navy-700">EB</span>
+						</div>
+						<h3 class="text-2xl font-bold text-navy-800 mb-2">Eugene Boyle</h3>
+						<p class="text-gold-600 font-semibold mb-4">Southern California Expert</p>
+						<div class="text-left mb-6">
+							<h4 class="font-semibold text-navy-700 mb-3">Territory & Expertise:</h4>
+							<ul class="text-gray-700 space-y-2">
+								<li>• Los Angeles & Orange County</li>
+								<li>• Inland Empire & San Diego</li>
+								<li>• Entertainment Industry</li>
+								<li>• Real Estate Developers</li>
+								<li>• Luxury Residential</li>
+							</ul>
+						</div>
+						<div class="text-left mb-6">
+							<h4 class="font-semibold text-navy-700 mb-3">Key Markets:</h4>
+							<ul class="text-gray-700 space-y-1">
+								<li>• Beverly Hills & West LA</li>
+								<li>• Orange County</li>
+								<li>• Inland Empire</li>
+								<li>• San Diego Metro</li>
+							</ul>
+						</div>
+						<Button href="/team/eugene-boyle" variant="primary" class="w-full">Learn More About Eugene</Button>
+					</div>
+
+					<!-- Dr. Jan Duffy -->
+					<div class="bg-white rounded-lg shadow-lg p-8 text-center border-2 border-gold-400">
+						<div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-6 flex items-center justify-center">
+							<span class="text-4xl font-bold text-navy-700">JD</span>
+						</div>
+						<h3 class="text-2xl font-bold text-navy-800 mb-2">Dr. Jan Duffy</h3>
+						<p class="text-gold-600 font-semibold mb-4">Nevada & Cross-State Leader</p>
+						<div class="text-left mb-6">
+							<h4 class="font-semibold text-navy-700 mb-3">Territory & Expertise:</h4>
+							<ul class="text-gray-700 space-y-2">
+								<li>• Las Vegas & Henderson</li>
+								<li>• Reno-Tahoe Markets</li>
+								<li>• Cross-State Tax Strategies</li>
+								<li>• 500+ Transactions</li>
+								<li>• High-Value Deals</li>
+							</ul>
+						</div>
+						<div class="text-left mb-6">
+							<h4 class="font-semibold text-navy-700 mb-3">Key Markets:</h4>
+							<ul class="text-gray-700 space-y-1">
+								<li>• Las Vegas Arts District</li>
+								<li>• Henderson & Summerlin</li>
+								<li>• Reno & Sparks</li>
+								<li>• Lake Tahoe Area</li>
+							</ul>
+						</div>
+						<Button href="/team/dr-jan-duffy" variant="primary" class="w-full">Learn More About Dr. Jan</Button>
+						<div class="mt-4 p-3 bg-gold-50 rounded-lg">
+							<p class="text-sm text-gold-800 font-semibold">⭐ Cross-State Strategy Leader</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Team Statistics -->
+		<section class="py-16 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-12">
+					<h2 class="text-4xl font-bold text-navy-800 mb-6">Combined Team Excellence</h2>
+					<p class="text-xl text-gray-700 max-w-3xl mx-auto">
+						Our collective experience and expertise deliver unmatched results for high-net-worth clients.
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-4 gap-8 mb-12">
+					<div class="text-center">
+						<div class="text-4xl font-bold text-navy-700 mb-2">750+</div>
+						<div class="text-lg text-gray-700">Combined Transactions</div>
+					</div>
+					<div class="text-center">
+						<div class="text-4xl font-bold text-navy-700 mb-2">$2.5B+</div>
+						<div class="text-lg text-gray-700">Total Transaction Volume</div>
+					</div>
+					<div class="text-center">
+						<div class="text-4xl font-bold text-navy-700 mb-2">3</div>
+						<div class="text-lg text-gray-700">West Coast States</div>
+					</div>
+					<div class="text-center">
+						<div class="text-4xl font-bold text-navy-700 mb-2">15+</div>
+						<div class="text-lg text-gray-700">Years Combined Experience</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Cross-State Strategy -->
+		<section class="py-16 bg-navy-700 text-white">
+			<div class="container mx-auto px-4">
+				<div class="grid md:grid-cols-2 gap-12 items-center">
+					<div>
+						<h2 class="text-4xl font-bold mb-6">The Cross-State Advantage</h2>
+						<p class="text-xl mb-6">
+							Our unique team structure allows California clients to leverage Nevada Opportunity Zones 
+							for maximum tax benefits while maintaining local market expertise.
+						</p>
+						<ul class="text-lg space-y-3 mb-8">
+							<li>• <strong>California Expertise:</strong> Kelly & Eugene understand local markets and client needs</li>
+							<li>• <strong>Nevada Opportunities:</strong> Dr. Jan provides access to prime OZ investments</li>
+							<li>• <strong>Tax Optimization:</strong> Cross-state strategies eliminate California state tax</li>
+							<li>• <strong>Seamless Coordination:</strong> Integrated approach from strategy to execution</li>
+						</ul>
+						<Button href="/cross-state-strategies/california-nevada-benefits" variant="secondary">Learn About Cross-State Benefits</Button>
+					</div>
+					<div class="bg-white p-8 rounded-lg text-navy-800">
+						<h3 class="text-2xl font-bold mb-6">How It Works</h3>
+						<div class="space-y-4">
+							<div class="flex items-start">
+								<div class="w-8 h-8 bg-navy-700 text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">1</div>
+								<div>
+									<h4 class="font-semibold mb-1">California Capital Gains Event</h4>
+									<p class="text-gray-700">Client has capital gains from California property or business sale</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<div class="w-8 h-8 bg-navy-700 text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">2</div>
+								<div>
+									<h4 class="font-semibold mb-1">Local Expert Consultation</h4>
+									<p class="text-gray-700">Kelly or Eugene assesses situation and coordinates with Dr. Jan</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<div class="w-8 h-8 bg-navy-700 text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">3</div>
+								<div>
+									<h4 class="font-semibold mb-1">Nevada OZ Investment</h4>
+									<p class="text-gray-700">Dr. Jan identifies and structures Nevada OZ opportunity</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<div class="w-8 h-8 bg-navy-700 text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">4</div>
+								<div>
+									<h4 class="font-semibold mb-1">Tax Optimization</h4>
+									<p class="text-gray-700">Capital gains deferred, California state tax eliminated</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Client Types -->
+		<section class="py-16 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-12">
+					<h2 class="text-4xl font-bold text-navy-800 mb-6">Who We Serve</h2>
+					<p class="text-xl text-gray-700 max-w-3xl mx-auto">
+						Our team specializes in serving high-net-worth individuals and families across diverse industries.
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+					<div class="bg-white p-6 rounded-lg shadow-md text-center">
+						<div class="text-4xl mb-4">💻</div>
+						<h3 class="text-xl font-bold text-navy-800 mb-2">Tech Executives</h3>
+						<p class="text-gray-700">Silicon Valley leaders with stock options and startup exits</p>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow-md text-center">
+						<div class="text-4xl mb-4">🎬</div>
+						<h3 class="text-xl font-bold text-navy-800 mb-2">Entertainment Industry</h3>
+						<p class="text-gray-700">Producers, directors, and entertainment professionals</p>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow-md text-center">
+						<div class="text-4xl mb-4">🏢</div>
+						<h3 class="text-xl font-bold text-navy-800 mb-2">Real Estate Developers</h3>
+						<p class="text-gray-700">Property developers and real estate investors</p>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow-md text-center">
+						<div class="text-4xl mb-4">👨‍👩‍👧‍👦</div>
+						<h3 class="text-xl font-bold text-navy-800 mb-2">Family Offices</h3>
+						<p class="text-gray-700">High-net-worth families and family offices</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="py-16 bg-white">
+			<div class="container mx-auto px-4 text-center">
+				<h2 class="text-4xl font-bold text-navy-800 mb-6">Ready to Work with the Boyle-Duffy Team?</h2>
+				<p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+					Experience the power of cross-state Opportunity Zone expertise. Let our team help you optimize your capital gains strategy.
+				</p>
+				<div class="flex justify-center space-x-4">
+					<Button href="/cross-state-strategies/tax-savings-calculator" variant="primary">Calculate Your Savings</Button>
+					<Button href="/contact" variant="secondary">Schedule Team Consultation</Button>
+					<Button href="tel:702-222-1964" variant="primary">Call Dr. Jan: 702-222-1964</Button>
+				</div>
+			</div>
+		</section>
+	</main>
+	<StickyCTA />
+	<Footer />
+</Layout>

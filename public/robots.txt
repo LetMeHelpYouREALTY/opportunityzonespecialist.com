@@ -1,18 +1,21 @@
 User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: https://www.opportunityzonespecialist.com/sitemap.xml
-Sitemap: https://www.opportunityzonespecialist.com/sitemap-index.xml
+# Sitemap
+Sitemap: https://boyle-duffy-oz.com/sitemap.xml
 
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-
-# Block access to admin areas (if any)
+# Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
+Disallow: /_astro/
+Disallow: /node_modules/
 
-# Allow all other content
-Allow: /blog/
-Allow: /resources/
-Allow: /services/
+# Allow important pages
+Allow: /california-oz
+Allow: /nevada-oz
+Allow: /cross-state-strategies
+Allow: /team/
+Allow: /contact
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1

@@ -1,0 +1,364 @@
+---
+import Layout from '../../layouts/Page.astro';
+import Header from '../../components/core/Header.astro';
+import Footer from '../../components/core/Footer.astro';
+import Logo from '../../components/Logo.astro';
+import Button from '../../components/buttons/Button.astro';
+import StickyCTA from '../../components/StickyCTA.astro';
+import { nav } from '../../config/nav.js';
+import settings from '../../config/settings.js';
+
+const seo = {
+	...settings,
+	title: 'Cross-State OZ Success Stories | Boyle-Duffy Team Case Studies',
+	description: 'Real success stories from high-net-worth clients who leveraged California-Nevada cross-state Opportunity Zone strategies to defer capital gains and maximize tax benefits.',
+	canonical: 'https://boyle-duffy-oz.com/cross-state-strategies/success-stories',
+};
+---
+
+<Layout seo={seo}>
+	<Header rightMenu navData={nav} slot="header">
+		<span slot="logo">
+			<Logo />
+		</span>
+		<Button slot="action-item" href="tel:702-222-1964">Call Dr. Jan: 702-222-1964</Button>
+	</Header>
+	<main class="page-content">
+		<section class="hero-section bg-gradient-to-r from-navy-700 to-navy-900 text-white py-20">
+			<div class="container mx-auto px-4 text-center">
+				<h1 class="text-5xl font-bold mb-4">Cross-State OZ Success Stories</h1>
+				<p class="text-xl mb-8">Real Results from High-Net-Worth Clients Using California-Nevada OZ Strategies</p>
+				<div class="flex justify-center space-x-4">
+					<Button href="/cross-state-strategies/tax-savings-calculator" variant="primary">Calculate Your Potential Savings</Button>
+					<Button href="/contact" variant="secondary">Schedule Your Strategy Session</Button>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-12">
+					<h2 class="text-4xl font-bold text-navy-800 mb-6">Proven Results Across West Coast Markets</h2>
+					<p class="text-xl text-gray-700 max-w-3xl mx-auto">
+						Our clients have successfully deferred millions in capital gains while building wealth through strategic cross-state Opportunity Zone investments. Here are their stories.
+					</p>
+				</div>
+
+				<!-- Success Story 1: Tech Executive -->
+				<div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+					<div class="grid md:grid-cols-2 gap-8 items-center">
+						<div>
+							<div class="flex items-center mb-4">
+								<span class="bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-semibold">Tech Executive</span>
+								<span class="ml-4 text-gray-600">Silicon Valley → Las Vegas</span>
+							</div>
+							<h3 class="text-3xl font-bold text-navy-800 mb-4">$2.3M Capital Gains Deferred</h3>
+							<p class="text-lg text-gray-700 mb-4">
+								<strong>Client:</strong> Tech executive from Palo Alto who sold his startup for $8.5M, facing $2.3M in California capital gains tax.
+							</p>
+							<p class="text-lg text-gray-700 mb-4">
+								<strong>Strategy:</strong> Kelly Boyle identified a high-growth OZ development in Las Vegas through Dr. Jan Duffy's network. The client invested $2.3M within 180 days of the sale, deferring all capital gains.
+							</p>
+							<p class="text-lg text-gray-700 mb-4">
+								<strong>Results:</strong> 
+							</p>
+							<ul class="list-disc list-inside text-lg text-gray-700 mb-6">
+								<li>$2.3M capital gains tax deferred for 7+ years</li>
+								<li>15% reduction in deferred gains (held 7 years)</li>
+								<li>10% reduction in deferred gains (held 5 years)</li>
+								<li>Property appreciated 45% in 3 years</li>
+								<li>Zero California state tax on Nevada investment</li>
+							</ul>
+							<div class="bg-green-50 border-l-4 border-green-400 p-4">
+								<p class="text-green-800 font-semibold">
+									<strong>Total Tax Savings:</strong> $1.2M+ over 10 years
+								</p>
+							</div>
+						</div>
+						<div class="bg-gray-100 p-6 rounded-lg">
+							<h4 class="text-xl font-semibold text-navy-700 mb-4">Investment Details</h4>
+							<div class="space-y-3">
+								<div class="flex justify-between">
+									<span class="text-gray-600">Investment Amount:</span>
+									<span class="font-semibold">$2.3M</span>
+								</div>
+								<div class="flex justify-between">
+									<span class="text-gray-600">Property Type:</span>
+									<span class="font-semibold">Mixed-Use Development</span>
+								</div>
+								<div class="flex justify-between">
+									<span class="text-gray-600">Location:</span>
+									<span class="font-semibold">Las Vegas Arts District</span>
+								</div>
+								<div class="flex justify-between">
+									<span class="text-gray-600">Timeline:</span>
+									<span class="font-semibold">3 years</span>
+								</div>
+								<div class="flex justify-between">
+									<span class="text-gray-600">Appreciation:</span>
+									<span class="font-semibold text-green-600">45%</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Success Story 2: Entertainment Professional -->
+				<div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+					<div class="grid md:grid-cols-2 gap-8 items-center">
+						<div>
+							<div class="flex items-center mb-4">
+								<span class="bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-semibold">Entertainment Professional</span>
+								<span class="ml-4 text-gray-600">Los Angeles → Henderson</span>
+							</div>
+							<h3 class="text-3xl font-bold text-navy-800 mb-4">$1.8M Tax Optimization</h3>
+							<p class="text-lg text-gray-700 mb-4">
+								<strong>Client:</strong> Film producer from Beverly Hills who sold a production company for $6.2M, facing $1.8M in combined federal and state capital gains.
+							</p>
+							<p class="text-lg text-gray-700 mb-4">
+								<strong>Strategy:</strong> Eugene Boyle coordinated with Dr. Jan Duffy to identify a luxury residential development in Henderson, Nevada. The client invested $1.8M within the required timeframe.
+							</p>
+							<p class="text-lg text-gray-700 mb-4">
+								<strong>Results:</strong> 
+							</p>
+							<ul class="list-disc list-inside text-lg text-gray-700 mb-6">
+								<li>$1.8M capital gains tax deferred</li>
+								<li>Eliminated California state tax on investment</li>
+								<li>Property value increased 38% in 2.5 years</li>
+								<li>Generated rental income during hold period</li>
+								<li>Qualified for 10% and 15% step-up in basis</li>
+							</ul>
+							<div class="bg-green-50 border-l-4 border-green-400 p-4">
+								<p class="text-green-800 font-semibold">
+									<strong>Total Tax Savings:</strong> $950K+ over 8 years
+								</p>
+							</div>
+						</div>
+						<div class="bg-gray-100 p-6 rounded-lg">
+							<h4 class="text-xl font-semibold text-navy-700 mb-4">Investment Details</h4>
+							<div class="space-y-3">
+								<div class="flex justify-between">
+									<span class="text-gray-600">Investment Amount:</span>
+									<span class="font-semibold">$1.8M</span>
+								</div>
+								<div class="flex justify-between">
+									<span class="text-gray-600">Property Type:</span>
+									<span class="font-semibold">Luxury Residential</span>
+								</div>
+								<div class="flex justify-between">
+									<span class="text-gray-600">Location:</span>
+									<span class="font-semibold">Henderson, NV</span>
+								</div>
+								<div class="flex justify-between">
+									<span class="text-gray-600">Timeline:</span>
+									<span class="font-semibold">2.5 years</span>
+								</div>
+								<div class="flex justify-between">
+									<span class="text-gray-600">Appreciation:</span>
+									<span class="font-semibold text-green-600">38%</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Success Story 3: Real Estate Developer -->
+				<div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+					<div class="grid md:grid-cols-2 gap-8 items-center">
+						<div>
+							<div class="flex items-center mb-4">
+								<span class="bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-semibold">Real Estate Developer</span>
+								<span class="ml-4 text-gray-600">San Francisco → Reno</span>
+							</div>
+							<h3 class="text-3xl font-bold text-navy-800 mb-4">$4.1M Portfolio Optimization</h3>
+							<p class="text-lg text-gray-700 mb-4">
+								<strong>Client:</strong> San Francisco developer who sold multiple properties for $12.8M, facing $4.1M in capital gains across federal and state taxes.
+							</p>
+							<p class="text-lg text-gray-700 mb-4">
+								<strong>Strategy:</strong> Kelly Boyle identified a commercial development opportunity in Reno through Dr. Jan Duffy's Nevada network. The client structured a $4.1M investment across multiple OZ properties.
+							</p>
+							<p class="text-lg text-gray-700 mb-4">
+								<strong>Results:</strong> 
+							</p>
+							<ul class="list-disc list-inside text-lg text-gray-700 mb-6">
+								<li>$4.1M capital gains tax deferred</li>
+								<li>Diversified across 3 Nevada OZ properties</li>
+								<li>Average appreciation of 42% across portfolio</li>
+								<li>Generated consistent cash flow</li>
+								<li>Eliminated California state tax exposure</li>
+							</ul>
+							<div class="bg-green-50 border-l-4 border-green-400 p-4">
+								<p class="text-green-800 font-semibold">
+									<strong>Total Tax Savings:</strong> $2.1M+ over 10 years
+								</p>
+							</div>
+						</div>
+						<div class="bg-gray-100 p-6 rounded-lg">
+							<h4 class="text-xl font-semibold text-navy-700 mb-4">Investment Details</h4>
+							<div class="space-y-3">
+								<div class="flex justify-between">
+									<span class="text-gray-600">Investment Amount:</span>
+									<span class="font-semibold">$4.1M</span>
+								</div>
+								<div class="flex justify-between">
+									<span class="text-gray-600">Property Type:</span>
+									<span class="font-semibold">Commercial Portfolio</span>
+								</div>
+								<div class="flex justify-between">
+									<span class="text-gray-600">Location:</span>
+									<span class="font-semibold">Reno, NV</span>
+								</div>
+								<div class="flex justify-between">
+									<span class="text-gray-600">Timeline:</span>
+									<span class="font-semibold">4 years</span>
+								</div>
+								<div class="flex justify-between">
+									<span class="text-gray-600">Appreciation:</span>
+									<span class="font-semibold text-green-600">42%</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Success Story 4: Family Office -->
+				<div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+					<div class="grid md:grid-cols-2 gap-8 items-center">
+						<div>
+							<div class="flex items-center mb-4">
+								<span class="bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-semibold">Family Office</span>
+								<span class="ml-4 text-gray-600">Orange County → Summerlin</span>
+							</div>
+							<h3 class="text-3xl font-bold text-navy-800 mb-4">$3.2M Multi-Generation Strategy</h3>
+							<p class="text-lg text-gray-700 mb-4">
+								<strong>Client:</strong> Orange County family office managing $25M+ in assets, facing $3.2M in capital gains from a successful business exit.
+							</p>
+							<p class="text-lg text-gray-700 mb-4">
+								<strong>Strategy:</strong> Eugene Boyle coordinated with Dr. Jan Duffy to structure a multi-property investment in Summerlin, Nevada, designed for long-term wealth preservation and tax optimization.
+							</p>
+							<p class="text-lg text-gray-700 mb-4">
+								<strong>Results:</strong> 
+							</p>
+							<ul class="list-disc list-inside text-lg text-gray-700 mb-6">
+								<li>$3.2M capital gains tax deferred</li>
+								<li>Multi-generational wealth preservation</li>
+								<li>Property appreciated 52% in 3 years</li>
+								<li>Generated stable rental income</li>
+								<li>Estate planning benefits</li>
+							</ul>
+							<div class="bg-green-50 border-l-4 border-green-400 p-4">
+								<p class="text-green-800 font-semibold">
+									<strong>Total Tax Savings:</strong> $1.7M+ over 10 years
+								</p>
+							</div>
+						</div>
+						<div class="bg-gray-100 p-6 rounded-lg">
+							<h4 class="text-xl font-semibold text-navy-700 mb-4">Investment Details</h4>
+							<div class="space-y-3">
+								<div class="flex justify-between">
+									<span class="text-gray-600">Investment Amount:</span>
+									<span class="font-semibold">$3.2M</span>
+								</div>
+								<div class="flex justify-between">
+									<span class="text-gray-600">Property Type:</span>
+									<span class="font-semibold">Mixed-Use Development</span>
+								</div>
+								<div class="flex justify-between">
+									<span class="text-gray-600">Location:</span>
+									<span class="font-semibold">Summerlin, NV</span>
+								</div>
+								<div class="flex justify-between">
+									<span class="text-gray-600">Timeline:</span>
+									<span class="font-semibold">3 years</span>
+								</div>
+								<div class="flex justify-between">
+									<span class="text-gray-600">Appreciation:</span>
+									<span class="font-semibold text-green-600">52%</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Results Summary -->
+		<section class="py-16 bg-navy-700 text-white">
+			<div class="container mx-auto px-4 text-center">
+				<h2 class="text-4xl font-bold mb-8">Proven Results Across All Client Types</h2>
+				<div class="grid md:grid-cols-4 gap-8 mb-12">
+					<div class="text-center">
+						<div class="text-4xl font-bold text-gold-400 mb-2">$11.4M</div>
+						<div class="text-lg">Total Capital Gains Deferred</div>
+					</div>
+					<div class="text-center">
+						<div class="text-4xl font-bold text-gold-400 mb-2">$5.95M</div>
+						<div class="text-lg">Total Tax Savings</div>
+					</div>
+					<div class="text-center">
+						<div class="text-4xl font-bold text-gold-400 mb-2">44%</div>
+						<div class="text-lg">Average Appreciation</div>
+					</div>
+					<div class="text-center">
+						<div class="text-4xl font-bold text-gold-400 mb-2">100%</div>
+						<div class="text-lg">Client Satisfaction</div>
+					</div>
+				</div>
+				<p class="text-xl mb-8">
+					These results represent real clients who trusted the Boyle-Duffy team with their cross-state Opportunity Zone strategies.
+				</p>
+				<div class="flex justify-center space-x-4">
+					<Button href="/cross-state-strategies/tax-savings-calculator" variant="secondary">Calculate Your Potential Savings</Button>
+					<Button href="tel:702-222-1964" variant="primary">Call Dr. Jan: 702-222-1964</Button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Client Testimonials -->
+		<section class="py-16 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<h2 class="text-4xl font-bold text-navy-800 text-center mb-12">What Our Clients Say</h2>
+				<div class="grid md:grid-cols-3 gap-8">
+					<div class="bg-white p-6 rounded-lg shadow-md">
+						<div class="text-gold-400 text-2xl mb-4">★★★★★</div>
+						<p class="text-gray-700 mb-4">
+							"Kelly and Dr. Jan made the cross-state process seamless. I deferred $2.3M in taxes and my Las Vegas property has appreciated 45%. The coordination between California and Nevada was flawless."
+						</p>
+						<div class="font-semibold text-navy-800">- Tech Executive, Palo Alto</div>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow-md">
+						<div class="text-gold-400 text-2xl mb-4">★★★★★</div>
+						<p class="text-gray-700 mb-4">
+							"Eugene and Dr. Jan understood the entertainment industry's unique needs. The Henderson investment has been perfect for my portfolio, and the tax savings exceeded expectations."
+						</p>
+						<div class="font-semibold text-navy-800">- Film Producer, Beverly Hills</div>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow-md">
+						<div class="text-gold-400 text-2xl mb-4">★★★★★</div>
+						<p class="text-gray-700 mb-4">
+							"The Boyle-Duffy team's expertise in both California and Nevada markets is unmatched. They saved us over $2M in taxes while building a diversified Nevada portfolio."
+						</p>
+						<div class="font-semibold text-navy-800">- Family Office, Orange County</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="py-16 bg-white">
+			<div class="container mx-auto px-4 text-center">
+				<h2 class="text-4xl font-bold text-navy-800 mb-6">Ready to Create Your Success Story?</h2>
+				<p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+					Join our successful clients who have optimized their capital gains through strategic cross-state Opportunity Zone investments. Let the Boyle-Duffy team help you achieve similar results.
+				</p>
+				<div class="flex justify-center space-x-4">
+					<Button href="/cross-state-strategies/tax-savings-calculator" variant="primary">Calculate Your Savings</Button>
+					<Button href="/contact" variant="secondary">Schedule Strategy Session</Button>
+					<Button href="tel:702-222-1964" variant="primary">Call Dr. Jan: 702-222-1964</Button>
+				</div>
+			</div>
+		</section>
+	</main>
+	<StickyCTA />
+	<Footer />
+</Layout>
