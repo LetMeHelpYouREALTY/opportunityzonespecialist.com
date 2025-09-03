@@ -1,0 +1,609 @@
+---
+import Layout from '../../layouts/Page.astro';
+import Header from '../../components/core/Header.astro';
+import Footer from '../../components/core/Footer.astro';
+import Logo from '../../components/Logo.astro';
+import Button from '../../components/buttons/Button.astro';
+import StickyCTA from '../../components/StickyCTA.astro';
+import { nav } from '../../config/nav.js';
+import settings from '../../config/settings.js';
+
+const seo = {
+	...settings,
+	title: 'Eugene Boyle - Southern California OZ Expert | Boyle-Duffy Team',
+	description: 'Eugene Boyle specializes in Southern California Opportunity Zone investments, serving Los Angeles entertainment industry professionals and high-net-worth clients with cross-state OZ strategies.',
+	canonical: 'https://boyle-duffy-oz.com/team/eugene-boyle',
+};
+---
+
+<Layout seo={seo}>
+	<Header rightMenu navData={nav} slot="header">
+		<span slot="logo">
+			<Logo />
+		</span>
+		<Button slot="action-item" href="tel:702-222-1964">Call Dr. Jan: 702-222-1964</Button>
+	</Header>
+	<div id="page">
+		<main class="oz-main">
+			<!-- Hero Section -->
+			<section class="oz-hero">
+				<div class="oz-container">
+					<div class="oz-hero-content">
+						<div class="oz-hero-text">
+							<h1>Eugene Boyle</h1>
+							<h2>Southern California OZ Expert</h2>
+							<p class="oz-hero-subtitle">Los Angeles' Premier Opportunity Zone Investment Strategist</p>
+							<div class="oz-hero-stats">
+								<div class="oz-stat">
+									<span class="oz-stat-number">12+</span>
+									<span class="oz-stat-label">Years Experience</span>
+								</div>
+								<div class="oz-stat">
+									<span class="oz-stat-number">$300M+</span>
+									<span class="oz-stat-label">Transactions Closed</span>
+								</div>
+								<div class="oz-stat">
+									<span class="oz-stat-number">150+</span>
+									<span class="oz-stat-label">Entertainment Clients</span>
+								</div>
+							</div>
+						</div>
+						<div class="oz-hero-image">
+							<div class="oz-expert-photo">
+								<img src="/images/eugene-boyle-profile.jpg" alt="Eugene Boyle - Southern California OZ Expert" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Expertise Section -->
+			<section class="oz-section">
+				<div class="oz-container">
+					<h2>Southern California Market Expertise</h2>
+					<div class="oz-expertise-grid">
+						<div class="oz-expertise-card">
+							<h3>Los Angeles Metro OZ Properties</h3>
+							<p>Comprehensive knowledge of LA's Opportunity Zones, from downtown to the coast, helping entertainment professionals and high-net-worth clients optimize their capital gains through strategic OZ investments.</p>
+							<ul>
+								<li>Downtown LA development projects</li>
+								<li>Hollywood entertainment district</li>
+								<li>Long Beach port area properties</li>
+								<li>Inglewood sports complex development</li>
+							</ul>
+						</div>
+						<div class="oz-expertise-card">
+							<h3>Entertainment Industry Specialization</h3>
+							<p>Deep understanding of entertainment industry wealth patterns and the unique needs of actors, producers, directors, and entertainment executives with significant capital gains from film, TV, and music ventures.</p>
+							<ul>
+								<li>Film/TV production capital gains</li>
+								<li>Music industry exit strategies</li>
+								<li>Entertainment real estate investments</li>
+								<li>Cross-state tax optimization</li>
+							</ul>
+						</div>
+						<div class="oz-expertise-card">
+							<h3>Cross-State Strategy Expertise</h3>
+							<p>Specializing in California-to-Nevada OZ strategies, helping Southern California clients leverage Nevada's tax advantages while maintaining federal OZ benefits and proximity to LA markets.</p>
+							<ul>
+								<li>California capital gains deferral</li>
+								<li>Nevada tax elimination strategies</li>
+								<li>Multi-state compliance expertise</li>
+								<li>Entertainment industry timeline optimization</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Market Focus Areas -->
+			<section class="oz-section oz-bg-light">
+				<div class="oz-container">
+					<h2>Primary Market Territories</h2>
+					<div class="oz-market-grid">
+						<div class="oz-market-card">
+							<h3>Los Angeles County</h3>
+							<p>Downtown LA, Hollywood, Inglewood, and surrounding areas</p>
+							<div class="oz-market-stats">
+								<span>30+ OZ districts</span>
+								<span>$3B+ development pipeline</span>
+							</div>
+						</div>
+						<div class="oz-market-card">
+							<h3>Orange County</h3>
+							<p>Anaheim, Santa Ana, and coastal OZ opportunities</p>
+							<div class="oz-market-stats">
+								<span>20+ OZ districts</span>
+								<span>$1.5B+ development pipeline</span>
+							</div>
+						</div>
+						<div class="oz-market-card">
+							<h3>Riverside & San Bernardino</h3>
+							<p>Inland Empire industrial and residential OZ properties</p>
+							<div class="oz-market-stats">
+								<span>25+ OZ districts</span>
+								<span>$800M+ development pipeline</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Client Success Stories -->
+			<section class="oz-section">
+				<div class="oz-container">
+					<h2>Client Success Stories</h2>
+					<div class="oz-success-stories">
+						<div class="oz-story">
+							<h3>Film Producer - $75M Capital Gains</h3>
+							<p>"Eugene helped me defer $75M in capital gains from my production company sale through a strategic Nevada OZ investment. The cross-state strategy eliminated my California state tax liability while maintaining federal OZ benefits. Saved me over $7M in taxes."</p>
+							<div class="oz-story-meta">
+								<span class="oz-story-client">- Film Producer, Beverly Hills</span>
+								<span class="oz-story-savings">Tax Savings: $7.5M</span>
+							</div>
+						</div>
+						<div class="oz-story">
+							<h3>Music Executive - Entertainment Portfolio</h3>
+							<p>"Working with Eugene on our entertainment real estate portfolio has been exceptional. His understanding of both California and Nevada markets helped us optimize our entire investment strategy."</p>
+							<div class="oz-story-meta">
+								<span class="oz-story-client">- Music Executive, West Hollywood</span>
+								<span class="oz-story-savings">Portfolio Value: $150M+</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Cross-State Strategy -->
+			<section class="oz-section oz-bg-light">
+				<div class="oz-container">
+					<h2>California → Nevada OZ Strategy</h2>
+					<div class="oz-strategy-content">
+						<div class="oz-strategy-text">
+							<h3>Why Cross-State OZ Investment?</h3>
+							<p>As a Southern California expert, Eugene understands that while California offers excellent OZ opportunities, Nevada provides additional tax advantages that can significantly enhance your overall returns, especially for entertainment industry professionals.</p>
+							<div class="oz-strategy-benefits">
+								<div class="oz-benefit">
+									<h4>Federal OZ Benefits</h4>
+									<p>Capital gains deferral, reduction, and elimination</p>
+								</div>
+								<div class="oz-benefit">
+									<h4>Nevada Tax Advantages</h4>
+									<p>No state income tax, no capital gains tax</p>
+								</div>
+								<div class="oz-benefit">
+									<h4>California Tax Elimination</h4>
+									<p>Eliminate California state capital gains tax</p>
+								</div>
+							</div>
+						</div>
+						<div class="oz-strategy-cta">
+							<h3>Ready to Optimize Your Southern California Capital Gains?</h3>
+							<p>Let Eugene and the Boyle-Duffy team show you how cross-state OZ investment can maximize your returns.</p>
+							<div class="oz-cta-buttons">
+								<a href="tel:702-222-1964" class="oz-btn oz-btn-primary">Call Dr. Jan: 702-222-1964</a>
+								<a href="/cross-state-strategies/tax-savings-calculator" class="oz-btn oz-btn-secondary">Calculate Your Savings</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Entertainment Industry Focus -->
+			<section class="oz-section">
+				<div class="oz-container">
+					<h2>Entertainment Industry Expertise</h2>
+					<div class="oz-entertainment-grid">
+						<div class="oz-entertainment-card">
+							<h3>Film & Television</h3>
+							<p>Specialized knowledge of film and TV production capital gains, helping producers, directors, and actors optimize their earnings through strategic OZ investments.</p>
+							<ul>
+								<li>Production company sales</li>
+								<li>Distribution deal capital gains</li>
+								<li>Streaming platform exits</li>
+								<li>Entertainment real estate</li>
+							</ul>
+						</div>
+						<div class="oz-entertainment-card">
+							<h3>Music Industry</h3>
+							<p>Deep understanding of music industry wealth patterns, from record label sales to artist catalog acquisitions, helping music professionals optimize their capital gains.</p>
+							<ul>
+								<li>Record label acquisitions</li>
+								<li>Artist catalog sales</li>
+								<li>Music publishing deals</li>
+								<li>Concert venue investments</li>
+							</ul>
+						</div>
+						<div class="oz-entertainment-card">
+							<h3>Sports & Media</h3>
+							<p>Expertise in sports and media industry capital gains, from team ownership to media company acquisitions, helping sports and media professionals optimize their investments.</p>
+							<ul>
+								<li>Sports team ownership</li>
+								<li>Media company acquisitions</li>
+								<li>Broadcasting rights deals</li>
+								<li>Sports venue investments</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Contact & Consultation -->
+			<section class="oz-section oz-bg-light">
+				<div class="oz-container">
+					<h2>Schedule Your Southern California Consultation</h2>
+					<div class="oz-consultation-grid">
+						<div class="oz-consultation-card">
+							<h3>Direct Team Contact</h3>
+							<p>For immediate assistance with your Southern California OZ strategy:</p>
+							<div class="oz-contact-info">
+								<a href="tel:702-222-1964" class="oz-contact-btn">Call Dr. Jan: 702-222-1964</a>
+								<p class="oz-contact-note">Dr. Jan coordinates all team consultations</p>
+							</div>
+						</div>
+						<div class="oz-consultation-card">
+							<h3>Market Analysis Request</h3>
+							<p>Get Eugene's latest Southern California OZ market analysis:</p>
+							<a href="/eugene-boyle/southern-california" class="oz-btn oz-btn-outline">View Market Analysis</a>
+						</div>
+						<div class="oz-consultation-card">
+							<h3>Entertainment Industry Focus</h3>
+							<p>Learn about OZ strategies for entertainment professionals:</p>
+							<a href="/cross-state-strategies/entertainment-industry" class="oz-btn oz-btn-outline">Learn More</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+	<Footer navData={nav} />
+	<StickyCTA />
+</Layout>
+
+<style>
+	.oz-hero {
+		background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+		color: white;
+		padding: 4rem 0;
+	}
+
+	.oz-hero-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.oz-hero h1 {
+		font-size: 3rem;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+	}
+
+	.oz-hero h2 {
+		font-size: 1.5rem;
+		font-weight: 400;
+		margin-bottom: 1rem;
+		color: #fbbf24;
+	}
+
+	.oz-hero-subtitle {
+		font-size: 1.25rem;
+		margin-bottom: 2rem;
+		opacity: 0.9;
+	}
+
+	.oz-hero-stats {
+		display: flex;
+		gap: 2rem;
+	}
+
+	.oz-stat {
+		text-align: center;
+	}
+
+	.oz-stat-number {
+		display: block;
+		font-size: 2rem;
+		font-weight: 700;
+		color: #fbbf24;
+	}
+
+	.oz-stat-label {
+		font-size: 0.875rem;
+		opacity: 0.8;
+	}
+
+	.oz-expert-photo {
+		text-align: center;
+	}
+
+	.oz-expert-photo img {
+		width: 300px;
+		height: 300px;
+		border-radius: 50%;
+		object-fit: cover;
+		border: 4px solid #fbbf24;
+	}
+
+	.oz-expertise-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.oz-expertise-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	.oz-expertise-card h3 {
+		color: #1e3a8a;
+		margin-bottom: 1rem;
+	}
+
+	.oz-expertise-card ul {
+		margin-top: 1rem;
+		padding-left: 1.5rem;
+	}
+
+	.oz-expertise-card li {
+		margin-bottom: 0.5rem;
+		color: #4b5563;
+	}
+
+	.oz-market-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.oz-market-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		text-align: center;
+	}
+
+	.oz-market-card h3 {
+		color: #1e3a8a;
+		margin-bottom: 1rem;
+	}
+
+	.oz-market-stats {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 1rem;
+		font-size: 0.875rem;
+		color: #6b7280;
+	}
+
+	.oz-success-stories {
+		display: grid;
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.oz-story {
+		background: white;
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		border-left: 4px solid #fbbf24;
+	}
+
+	.oz-story h3 {
+		color: #1e3a8a;
+		margin-bottom: 1rem;
+	}
+
+	.oz-story-meta {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 1rem;
+		font-size: 0.875rem;
+		color: #6b7280;
+	}
+
+	.oz-story-savings {
+		font-weight: 600;
+		color: #059669;
+	}
+
+	.oz-strategy-content {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 3rem;
+		align-items: start;
+	}
+
+	.oz-strategy-benefits {
+		display: grid;
+		gap: 1rem;
+		margin-top: 2rem;
+	}
+
+	.oz-benefit {
+		background: white;
+		padding: 1.5rem;
+		border-radius: 8px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+
+	.oz-benefit h4 {
+		color: #1e3a8a;
+		margin-bottom: 0.5rem;
+	}
+
+	.oz-strategy-cta {
+		background: #1e3a8a;
+		color: white;
+		padding: 2rem;
+		border-radius: 8px;
+		text-align: center;
+	}
+
+	.oz-strategy-cta h3 {
+		margin-bottom: 1rem;
+	}
+
+	.oz-cta-buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		margin-top: 1.5rem;
+	}
+
+	.oz-entertainment-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.oz-entertainment-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	.oz-entertainment-card h3 {
+		color: #1e3a8a;
+		margin-bottom: 1rem;
+	}
+
+	.oz-entertainment-card ul {
+		margin-top: 1rem;
+		padding-left: 1.5rem;
+	}
+
+	.oz-entertainment-card li {
+		margin-bottom: 0.5rem;
+		color: #4b5563;
+	}
+
+	.oz-consultation-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.oz-consultation-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		text-align: center;
+	}
+
+	.oz-consultation-card h3 {
+		color: #1e3a8a;
+		margin-bottom: 1rem;
+	}
+
+	.oz-contact-info {
+		margin-top: 1rem;
+	}
+
+	.oz-contact-btn {
+		display: inline-block;
+		background: #1e3a8a;
+		color: white;
+		padding: 1rem 2rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+
+	.oz-contact-note {
+		font-size: 0.875rem;
+		color: #6b7280;
+	}
+
+	.oz-btn {
+		display: inline-block;
+		padding: 0.75rem 1.5rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		transition: all 0.3s ease;
+	}
+
+	.oz-btn-primary {
+		background: #1e3a8a;
+		color: white;
+	}
+
+	.oz-btn-primary:hover {
+		background: #1e40af;
+	}
+
+	.oz-btn-secondary {
+		background: #fbbf24;
+		color: #1e3a8a;
+	}
+
+	.oz-btn-secondary:hover {
+		background: #f59e0b;
+	}
+
+	.oz-btn-outline {
+		background: transparent;
+		color: #1e3a8a;
+		border: 2px solid #1e3a8a;
+	}
+
+	.oz-btn-outline:hover {
+		background: #1e3a8a;
+		color: white;
+	}
+
+	.oz-bg-light {
+		background: #f8fafc;
+	}
+
+	.oz-section {
+		padding: 4rem 0;
+	}
+
+	.oz-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	.oz-main h2 {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: #1e3a8a;
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+
+	@media (max-width: 768px) {
+		.oz-hero-content {
+			grid-template-columns: 1fr;
+			text-align: center;
+		}
+
+		.oz-hero-stats {
+			justify-content: center;
+		}
+
+		.oz-strategy-content {
+			grid-template-columns: 1fr;
+		}
+
+		.oz-cta-buttons {
+			flex-direction: column;
+		}
+	}
+</style>
