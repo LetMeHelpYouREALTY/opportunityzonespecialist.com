@@ -1,18 +1,41 @@
 ---
 ---
 
-<p class="odyssey-logo">Odyssey</p>
+<a href="/" class="oz-logo">
+	<span class="oz-logo-text">OZ</span>
+	<span class="oz-logo-accent">SPECIALIST</span>
+</a>
 
 <style>
-	.odyssey-logo {
-		width: fit-content;
-		margin: 0;
-		font-family: var(--theme-font-family-serif);
-    font-size: var(--font-size-md);
+	.oz-logo {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
 		color: inherit;
+		font-family: var(--theme-font-family-serif);
+		font-size: var(--font-size-md);
+		font-weight: 700;
+		letter-spacing: -0.025em;
 	}
-	.odyssey-logo:hover {
-		text-decoration: underline;
-		cursor: pointer;
+	
+	.oz-logo-text {
+		color: var(--oz-navy);
+		margin-right: 0.25rem;
+	}
+	
+	.oz-logo-accent {
+		color: var(--oz-gold);
+	}
+	
+	.oz-logo:hover {
+		text-decoration: none;
+	}
+	
+	.oz-logo:hover .oz-logo-text {
+		color: var(--oz-navy-light);
+	}
+	
+	.oz-logo:hover .oz-logo-accent {
+		color: var(--oz-gold-light);
 	}
 </style>

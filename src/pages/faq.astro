@@ -1,0 +1,400 @@
+---
+import Layout from '../layouts/Page.astro';
+import '../styles/oz-custom.css';
+---
+
+<Layout>
+	<!-- Hero Section -->
+	<section class="oz-hero">
+		<div class="oz-hero-content">
+			<h1>Opportunity Zone FAQ</h1>
+			<p class="subtitle">Get answers to the most common questions about Opportunity Zone investments</p>
+		</div>
+	</section>
+
+	<!-- FAQ Categories -->
+	<section class="oz-services">
+		<div class="oz-services-content">
+			<div style="max-width: 800px; margin: 0 auto; text-align: center;">
+				<h2>Frequently Asked Questions</h2>
+				<p style="font-size: 1.125rem; color: var(--oz-gray-600); margin-bottom: 3rem;">
+					Find answers to the most common questions about Opportunity Zone investments, tax benefits, compliance requirements, and investment strategies.
+				</p>
+			</div>
+			
+			<!-- FAQ Navigation -->
+			<div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap;">
+				<button onclick="showCategory('general')" class="oz-btn oz-btn-outline active-category">General</button>
+				<button onclick="showCategory('tax')" class="oz-btn oz-btn-outline">Tax Benefits</button>
+				<button onclick="showCategory('compliance')" class="oz-btn oz-btn-outline">Compliance</button>
+				<button onclick="showCategory('investment')" class="oz-btn oz-btn-outline">Investment</button>
+				<button onclick="showCategory('timing')" class="oz-btn oz-btn-outline">Timing</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ Content -->
+	<section class="oz-authority">
+		<div class="oz-authority-content">
+			<!-- General Questions -->
+			<div id="general-category" class="faq-category">
+				<h2 style="color: var(--oz-navy); margin-bottom: 2rem;">General Questions</h2>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>What is an Opportunity Zone?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>An Opportunity Zone is a designated economically distressed community where new investments may be eligible for preferential tax treatment. These zones were created by the Tax Cuts and Jobs Act of 2017 to encourage long-term investments in low-income communities.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>How many Opportunity Zones are there?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>There are over 8,700 designated Opportunity Zones across all 50 states, the District of Columbia, and five U.S. territories. These zones represent approximately 12% of all census tracts in the United States.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>What is a Qualified Opportunity Fund (QOF)?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>A Qualified Opportunity Fund is an investment vehicle organized as a corporation or partnership for the purpose of investing in Opportunity Zone property. QOFs must hold at least 90% of their assets in Opportunity Zone property and can be self-certified with the IRS.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>Can I invest directly in Opportunity Zone property?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>Yes, you can invest directly in Opportunity Zone property or through a Qualified Opportunity Fund. Direct investments give you more control but require more expertise and compliance management. QOFs provide professional management and diversification.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Tax Benefits Questions -->
+			<div id="tax-category" class="faq-category" style="display: none;">
+				<h2 style="color: var(--oz-navy); margin-bottom: 2rem;">Tax Benefits</h2>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>What are the three tax benefits of Opportunity Zone investments?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>The three tax benefits are: 1) Capital gains deferral until December 31, 2026, 2) Basis step-up of 10% after 5 years and 15% after 7 years, and 3) Tax-free appreciation if held for 10+ years.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>What types of capital gains can I defer?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>You can defer capital gains from any source, including stock sales, real estate sales, business sales, cryptocurrency gains, and other capital assets. The gains must be invested within 180 days of realization.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>How much can I save in taxes?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>Tax savings depend on your specific situation, but can be substantial. For example, on a $1M capital gain with a 20% tax rate, you could save $200K in immediate taxes, plus 15% on the deferred amount, plus all taxes on appreciation after 10 years.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>When do I have to pay the deferred taxes?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>Deferred capital gains taxes are due by December 31, 2026, regardless of when you sell your OZ investment. However, if you hold for 5+ years, you get a 10% basis step-up, and if you hold for 7+ years, you get an additional 5% step-up.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Compliance Questions -->
+			<div id="compliance-category" class="faq-category" style="display: none;">
+				<h2 style="color: var(--oz-navy); margin-bottom: 2rem;">Compliance</h2>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>What are the 90% asset test requirements?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>Qualified Opportunity Funds must hold at least 90% of their assets in Opportunity Zone property. This test is measured on the last day of the first 6-month period and the last day of the taxable year.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>What is the substantial improvement requirement?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>For existing buildings, you must make improvements equal to the building's basis within 30 months. For vacant land, you must make substantial improvements within 30 months. The improvements must be made to the building, not the land.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>What happens if I don't meet compliance requirements?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>Failure to meet compliance requirements can result in loss of tax benefits, penalties, and interest. It's crucial to work with experienced professionals to ensure ongoing compliance throughout the investment lifecycle.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>Do I need to file any special forms with the IRS?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>Yes, you'll need to file Form 8949 and Schedule D to report your OZ investment. QOFs must file Form 8996 annually to certify compliance with the 90% asset test. Proper documentation is essential for maintaining tax benefits.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Investment Questions -->
+			<div id="investment-category" class="faq-category" style="display: none;">
+				<h2 style="color: var(--oz-navy); margin-bottom: 2rem;">Investment</h2>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>What types of properties can I invest in?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>You can invest in any type of real property located in an Opportunity Zone, including residential, commercial, industrial, and mixed-use properties. The property must be used in a trade or business and meet the substantial improvement requirements.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>What is the minimum investment amount?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>There's no minimum investment amount for Opportunity Zone investments. However, most QOFs have minimum investments ranging from $25K to $1M. Direct investments typically require larger amounts due to property costs and development requirements.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>How do I find Opportunity Zone properties?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>You can use the Treasury Department's Opportunity Zone mapping tool, work with local real estate professionals, or partner with experienced OZ investment firms. We provide comprehensive property identification and analysis services.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>What are the typical returns on OZ investments?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>Returns vary significantly based on location, property type, and management. Typical returns range from 8-15% annually, but the tax benefits can significantly enhance overall returns. It's important to evaluate both the investment returns and tax benefits together.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Timing Questions -->
+			<div id="timing-category" class="faq-category" style="display: none;">
+				<h2 style="color: var(--oz-navy); margin-bottom: 2rem;">Timing</h2>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>What is the 180-day rule?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>You have 180 days from the date you realize a capital gain to invest it in a Qualified Opportunity Fund. This deadline is crucial - missing it means you lose the ability to defer taxes on that gain.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>When is the deadline for full tax benefits?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>To get the full 7-year basis step-up (15% reduction), you must invest before December 31, 2021. After that date, you can still get the 5-year step-up (10% reduction) if you invest before December 31, 2024.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>How long do I need to hold my investment?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>To get the maximum tax benefits, you should hold for at least 10 years. This gives you tax-free appreciation. However, you can sell earlier if needed, though you'll lose some tax benefits.</p>
+					</div>
+				</div>
+				
+				<div class="faq-item">
+					<button class="faq-question" onclick="toggleFAQ(this)">
+						<h3>What happens after December 31, 2026?</h3>
+						<span class="faq-icon">+</span>
+					</button>
+					<div class="faq-answer">
+						<p>After December 31, 2026, you must pay taxes on your deferred capital gains (minus any basis step-up). However, if you hold for 10+ years, any appreciation after your original investment remains tax-free.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Still Have Questions -->
+	<section class="oz-cta">
+		<div class="oz-cta-content">
+			<h2>Still Have Questions?</h2>
+			<p>Our Opportunity Zone specialists are here to help. Schedule a free consultation to get personalized answers to your specific questions.</p>
+			<div class="oz-hero .cta-buttons">
+				<a href="/contact" class="oz-btn oz-btn-primary">Schedule Free Consultation</a>
+				<a href="/resources/guides" class="oz-btn oz-btn-secondary">Download OZ Guide</a>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<script>
+	function showCategory(category) {
+		// Hide all categories
+		const categories = document.querySelectorAll('.faq-category');
+		categories.forEach(cat => cat.style.display = 'none');
+		
+		// Remove active class from all buttons
+		const buttons = document.querySelectorAll('.active-category');
+		buttons.forEach(btn => btn.classList.remove('active-category'));
+		
+		// Show selected category
+		document.getElementById(category + '-category').style.display = 'block';
+		
+		// Add active class to clicked button
+		event.target.classList.add('active-category');
+	}
+	
+	function toggleFAQ(button) {
+		const answer = button.nextElementSibling;
+		const icon = button.querySelector('.faq-icon');
+		
+		if (answer.style.display === 'block') {
+			answer.style.display = 'none';
+			icon.textContent = '+';
+		} else {
+			answer.style.display = 'block';
+			icon.textContent = '-';
+		}
+	}
+</script>
+
+<style>
+	.faq-item {
+		background: var(--oz-white);
+		border-radius: 0.5rem;
+		box-shadow: var(--oz-shadow);
+		margin-bottom: 1rem;
+		overflow: hidden;
+	}
+	
+	.faq-question {
+		width: 100%;
+		padding: 1.5rem;
+		background: none;
+		border: none;
+		text-align: left;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		transition: background-color 0.3s ease;
+	}
+	
+	.faq-question:hover {
+		background: var(--oz-gray-50);
+	}
+	
+	.faq-question h3 {
+		color: var(--oz-navy);
+		margin: 0;
+		font-size: 1.125rem;
+	}
+	
+	.faq-icon {
+		font-size: 1.5rem;
+		color: var(--oz-gold);
+		font-weight: 700;
+	}
+	
+	.faq-answer {
+		display: none;
+		padding: 0 1.5rem 1.5rem;
+		color: var(--oz-gray-600);
+		line-height: 1.6;
+	}
+	
+	.active-category {
+		background: var(--oz-gold) !important;
+		color: var(--oz-white) !important;
+	}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an Opportunity Zone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An Opportunity Zone is a designated economically distressed community where new investments may be eligible for preferential tax treatment. These zones were created by the Tax Cuts and Jobs Act of 2017 to encourage long-term investments in low-income communities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the three tax benefits of Opportunity Zone investments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The three tax benefits are: 1) Capital gains deferral until December 31, 2026, 2) Basis step-up of 10% after 5 years and 15% after 7 years, and 3) Tax-free appreciation if held for 10+ years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 180-day rule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You have 180 days from the date you realize a capital gain to invest it in a Qualified Opportunity Fund. This deadline is crucial - missing it means you lose the ability to defer taxes on that gain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of properties can I invest in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can invest in any type of real property located in an Opportunity Zone, including residential, commercial, industrial, and mixed-use properties. The property must be used in a trade or business and meet the substantial improvement requirements."
+      }
+    }
+  ]
+}
+</script>

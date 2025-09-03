@@ -1,0 +1,216 @@
+---
+import Layout from '../layouts/Page.astro';
+import '../styles/oz-custom.css';
+---
+
+<Layout>
+	<!-- Hero Section -->
+	<section class="oz-hero">
+		<div class="oz-hero-content">
+			<h1>OZ Investment Guide Library</h1>
+			<p class="subtitle">Comprehensive resources to help you navigate Opportunity Zone investments</p>
+		</div>
+	</section>
+
+	<!-- Lead Magnets -->
+	<section class="oz-services">
+		<div class="oz-services-content">
+			<div style="max-width: 800px; margin: 0 auto; text-align: center;">
+				<h2>Free Investment Guides & Resources</h2>
+				<p style="font-size: 1.125rem; color: var(--oz-gray-600); margin-bottom: 3rem;">
+					Download our comprehensive guides to learn everything you need to know about Opportunity Zone investments, tax benefits, and compliance requirements.
+				</p>
+			</div>
+			
+			<div class="oz-services-grid">
+				<div class="oz-service-card">
+					<div class="icon">📋</div>
+					<h3>2025 OZ Tax Strategy Guide</h3>
+					<p>Complete guide to maximizing your tax benefits with Opportunity Zone investments, including timing strategies and compliance requirements.</p>
+					<ul style="text-align: left; margin-top: 1rem;">
+						<li>Tax benefit optimization strategies</li>
+						<li>Timing considerations and deadlines</li>
+						<li>Compliance requirements</li>
+						<li>Case studies and examples</li>
+					</ul>
+					<button onclick="downloadGuide('tax-strategy')" class="oz-btn oz-btn-outline" style="margin-top: 1rem;">Download Free Guide</button>
+				</div>
+				
+				<div class="oz-service-card">
+					<div class="icon">🏢</div>
+					<h3>Property Evaluation Checklist</h3>
+					<p>Step-by-step checklist for evaluating Opportunity Zone properties, including due diligence requirements and compliance verification.</p>
+					<ul style="text-align: left; margin-top: 1rem;">
+						<li>OZ eligibility verification</li>
+						<li>Market analysis checklist</li>
+						<li>Financial modeling templates</li>
+						<li>Due diligence requirements</li>
+					</ul>
+					<button onclick="downloadGuide('property-checklist')" class="oz-btn oz-btn-outline" style="margin-top: 1rem;">Download Free Guide</button>
+				</div>
+				
+				<div class="oz-service-card">
+					<div class="icon">🏛️</div>
+					<h3>QOF Due Diligence Template</h3>
+					<p>Comprehensive template for evaluating Qualified Opportunity Funds, including performance metrics and compliance verification.</p>
+					<ul style="text-align: left; margin-top: 1rem;">
+						<li>Fund evaluation criteria</li>
+						<li>Performance analysis tools</li>
+						<li>Compliance verification checklist</li>
+						<li>Risk assessment framework</li>
+					</ul>
+					<button onclick="downloadGuide('qof-template')" class="oz-btn oz-btn-outline" style="margin-top: 1rem;">Download Free Guide</button>
+				</div>
+				
+				<div class="oz-service-card">
+					<div class="icon">🗺️</div>
+					<h3>State-by-State OZ Comparison Chart</h3>
+					<p>Comprehensive comparison of Opportunity Zone markets across all 50 states, including investment opportunities and market conditions.</p>
+					<ul style="text-align: left; margin-top: 1rem;">
+						<li>Market analysis by state</li>
+						<li>Investment opportunity rankings</li>
+						<li>Regulatory considerations</li>
+						<li>Local market insights</li>
+					</ul>
+					<button onclick="downloadGuide('state-comparison')" class="oz-btn oz-btn-outline" style="margin-top: 1rem;">Download Free Guide</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Additional Resources -->
+	<section class="oz-authority">
+		<div class="oz-authority-content">
+			<h2>Additional Resources</h2>
+			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+				<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow);">
+					<h3 style="color: var(--oz-navy); margin-bottom: 1rem;">📊 Market Reports</h3>
+					<p style="color: var(--oz-gray-600); margin-bottom: 1rem;">Monthly Opportunity Zone market analysis and investment opportunity reports.</p>
+					<a href="/market-updates" class="oz-btn oz-btn-outline">View Reports</a>
+				</div>
+				
+				<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow);">
+					<h3 style="color: var(--oz-navy); margin-bottom: 1rem;">🛠️ Tools & Calculators</h3>
+					<p style="color: var(--oz-gray-600); margin-bottom: 1rem;">Interactive tools for ROI calculation, compliance tracking, and investment analysis.</p>
+					<a href="/resources/tools" class="oz-btn oz-btn-outline">Access Tools</a>
+				</div>
+				
+				<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow);">
+					<h3 style="color: var(--oz-navy); margin-bottom: 1rem;">❓ FAQ Hub</h3>
+					<p style="color: var(--oz-gray-600); margin-bottom: 1rem;">Comprehensive answers to the most common Opportunity Zone investment questions.</p>
+					<a href="/faq" class="oz-btn oz-btn-outline">View FAQ</a>
+				</div>
+				
+				<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow);">
+					<h3 style="color: var(--oz-navy); margin-bottom: 1rem;">📚 IRS Regulations</h3>
+					<p style="color: var(--oz-gray-600); margin-bottom: 1rem;">Summary of IRS regulations and compliance requirements for Opportunity Zone investments.</p>
+					<a href="/resources/regulations" class="oz-btn oz-btn-outline">View Regulations</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Newsletter Signup -->
+	<section class="oz-tools">
+		<div class="oz-tools-content">
+			<div style="max-width: 600px; margin: 0 auto; text-align: center;">
+				<h2>Stay Updated with OZ Market Insights</h2>
+				<p style="color: var(--oz-gray-600); margin-bottom: 2rem;">
+					Get the latest Opportunity Zone market updates, regulatory changes, and investment opportunities delivered to your inbox.
+				</p>
+				
+				<form class="oz-form" id="newsletter-form" style="max-width: 500px; margin: 0 auto;">
+					<div class="oz-form-group">
+						<label class="oz-form-label" for="newsletter-email">Email Address</label>
+						<input type="email" id="newsletter-email" name="email" class="oz-form-input" required>
+					</div>
+					<div class="oz-form-group">
+						<label class="oz-form-label" for="newsletter-name">Full Name</label>
+						<input type="text" id="newsletter-name" name="name" class="oz-form-input" required>
+					</div>
+					<button type="submit" class="oz-btn oz-btn-primary" style="width: 100%;">Subscribe to Updates</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="oz-cta">
+		<div class="oz-cta-content">
+			<h2>Need Personalized Guidance?</h2>
+			<p>While our guides provide comprehensive information, every investment situation is unique. Schedule a consultation with our specialists for personalized advice.</p>
+			<div class="oz-hero .cta-buttons">
+				<a href="/contact" class="oz-btn oz-btn-primary">Schedule Consultation</a>
+				<a href="/about" class="oz-btn oz-btn-secondary">Meet Our Team</a>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<script>
+	function downloadGuide(guideType) {
+		// In a real implementation, this would trigger a download and track the lead
+		const guideNames = {
+			'tax-strategy': '2025 OZ Tax Strategy Guide',
+			'property-checklist': 'Property Evaluation Checklist',
+			'qof-template': 'QOF Due Diligence Template',
+			'state-comparison': 'State-by-State OZ Comparison Chart'
+		};
+		
+		alert(`Thank you for your interest! The ${guideNames[guideType]} will be sent to your email address. Please check your inbox.`);
+		
+		// Track the download for analytics
+		console.log('Guide download:', guideType);
+	}
+	
+	// Newsletter signup
+	document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+		e.preventDefault();
+		
+		const email = document.getElementById('newsletter-email').value;
+		const name = document.getElementById('newsletter-name').value;
+		
+		// In a real implementation, this would send data to your email service
+		console.log('Newsletter signup:', { email, name });
+		
+		alert('Thank you for subscribing! You\'ll receive our latest OZ market insights and updates.');
+		
+		// Reset form
+		this.reset();
+	});
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "OZ Investment Guide Library",
+  "description": "Comprehensive resources to help you navigate Opportunity Zone investments",
+  "url": "https://opportunityzonespecialist.com/resources/guides",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "CreativeWork",
+        "name": "2025 OZ Tax Strategy Guide",
+        "description": "Complete guide to maximizing your tax benefits with Opportunity Zone investments"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Property Evaluation Checklist",
+        "description": "Step-by-step checklist for evaluating Opportunity Zone properties"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "QOF Due Diligence Template",
+        "description": "Comprehensive template for evaluating Qualified Opportunity Funds"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "State-by-State OZ Comparison Chart",
+        "description": "Comprehensive comparison of Opportunity Zone markets across all 50 states"
+      }
+    ]
+  }
+}
+</script>

@@ -1,8 +1,8 @@
 export default {
-	title: `Odyssey Astro Theme | A Marketing Website Theme for Startups and Businesses`,
-	description: `A simple, clean, and modern theme for a startup or businesses' marketing website.`,
-	url: `https://odyssey-theme.sapling.supply`, // No trailing slash!
-	name: `Odyssey`, // The short name of the business or brand name. Used for things like the copyright in the footer.
-	enableThemeSwitcher: true,
-	showPlug: true, // Disable this if you want to remove the plug from the footer. (╯°□°)╯︵ ┻━┻
+	title: `Opportunity Zone Specialist | Expert OZ Investment Guidance & Property Analysis`,
+	description: `Professional opportunity zone investment consulting. Expert guidance on Qualified Opportunity Funds, property acquisition, tax benefits, and compliance for maximum ROI.`,
+	url: `https://opportunityzonespecialist.com`, // No trailing slash!
+	name: `OZ Specialist`, // The short name of the business or brand name. Used for things like the copyright in the footer.
+	enableThemeSwitcher: false,
+	showPlug: false, // Disable this if you want to remove the plug from the footer. (╯°□°)╯︵ ┻━┻
 };

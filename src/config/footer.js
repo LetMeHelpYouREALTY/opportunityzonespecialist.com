@@ -1,42 +1,66 @@
 export const footerSocials = [
   {
+    name: 'LinkedIn',
+    url: 'https://linkedin.com/company/opportunity-zone-specialist',
+    icon: "mdi:linkedin",
+  },
+  {
     name: 'Twitter',
-    url: 'https://twitter.com/jaydanurwin',
+    url: 'https://twitter.com/ozspecialist',
     icon: "mdi:twitter",
   },
   {
-    name: 'Youtube',
-    url: 'https://youtube.com/@jaydanurwin',
+    name: 'YouTube',
+    url: 'https://youtube.com/@opportunityzonespecialist',
     icon: "mdi:youtube",
-  },
-  {
-    name: 'Github',
-    url: 'https://github.com/jaydanurwin',
-    icon: "mdi:github",
-  },
-  {
-    name: 'Discord',
-    url: 'https://astro.build/chat',
-    icon: "ic:baseline-discord",
   },
 ]
 
 export const footerLists = [
 	{
-		title: 'Landing Pages',
+		title: 'Services',
 		items: [
 			{
-				title: 'Landing Page 1',
-				slug: '/landing-pages/landing-1',
+				title: 'Investment Consulting',
+				slug: '/investment-consulting',
 			},
 			{
-				title: 'Landing Page 2',
-				slug: '/landing-pages/landing-2',
+				title: 'Property Analysis',
+				slug: '/property-analysis',
 			},
-      // {
-			// 	title: 'Landing Page 3',
-			// 	slug: '/landing-pages/landing-3',
-			// },
+			{
+				title: 'Tax Optimization',
+				slug: '/tax-benefits',
+			},
+			{
+				title: 'Fund Formation',
+				slug: '/qualified-opportunity-funds',
+			},
+		],
+	},
+	{
+		title: 'Resources',
+		items: [
+			{
+				title: 'OZ Guide Library',
+				slug: '/resources/guides',
+			},
+			{
+				title: 'Market Updates',
+				slug: '/market-updates',
+			},
+			{
+				title: 'Tools & Calculators',
+				slug: '/resources/tools',
+			},
+			{
+				title: 'Blog',
+				slug: '/blog',
+			},
+			{
+				title: 'FAQ',
+				slug: '/faq',
+			},
 		],
 	},
 	{
@@ -44,37 +68,20 @@ export const footerLists = [
 		items: [
 			{
 				title: 'About',
-				slug: '/company/about',
-			},
-			{
-				title: 'Blog',
-				slug: '/blog',
+				slug: '/about',
 			},
 			{
 				title: 'Contact',
-				slug: '/company/contact',
-			},
-		],
-	},
-	{
-		title: 'Theme',
-		items: [
-			{
-				title: 'Get Started',
-				slug: '/theme/get-started',
+				slug: '/contact',
 			},
 			{
-				title: 'Style Guide',
-				slug: '/theme/style-guide',
+				title: 'Privacy Policy',
+				slug: '/privacy-policy',
 			},
-      {
-        title: 'Theme Setup',
-        slug: '/theme/theme-setup',
-      },
-      {
-        title: 'Customizing Odyssey',
-        slug: '/theme/customizing-odyssey',
-      }
+			{
+				title: 'Terms of Service',
+				slug: '/terms-of-service',
+			},
 		],
 	},
 ];

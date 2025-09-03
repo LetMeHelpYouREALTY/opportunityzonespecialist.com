@@ -11,7 +11,12 @@
 		"start": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
-		"format": "npx prettier -w ."
+		"format": "biome format --write .",
+		"format:check": "biome format .",
+		"lint": "biome lint .",
+		"lint:fix": "biome lint --write .",
+		"check": "biome check .",
+		"check:fix": "biome check --write ."
 	},
 	"devDependencies": {
 		"@astrojs/lit": "^4.0.1",
@@ -25,5 +30,8 @@
 		"date-fns": "^2.28.0",
 		"lit": "^3.1.2",
 		"prettier-plugin-astro": "^0.0.12"
+	},
+	"dependencies": {
+		"@astrojs/rss": "^4.0.12"
 	}
 }

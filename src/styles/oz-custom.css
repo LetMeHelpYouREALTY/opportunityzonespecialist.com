@@ -1,0 +1,554 @@
+/* OZ Specialist Custom Styles */
+:root {
+  /* OZ Brand Colors */
+  --oz-navy: #1e3a8a;
+  --oz-navy-light: #3b82f6;
+  --oz-gold: #f59e0b;
+  --oz-gold-light: #fbbf24;
+  --oz-white: #ffffff;
+  --oz-gray-50: #f9fafb;
+  --oz-gray-100: #f3f4f6;
+  --oz-gray-200: #e5e7eb;
+  --oz-gray-300: #d1d5db;
+  --oz-gray-400: #9ca3af;
+  --oz-gray-500: #6b7280;
+  --oz-gray-600: #4b5563;
+  --oz-gray-700: #374151;
+  --oz-gray-800: #1f2937;
+  --oz-gray-900: #111827;
+  
+  /* Semantic Colors */
+  --oz-success: #10b981;
+  --oz-warning: #f59e0b;
+  --oz-error: #ef4444;
+  --oz-info: #3b82f6;
+  
+  /* Typography */
+  --oz-font-heading: 'Roboto Serif', serif;
+  --oz-font-body: 'Lato', sans-serif;
+  
+  /* Spacing */
+  --oz-section-padding: 4rem 0;
+  --oz-container-padding: 1.5rem;
+  
+  /* Shadows */
+  --oz-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --oz-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --oz-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --oz-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --oz-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Override theme colors */
+:root {
+  --theme-primary: var(--oz-navy);
+  --theme-primary-light: var(--oz-navy-light);
+  --theme-accent: var(--oz-gold);
+  --theme-accent-light: var(--oz-gold-light);
+  --theme-text: var(--oz-gray-800);
+  --theme-text-light: var(--oz-gray-600);
+  --theme-bg: var(--oz-white);
+  --theme-bg-alt: var(--oz-gray-50);
+}
+
+/* OZ Logo Styling */
+.oz-logo {
+  font-family: var(--oz-font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--oz-navy);
+  text-decoration: none;
+  letter-spacing: -0.025em;
+}
+
+.oz-logo .accent {
+  color: var(--oz-gold);
+}
+
+/* Hero Section */
+.oz-hero {
+  background: linear-gradient(135deg, var(--oz-navy) 0%, var(--oz-navy-light) 100%);
+  color: var(--oz-white);
+  padding: var(--oz-section-padding);
+  position: relative;
+  overflow: hidden;
+}
+
+.oz-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.oz-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--oz-container-padding);
+  text-align: center;
+}
+
+.oz-hero h1 {
+  font-family: var(--oz-font-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.oz-hero .subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.oz-hero .cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* Authority Section */
+.oz-authority {
+  padding: var(--oz-section-padding);
+  background: var(--oz-gray-50);
+}
+
+.oz-authority-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--oz-container-padding);
+}
+
+.oz-authority h2 {
+  font-family: var(--oz-font-heading);
+  font-size: 2.5rem;
+  color: var(--oz-navy);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.oz-authority-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.oz-authority-card {
+  background: var(--oz-white);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--oz-shadow);
+  text-align: center;
+}
+
+.oz-authority-card h3 {
+  font-family: var(--oz-font-heading);
+  color: var(--oz-navy);
+  margin-bottom: 1rem;
+}
+
+.oz-authority-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.oz-stat {
+  text-align: center;
+}
+
+.oz-stat-number {
+  font-family: var(--oz-font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--oz-gold);
+  display: block;
+}
+
+.oz-stat-label {
+  color: var(--oz-gray-600);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Services Section */
+.oz-services {
+  padding: var(--oz-section-padding);
+}
+
+.oz-services-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--oz-container-padding);
+}
+
+.oz-services h2 {
+  font-family: var(--oz-font-heading);
+  font-size: 2.5rem;
+  color: var(--oz-navy);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.oz-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.oz-service-card {
+  background: var(--oz-white);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--oz-shadow);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid var(--oz-gold);
+}
+
+.oz-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--oz-shadow-lg);
+}
+
+.oz-service-card h3 {
+  font-family: var(--oz-font-heading);
+  color: var(--oz-navy);
+  margin-bottom: 1rem;
+}
+
+.oz-service-card .icon {
+  width: 3rem;
+  height: 3rem;
+  background: var(--oz-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: var(--oz-white);
+  font-size: 1.5rem;
+}
+
+/* Tools Section */
+.oz-tools {
+  padding: var(--oz-section-padding);
+  background: var(--oz-gray-50);
+}
+
+.oz-tools-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--oz-container-padding);
+}
+
+.oz-tools h2 {
+  font-family: var(--oz-font-heading);
+  font-size: 2.5rem;
+  color: var(--oz-navy);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.oz-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.oz-tool-card {
+  background: var(--oz-white);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--oz-shadow);
+}
+
+.oz-tool-card h3 {
+  font-family: var(--oz-font-heading);
+  color: var(--oz-navy);
+  margin-bottom: 1rem;
+}
+
+/* Testimonials Section */
+.oz-testimonials {
+  padding: var(--oz-section-padding);
+}
+
+.oz-testimonials-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--oz-container-padding);
+}
+
+.oz-testimonials h2 {
+  font-family: var(--oz-font-heading);
+  font-size: 2.5rem;
+  color: var(--oz-navy);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.oz-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.oz-testimonial {
+  background: var(--oz-white);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--oz-shadow);
+  position: relative;
+}
+
+.oz-testimonial::before {
+  content: '"';
+  position: absolute;
+  top: -0.5rem;
+  left: 1rem;
+  font-size: 4rem;
+  color: var(--oz-gold);
+  font-family: var(--oz-font-heading);
+  line-height: 1;
+}
+
+.oz-testimonial-text {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: var(--oz-gray-700);
+}
+
+.oz-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.oz-testimonial-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--oz-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--oz-white);
+  font-weight: 700;
+}
+
+.oz-testimonial-info h4 {
+  color: var(--oz-navy);
+  margin: 0;
+  font-size: 1rem;
+}
+
+.oz-testimonial-info p {
+  color: var(--oz-gray-600);
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+/* CTA Section */
+.oz-cta {
+  padding: var(--oz-section-padding);
+  background: var(--oz-navy);
+  color: var(--oz-white);
+  text-align: center;
+}
+
+.oz-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--oz-container-padding);
+}
+
+.oz-cta h2 {
+  font-family: var(--oz-font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.oz-cta p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.oz-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.oz-btn-primary {
+  background: var(--oz-gold);
+  color: var(--oz-white);
+}
+
+.oz-btn-primary:hover {
+  background: var(--oz-gold-light);
+  transform: translateY(-1px);
+  box-shadow: var(--oz-shadow-md);
+}
+
+.oz-btn-secondary {
+  background: transparent;
+  color: var(--oz-white);
+  border: 2px solid var(--oz-white);
+}
+
+.oz-btn-secondary:hover {
+  background: var(--oz-white);
+  color: var(--oz-navy);
+}
+
+.oz-btn-outline {
+  background: transparent;
+  color: var(--oz-navy);
+  border: 2px solid var(--oz-navy);
+}
+
+.oz-btn-outline:hover {
+  background: var(--oz-navy);
+  color: var(--oz-white);
+}
+
+/* Forms */
+.oz-form {
+  background: var(--oz-white);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--oz-shadow-lg);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.oz-form h3 {
+  font-family: var(--oz-font-heading);
+  color: var(--oz-navy);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.oz-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.oz-form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--oz-gray-700);
+  font-weight: 600;
+}
+
+.oz-form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--oz-gray-200);
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.oz-form-input:focus {
+  outline: none;
+  border-color: var(--oz-gold);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .oz-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .oz-hero .subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .oz-hero .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .oz-authority h2,
+  .oz-services h2,
+  .oz-tools h2,
+  .oz-testimonials h2,
+  .oz-cta h2 {
+    font-size: 2rem;
+  }
+  
+  .oz-authority-grid,
+  .oz-services-grid,
+  .oz-tools-grid,
+  .oz-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .oz-authority-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .oz-stat-number {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .oz-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .oz-authority-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .oz-container-padding {
+    padding: 1rem;
+  }
+}
+
+/* Utility Classes */
+.oz-text-center { text-align: center; }
+.oz-text-left { text-align: left; }
+.oz-text-right { text-align: right; }
+
+.oz-mb-1 { margin-bottom: 0.25rem; }
+.oz-mb-2 { margin-bottom: 0.5rem; }
+.oz-mb-3 { margin-bottom: 0.75rem; }
+.oz-mb-4 { margin-bottom: 1rem; }
+.oz-mb-5 { margin-bottom: 1.25rem; }
+.oz-mb-6 { margin-bottom: 1.5rem; }
+
+.oz-mt-1 { margin-top: 0.25rem; }
+.oz-mt-2 { margin-top: 0.5rem; }
+.oz-mt-3 { margin-top: 0.75rem; }
+.oz-mt-4 { margin-top: 1rem; }
+.oz-mt-5 { margin-top: 1.25rem; }
+.oz-mt-6 { margin-top: 1.5rem; }

@@ -1,0 +1,228 @@
+---
+import Layout from '../layouts/Page.astro';
+import '../styles/oz-custom.css';
+---
+
+<Layout>
+	<!-- Hero Section -->
+	<section class="oz-hero">
+		<div class="oz-hero-content">
+			<h1>Contact OZ Specialist</h1>
+			<p class="subtitle">Get expert guidance on your Opportunity Zone investment strategy</p>
+		</div>
+	</section>
+
+	<!-- Contact Form & Info -->
+	<section class="oz-services">
+		<div class="oz-services-content">
+			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem; margin-top: 2rem;">
+				<!-- Contact Form -->
+				<div>
+					<h2 style="color: var(--oz-navy); margin-bottom: 2rem;">Schedule Your Free Consultation</h2>
+					<form class="oz-form" id="contact-form" style="max-width: none;">
+						<div class="oz-form-group">
+							<label class="oz-form-label" for="name">Full Name *</label>
+							<input type="text" id="name" name="name" class="oz-form-input" required>
+						</div>
+						
+						<div class="oz-form-group">
+							<label class="oz-form-label" for="email">Email Address *</label>
+							<input type="email" id="email" name="email" class="oz-form-input" required>
+						</div>
+						
+						<div class="oz-form-group">
+							<label class="oz-form-label" for="phone">Phone Number</label>
+							<input type="tel" id="phone" name="phone" class="oz-form-input">
+						</div>
+						
+						<div class="oz-form-group">
+							<label class="oz-form-label" for="company">Company/Organization</label>
+							<input type="text" id="company" name="company" class="oz-form-input">
+						</div>
+						
+						<div class="oz-form-group">
+							<label class="oz-form-label" for="investment-amount">Investment Amount</label>
+							<select id="investment-amount" name="investment-amount" class="oz-form-input">
+								<option value="">Select Range</option>
+								<option value="100k-500k">$100K - $500K</option>
+								<option value="500k-1m">$500K - $1M</option>
+								<option value="1m-5m">$1M - $5M</option>
+								<option value="5m-10m">$5M - $10M</option>
+								<option value="10m+">$10M+</option>
+							</select>
+						</div>
+						
+						<div class="oz-form-group">
+							<label class="oz-form-label" for="service">Service Interest</label>
+							<select id="service" name="service" class="oz-form-input">
+								<option value="">Select Service</option>
+								<option value="investment-consulting">Investment Consulting</option>
+								<option value="property-analysis">Property Analysis</option>
+								<option value="tax-optimization">Tax Optimization</option>
+								<option value="fund-formation">Fund Formation</option>
+								<option value="general-inquiry">General Inquiry</option>
+							</select>
+						</div>
+						
+						<div class="oz-form-group">
+							<label class="oz-form-label" for="message">Message</label>
+							<textarea id="message" name="message" class="oz-form-input" rows="4" placeholder="Tell us about your investment goals and how we can help..."></textarea>
+						</div>
+						
+						<button type="submit" class="oz-btn oz-btn-primary" style="width: 100%;">Send Message</button>
+					</form>
+				</div>
+				
+				<!-- Contact Information -->
+				<div>
+					<h2 style="color: var(--oz-navy); margin-bottom: 2rem;">Get in Touch</h2>
+					
+					<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow); margin-bottom: 2rem;">
+						<h3 style="color: var(--oz-navy); margin-bottom: 1rem;">📞 Phone</h3>
+						<p style="margin-bottom: 0.5rem;"><strong>Main Office:</strong></p>
+						<p style="color: var(--oz-gray-600); margin-bottom: 1rem;">+1 (555) 123-4567</p>
+						<p style="margin-bottom: 0.5rem;"><strong>Emergency Line:</strong></p>
+						<p style="color: var(--oz-gray-600);">+1 (555) 123-4568</p>
+					</div>
+					
+					<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow); margin-bottom: 2rem;">
+						<h3 style="color: var(--oz-navy); margin-bottom: 1rem;">✉️ Email</h3>
+						<p style="margin-bottom: 0.5rem;"><strong>General Inquiries:</strong></p>
+						<p style="color: var(--oz-gray-600); margin-bottom: 1rem;">info@opportunityzonespecialist.com</p>
+						<p style="margin-bottom: 0.5rem;"><strong>Investment Consulting:</strong></p>
+						<p style="color: var(--oz-gray-600); margin-bottom: 1rem;">consulting@opportunityzonespecialist.com</p>
+						<p style="margin-bottom: 0.5rem;"><strong>Compliance Support:</strong></p>
+						<p style="color: var(--oz-gray-600);">compliance@opportunityzonespecialist.com</p>
+					</div>
+					
+					<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow); margin-bottom: 2rem;">
+						<h3 style="color: var(--oz-navy); margin-bottom: 1rem;">📍 Office Address</h3>
+						<p style="color: var(--oz-gray-600); margin-bottom: 0.5rem;">OZ Specialist</p>
+						<p style="color: var(--oz-gray-600); margin-bottom: 0.5rem;">123 Financial District</p>
+						<p style="color: var(--oz-gray-600); margin-bottom: 0.5rem;">Suite 500</p>
+						<p style="color: var(--oz-gray-600);">New York, NY 10004</p>
+					</div>
+					
+					<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow);">
+						<h3 style="color: var(--oz-navy); margin-bottom: 1rem;">🕒 Business Hours</h3>
+						<p style="color: var(--oz-gray-600); margin-bottom: 0.5rem;"><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM EST</p>
+						<p style="color: var(--oz-gray-600); margin-bottom: 0.5rem;"><strong>Saturday:</strong> 10:00 AM - 2:00 PM EST</p>
+						<p style="color: var(--oz-gray-600);"><strong>Sunday:</strong> Closed</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Emergency Contact -->
+	<section class="oz-authority">
+		<div class="oz-authority-content">
+			<div style="background: var(--oz-gold); color: var(--oz-white); padding: 2rem; border-radius: 0.5rem; text-align: center;">
+				<h2 style="margin-bottom: 1rem;">⏰ Deadline Approaching?</h2>
+				<p style="font-size: 1.125rem; margin-bottom: 1.5rem;">
+					If you have a capital gains deadline approaching and need immediate assistance with your Opportunity Zone investment, call our emergency line for priority support.
+				</p>
+				<a href="tel:+15551234568" class="oz-btn" style="background: var(--oz-white); color: var(--oz-gold); font-size: 1.125rem; padding: 1rem 2rem;">Call Emergency Line: (555) 123-4568</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ Section -->
+	<section class="oz-tools">
+		<div class="oz-tools-content">
+			<h2>Frequently Asked Questions</h2>
+			<div style="max-width: 800px; margin: 0 auto;">
+				<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow); margin-bottom: 1rem;">
+					<h3 style="color: var(--oz-navy); margin-bottom: 1rem;">How quickly can you respond to inquiries?</h3>
+					<p style="color: var(--oz-gray-600);">We typically respond to all inquiries within 24 hours. For urgent matters or approaching deadlines, we offer same-day response through our emergency line.</p>
+				</div>
+				
+				<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow); margin-bottom: 1rem;">
+					<h3 style="color: var(--oz-navy); margin-bottom: 1rem;">Do you offer free consultations?</h3>
+					<p style="color: var(--oz-gray-600);">Yes, we offer free initial consultations to discuss your investment goals and determine how we can help you maximize your Opportunity Zone investment potential.</p>
+				</div>
+				
+				<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow); margin-bottom: 1rem;">
+					<h3 style="color: var(--oz-navy); margin-bottom: 1rem;">What information should I prepare for our consultation?</h3>
+					<p style="color: var(--oz-gray-600);">Please have details about your capital gains, investment timeline, risk tolerance, and any specific properties or markets you're considering. We'll guide you through the process.</p>
+				</div>
+				
+				<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow);">
+					<h3 style="color: var(--oz-navy); margin-bottom: 1rem;">Do you work with clients nationwide?</h3>
+					<p style="color: var(--oz-gray-600);">Yes, we work with clients across all 50 states and can provide remote consultations via video conference. We also travel to major markets for in-person meetings when needed.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="oz-cta">
+		<div class="oz-cta-content">
+			<h2>Ready to Get Started?</h2>
+			<p>Don't wait - Opportunity Zone investment deadlines are approaching. Contact us today to secure your consultation and begin maximizing your tax benefits.</p>
+			<div class="oz-hero .cta-buttons">
+				<a href="tel:+15551234567" class="oz-btn oz-btn-primary">Call Now: (555) 123-4567</a>
+				<a href="#contact-form" class="oz-btn oz-btn-secondary">Send Message</a>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<script>
+	// Contact form submission
+	document.getElementById('contact-form').addEventListener('submit', function(e) {
+		e.preventDefault();
+		
+		// Get form data
+		const formData = new FormData(this);
+		const data = Object.fromEntries(formData);
+		
+		// In a real implementation, this would send data to your CRM/email service
+		console.log('Form submitted:', data);
+		
+		// Show success message
+		alert('Thank you for your message! We\'ll contact you within 24 hours to schedule your free consultation.');
+		
+		// Reset form
+		this.reset();
+	});
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact OZ Specialist",
+  "description": "Get expert guidance on your Opportunity Zone investment strategy",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "OZ Specialist",
+    "url": "https://opportunityzonespecialist.com",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-123-4567",
+        "contactType": "customer service",
+        "email": "info@opportunityzonespecialist.com",
+        "availableLanguage": "English"
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-123-4568",
+        "contactType": "emergency",
+        "email": "emergency@opportunityzonespecialist.com",
+        "availableLanguage": "English"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Financial District, Suite 500",
+      "addressLocality": "New York",
+      "addressRegion": "NY",
+      "postalCode": "10004",
+      "addressCountry": "US"
+    },
+    "openingHours": "Mo-Fr 09:00-18:00,Sa 10:00-14:00"
+  }
+}
+</script>
