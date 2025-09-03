@@ -1,321 +1,263 @@
 ---
 import Layout from '../layouts/Page.astro';
 import '../styles/oz-custom.css';
+
+const seo = {
+	title: 'Boyle-Duffy West Coast OZ Team | Cross-State Opportunity Zone Real Estate Experts',
+	description: 'The only cross-state OZ real estate experts covering every West Coast wealth center. Kelly Boyle (Northern CA), Eugene Boyle (Southern CA), and Dr. Jan Duffy (Nevada) help high-net-worth clients defer capital gains through strategic cross-state OZ investments.',
+};
 ---
 
-<Layout>
+<Layout {seo}>
 	<!-- Hero Section -->
 	<section class="oz-hero">
 		<div class="oz-hero-content">
-			<h1>Opportunity Zone Investment Specialist</h1>
-			<p class="subtitle">Maximize Tax Benefits • Identify Prime Properties • Ensure Compliance</p>
+			<h1>The Only Cross-State OZ Real Estate Experts Covering Every West Coast Wealth Center</h1>
+			<p class="subtitle">California capital gains → Nevada OZ investment = Federal OZ benefits + eliminates California state capital gains tax</p>
 			<div class="oz-hero-cta">
-				<form class="oz-form" id="hero-lead-form">
-					<h2>Get Your Free OZ Investment Analysis</h2>
-					<div class="oz-form-group">
-						<label class="oz-form-label" for="name">Full Name</label>
-						<input type="text" id="name" name="name" class="oz-form-input" required>
-					</div>
-					<div class="oz-form-group">
-						<label class="oz-form-label" for="email">Email Address</label>
-						<input type="email" id="email" name="email" class="oz-form-input" required>
-					</div>
-					<div class="oz-form-group">
-						<label class="oz-form-label" for="investment-amount">Investment Amount</label>
-						<select id="investment-amount" name="investment-amount" class="oz-form-input" required>
-							<option value="">Select Range</option>
-							<option value="100k-500k">$100K - $500K</option>
-							<option value="500k-1m">$500K - $1M</option>
-							<option value="1m-5m">$1M - $5M</option>
-							<option value="5m+">$5M+</option>
-						</select>
-					</div>
-					<button type="submit" class="oz-btn oz-btn-primary" style="width: 100%;">Get Free Analysis</button>
-				</form>
+				<a href="tel:702-222-1964" class="oz-btn oz-btn-primary">Call/Text Dr. Jan: 702-222-1964</a>
+				<a href="/cross-state-strategies/tax-savings-calculator" class="oz-btn oz-btn-secondary">Calculate Your Tax Savings</a>
 			</div>
 		</div>
 	</section>
 
-	<!-- Authority Positioning Section -->
-	<section class="oz-authority">
-		<div class="oz-authority-content">
-			<h2>Why Choose an OZ Specialist vs. General Advisors</h2>
-			<div class="oz-authority-grid">
-				<div class="oz-authority-card">
-					<h3>Deep OZ Expertise</h3>
-					<p>Unlike general financial advisors, we specialize exclusively in Opportunity Zone investments, staying current with the latest regulations and market opportunities.</p>
-				</div>
-				<div class="oz-authority-card">
-					<h3>Proven Track Record</h3>
-					<p>We've analyzed over $2.5 billion in OZ transactions and helped clients achieve average tax savings of 15-25% on their capital gains.</p>
-				</div>
-				<div class="oz-authority-card">
-					<h3>Compliance Assurance</h3>
-					<p>Our team ensures every investment meets IRS requirements, protecting your tax benefits and avoiding costly compliance issues.</p>
-				</div>
-			</div>
-			<div class="oz-authority-stats">
-				<div class="oz-stat">
-					<span class="oz-stat-number">$2.5B+</span>
-					<span class="oz-stat-label">OZ Transactions Analyzed</span>
-				</div>
-				<div class="oz-stat">
-					<span class="oz-stat-number">500+</span>
-					<span class="oz-stat-label">Properties Evaluated</span>
-				</div>
-				<div class="oz-stat">
-					<span class="oz-stat-number">15+</span>
-					<span class="oz-stat-label">Years Experience</span>
-				</div>
-				<div class="oz-stat">
-					<span class="oz-stat-number">98%</span>
-					<span class="oz-stat-label">Client Satisfaction</span>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Services Overview Section -->
+	<!-- Team Introduction -->
 	<section class="oz-services">
 		<div class="oz-services-content">
-			<h2>Our OZ Investment Services</h2>
+			<h2>Meet the Boyle-Duffy West Coast OZ Team</h2>
+			<p class="oz-section-subtitle">Three experts, three states, one unified strategy for maximum tax benefits</p>
+			
 			<div class="oz-services-grid">
 				<div class="oz-service-card">
-					<div class="icon">📊</div>
-					<h3>Investment Strategy Consulting</h3>
-					<p>Develop comprehensive OZ investment strategies tailored to your financial goals, risk tolerance, and timeline. We analyze market conditions and identify optimal investment opportunities.</p>
-					<a href="/investment-consulting" class="oz-btn oz-btn-outline">Learn More</a>
+					<div class="expert-photo">👩‍💼</div>
+					<h3>Kelly Boyle</h3>
+					<h4>Northern California OZ Specialist</h4>
+					<p>Bay Area, Silicon Valley, Sacramento</p>
+					<ul style="text-align: left; margin-top: 1rem;">
+						<li>Tech executive stock option strategies</li>
+						<li>Silicon Valley capital gains expertise</li>
+						<li>Wine Country OZ investments</li>
+						<li>Government district opportunities</li>
+					</ul>
+					<a href="/kelly-boyle/northern-california" class="oz-btn oz-btn-outline">Kelly's Northern CA Markets</a>
 				</div>
+				
 				<div class="oz-service-card">
-					<div class="icon">🏢</div>
-					<h3>Property Identification & Analysis</h3>
-					<p>Our team identifies and evaluates OZ-eligible properties, conducting thorough due diligence on market conditions, development potential, and compliance requirements.</p>
-					<a href="/property-analysis" class="oz-btn oz-btn-outline">Learn More</a>
+					<div class="expert-photo">👨‍💼</div>
+					<h3>Eugene Boyle</h3>
+					<h4>Southern California OZ Specialist</h4>
+					<p>LA, Orange County, San Diego</p>
+					<ul style="text-align: left; margin-top: 1rem;">
+						<li>Entertainment industry strategies</li>
+						<li>Coastal OZ property expertise</li>
+						<li>Real estate developer partnerships</li>
+						<li>Multi-family development focus</li>
+					</ul>
+					<a href="/eugene-boyle/southern-california" class="oz-btn oz-btn-outline">Eugene's Southern CA Markets</a>
 				</div>
+				
 				<div class="oz-service-card">
-					<div class="icon">💰</div>
-					<h3>Tax Optimization</h3>
-					<p>Maximize your tax benefits through strategic planning, including capital gains deferral, basis step-up strategies, and long-term tax-free appreciation planning.</p>
-					<a href="/tax-benefits" class="oz-btn oz-btn-outline">Learn More</a>
-				</div>
-				<div class="oz-service-card">
-					<div class="icon">🏛️</div>
-					<h3>QOF Formation & Management</h3>
-					<p>Assist with Qualified Opportunity Fund formation, compliance management, and ongoing fund administration to ensure IRS requirements are met throughout the investment lifecycle.</p>
-					<a href="/qualified-opportunity-funds" class="oz-btn oz-btn-outline">Learn More</a>
+					<div class="expert-photo">👩‍🎓</div>
+					<h3>Dr. Jan Duffy</h3>
+					<h4>Nevada OZ Expert</h4>
+					<p>Las Vegas, Henderson, Reno</p>
+					<ul style="text-align: left; margin-top: 1rem;">
+						<li>500+ transactions completed</li>
+						<li>No state income tax advantage</li>
+						<li>Cross-state strategy specialist</li>
+						<li>High-net-worth client focus</li>
+					</ul>
+					<a href="/dr-jan-duffy/las-vegas-oz-properties" class="oz-btn oz-btn-outline">Dr. Jan's Nevada Markets</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- Interactive Tools Section -->
-	<section class="oz-tools">
-		<div class="oz-tools-content">
-			<h2>OZ Investment Tools & Resources</h2>
-			<div class="oz-tools-grid">
-				<div class="oz-tool-card">
-					<h3>OZ Zone Lookup Tool</h3>
-					<p>Quickly verify if any property is located within a designated Opportunity Zone using our integrated Treasury Department mapping tool.</p>
-					<iframe 
-						src="https://www.cdfifund.gov/nmtc-public-viewer" 
-						title="OZ Property Lookup Tool"
-						width="100%" 
-						height="400"
-						style="border: 1px solid #e5e7eb; border-radius: 0.375rem; margin-top: 1rem;">
-					</iframe>
+	<!-- Cross-State Strategy Benefits -->
+	<section class="oz-authority">
+		<div class="oz-authority-content">
+			<h2>Why Cross-State OZ Strategies Work</h2>
+			<div class="oz-authority-grid">
+				<div class="oz-authority-card">
+					<h3>🎯 California Capital Gains</h3>
+					<p>High-net-worth Californians with significant capital gains from stock sales, real estate, or business exits need immediate tax relief.</p>
 				</div>
-				<div class="oz-tool-card">
-					<h3>ROI Calculator</h3>
-					<p>Calculate potential returns and tax savings for your Opportunity Zone investment with our comprehensive ROI calculator.</p>
-					<div id="roi-calculator" style="margin-top: 1rem;">
-						<div class="oz-form-group">
-							<label class="oz-form-label">Investment Amount</label>
-							<input type="number" id="investment-amount-calc" class="oz-form-input" placeholder="$1,000,000">
-						</div>
-						<div class="oz-form-group">
-							<label class="oz-form-label">Capital Gains Rate</label>
-							<input type="number" id="cap-gains-rate" class="oz-form-input" placeholder="20" value="20">
-						</div>
-						<div class="oz-form-group">
-							<label class="oz-form-label">Hold Period (Years)</label>
-							<input type="number" id="hold-period" class="oz-form-input" placeholder="10" value="10">
-						</div>
-						<button onclick="calculateROI()" class="oz-btn oz-btn-primary" style="width: 100%;">Calculate ROI</button>
-						<div id="roi-results" style="margin-top: 1rem; padding: 1rem; background: #f9fafb; border-radius: 0.375rem; display: none;">
-							<h3>Projected Results:</h3>
-							<p id="tax-savings"></p>
-							<p id="net-returns"></p>
-						</div>
-					</div>
+				<div class="oz-authority-card">
+					<h3>🏛️ Federal OZ Benefits</h3>
+					<p>Defer capital gains until 2026, reduce by 10-15% with basis step-up, and eliminate taxes on appreciation after 10 years.</p>
 				</div>
-				<div class="oz-tool-card">
-					<h3>Compliance Deadline Tracker</h3>
-					<p>Track important deadlines and requirements for your Opportunity Zone investment to ensure compliance and maximize benefits.</p>
-					<div id="deadline-tracker" style="margin-top: 1rem;">
-						<div class="oz-form-group">
-							<label class="oz-form-label">Investment Date</label>
-							<input type="date" id="investment-date" class="oz-form-input">
-						</div>
-						<div class="oz-form-group">
-							<label class="oz-form-label">Fund Type</label>
-							<select id="fund-type" class="oz-form-input">
-								<option value="qof">Qualified Opportunity Fund</option>
-								<option value="direct">Direct Investment</option>
-							</select>
-						</div>
-						<button onclick="trackDeadlines()" class="oz-btn oz-btn-primary" style="width: 100%;">Track Deadlines</button>
-						<div id="deadline-results" style="margin-top: 1rem; padding: 1rem; background: #f9fafb; border-radius: 0.375rem; display: none;">
-							<h3>Key Deadlines:</h3>
-							<div id="deadline-list"></div>
-						</div>
-					</div>
+				<div class="oz-authority-card">
+					<h3>💰 Nevada Tax Advantage</h3>
+					<p>No state income tax means your California capital gains are completely eliminated when invested in Nevada OZ properties.</p>
 				</div>
 			</div>
-			</div>
-		</section>
+		</div>
+	</section>
 
-	<!-- Client Success Stories -->
+	<!-- Success Stories -->
 	<section class="oz-testimonials">
 		<div class="oz-testimonials-content">
-			<h2>Client Success Stories</h2>
+			<h2>Recent Cross-State Success Stories</h2>
 			<div class="oz-testimonials-grid">
-				<div class="oz-testimonial">
-					<p class="oz-testimonial-text">OZ Specialist helped us structure a $5M investment that resulted in $1.2M in tax savings over 10 years. Their expertise in compliance and property analysis was invaluable.</p>
-					<div class="oz-testimonial-author">
-						<div class="oz-testimonial-avatar">JS</div>
-						<div class="oz-testimonial-info">
-							<h3>John Smith</h3>
-							<p>Real Estate Developer, Miami</p>
-						</div>
+				<div class="oz-testimonial-card">
+					<div class="testimonial-content">
+						<p>"Kelly connected me with Dr. Jan for a Nevada OZ investment that saved me $2.3M in California state taxes on my tech stock gains. The cross-state strategy was brilliant."</p>
+					</div>
+					<div class="testimonial-author">
+						<h4>Sarah Chen</h4>
+						<span>Tech Executive, Palo Alto</span>
 					</div>
 				</div>
-				<div class="oz-testimonial">
-					<p class="oz-testimonial-text">We were skeptical about Opportunity Zones until we worked with OZ Specialist. They identified a property that appreciated 40% in 3 years while providing significant tax benefits.</p>
-					<div class="oz-testimonial-author">
-						<div class="oz-testimonial-avatar">MJ</div>
-						<div class="oz-testimonial-info">
-							<h3>Maria Johnson</h3>
-							<p>Investment Advisor, Austin</p>
-						</div>
+				
+				<div class="oz-testimonial-card">
+					<div class="testimonial-content">
+						<p>"Eugene and Dr. Jan worked together to structure my entertainment industry capital gains into a Las Vegas OZ development. The tax savings exceeded our projections."</p>
+					</div>
+					<div class="testimonial-author">
+						<h4>Michael Rodriguez</h4>
+						<span>Entertainment Producer, Beverly Hills</span>
 					</div>
 				</div>
-				<div class="oz-testimonial">
-					<p class="oz-testimonial-text">The team's knowledge of OZ regulations saved us from a costly compliance mistake. Their ongoing support throughout the investment lifecycle has been exceptional.</p>
-					<div class="oz-testimonial-author">
-						<div class="oz-testimonial-avatar">RB</div>
-						<div class="oz-testimonial-info">
-							<h3>Robert Brown</h3>
-							<p>High Net Worth Investor, Denver</p>
-						</div>
+				
+				<div class="oz-testimonial-card">
+					<div class="testimonial-content">
+						<p>"Dr. Jan's Nevada expertise combined with the Boyle brothers' California market knowledge created the perfect cross-state OZ strategy for our family office."</p>
+					</div>
+					<div class="testimonial-author">
+						<h4>Jennifer Walsh</h4>
+						<span>Family Office Director, San Francisco</span>
 					</div>
 				</div>
 			</div>
+		</div>
+	</section>
+
+	<!-- Current Opportunities -->
+	<section class="oz-authority">
+		<div class="oz-authority-content">
+			<h2>This Week's Featured Cross-State Opportunities</h2>
+			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+				<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow);">
+					<h3>Las Vegas Tech Campus OZ</h3>
+					<p><strong>Location:</strong> Las Vegas, NV - Census Tract 32.01</p>
+					<p><strong>Investment:</strong> $1M - $5M</p>
+					<p><strong>Expected IRR:</strong> 16-20%</p>
+					<p><strong>Tax Benefit:</strong> Eliminates CA state capital gains tax</p>
+					<a href="/dr-jan-duffy/las-vegas-oz-properties" class="oz-btn oz-btn-outline">View Details</a>
+				</div>
+				
+				<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow);">
+					<h3>Henderson Mixed-Use Development</h3>
+					<p><strong>Location:</strong> Henderson, NV - Census Tract 28.03</p>
+					<p><strong>Investment:</strong> $500K - $2M</p>
+					<p><strong>Expected IRR:</strong> 14-18%</p>
+					<p><strong>Tax Benefit:</strong> Federal OZ + Nevada tax advantage</p>
+					<a href="/dr-jan-duffy/henderson-development" class="oz-btn oz-btn-outline">View Details</a>
+				</div>
+				
+				<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow);">
+					<h3>Summerlin Residential OZ</h3>
+					<p><strong>Location:</strong> Summerlin, NV - Census Tract 35.02</p>
+					<p><strong>Investment:</strong> $250K - $1M</p>
+					<p><strong>Expected IRR:</strong> 12-16%</p>
+					<p><strong>Tax Benefit:</strong> Perfect for CA capital gains deferral</p>
+					<a href="/dr-jan-duffy/summerlin-oz-opportunities" class="oz-btn oz-btn-outline">View Details</a>
+				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
 	<!-- CTA Section -->
 	<section class="oz-cta">
 		<div class="oz-cta-content">
-			<h2>Ready to Maximize Your OZ Investment Potential?</h2>
-			<p>Schedule a free consultation with our Opportunity Zone specialists to discuss your investment goals and explore tax-saving opportunities.</p>
+			<h2>Ready to Optimize Your California Capital Gains?</h2>
+			<p>Let the Boyle-Duffy team create your personalized cross-state OZ strategy. California expertise meets Nevada tax advantages for maximum benefit.</p>
 			<div class="oz-hero .cta-buttons">
-				<a href="/contact" class="oz-btn oz-btn-primary">Schedule Free Consultation</a>
-				<a href="/resources/guides" class="oz-btn oz-btn-secondary">Download OZ Guide</a>
+				<a href="tel:702-222-1964" class="oz-btn oz-btn-primary">Call/Text Dr. Jan: 702-222-1964</a>
+				<a href="/cross-state-strategies/california-nevada-benefits" class="oz-btn oz-btn-secondary">Learn Cross-State Benefits</a>
 			</div>
-			</div>
-		</section>
+		</div>
+	</section>
 </Layout>
 
-<script>
-	// ROI Calculator
-	function calculateROI() {
-		const investment = parseFloat((document.getElementById('investment-amount-calc') as HTMLInputElement)?.value || '0');
-		const capGainsRate = parseFloat((document.getElementById('cap-gains-rate') as HTMLInputElement)?.value || '0') / 100;
-		const holdPeriod = parseInt((document.getElementById('hold-period') as HTMLInputElement)?.value || '0');
-		
-		if (!investment || !capGainsRate || !holdPeriod) {
-			alert('Please fill in all fields');
-			return;
-		}
-		
-		// Simplified calculation - in reality, this would be more complex
-		const annualReturn = 0.08; // 8% annual return assumption
-		const futureValue = investment * Math.pow(1 + annualReturn, holdPeriod);
-		const appreciation = futureValue - investment;
-		const taxSavings = appreciation * capGainsRate;
-		const netReturns = futureValue - taxSavings;
-		
-		document.getElementById('tax-savings').innerHTML = `Tax Savings: $${taxSavings.toLocaleString()}`;
-		document.getElementById('net-returns').innerHTML = `Net Returns: $${netReturns.toLocaleString()}`;
-		document.getElementById('roi-results').style.display = 'block';
-	}
-	
-	// Deadline Tracker
-	function trackDeadlines() {
-		const investmentDate = new Date((document.getElementById('investment-date') as HTMLInputElement)?.value || '');
-		const fundType = (document.getElementById('fund-type') as HTMLSelectElement)?.value || '';
-		
-		if (!investmentDate) {
-			alert('Please select an investment date');
-			return;
-		}
-		
-		const deadlines = [];
-		
-		if (fundType === 'qof') {
-			// QOF specific deadlines
-			const qofDeadline = new Date(investmentDate);
-			qofDeadline.setDate(qofDeadline.getDate() + 180); // 180 days to invest in QOF
-			deadlines.push({
-				date: qofDeadline,
-				description: '180-day deadline to invest in QOF'
-			});
-		}
-		
-		// 10-year hold for full benefits
-		const tenYearDate = new Date(investmentDate);
-		tenYearDate.setFullYear(tenYearDate.getFullYear() + 10);
-		deadlines.push({
-			date: tenYearDate,
-			description: '10-year hold period for tax-free appreciation'
-		});
-		
-		// 5-year basis step-up
-		const fiveYearDate = new Date(investmentDate);
-		fiveYearDate.setFullYear(fiveYearDate.getFullYear() + 5);
-		deadlines.push({
-			date: fiveYearDate,
-			description: '5-year basis step-up (10% reduction)'
-		});
-		
-		// 7-year basis step-up
-		const sevenYearDate = new Date(investmentDate);
-		sevenYearDate.setFullYear(sevenYearDate.getFullYear() + 7);
-		deadlines.push({
-			date: sevenYearDate,
-			description: '7-year basis step-up (15% reduction)'
-		});
-		
-		let deadlineHTML = '';
-		deadlines.forEach(deadline => {
-			deadlineHTML += `<p><strong>${deadline.date.toLocaleDateString()}:</strong> ${deadline.description}</p>`;
-		});
-		
-		document.getElementById('deadline-list').innerHTML = deadlineHTML;
-		document.getElementById('deadline-results').style.display = 'block';
-	}
-	
-	// Lead form submission
-	document.getElementById('hero-lead-form').addEventListener('submit', function(e) {
-		e.preventDefault();
-		// In a real implementation, this would send data to your CRM/email service
-		alert('Thank you! We\'ll contact you within 24 hours with your free OZ investment analysis.');
-	});
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Boyle-Duffy West Coast OZ Team",
+  "description": "Cross-state opportunity zone real estate experts covering California and Nevada",
+  "url": "https://boyle-duffy-oz.com",
+  "areaServed": [
+    {
+      "@type": "State",
+      "name": "California"
+    },
+    {
+      "@type": "State", 
+      "name": "Nevada"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Opportunity Zone Real Estate Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Cross-State OZ Tax Strategy"
+        }
+      }
+    ]
+  }
+}
 </script>
 
 <style>
-	.oz-hero-cta {
+	.expert-photo {
+		width: 4rem;
+		height: 4rem;
+		background: var(--oz-gold);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto 1rem;
+		font-size: 2rem;
+	}
+	
+	.oz-testimonials-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
 		margin-top: 2rem;
+	}
+	
+	.oz-testimonial-card {
+		background: var(--oz-white);
+		padding: 2rem;
+		border-radius: 0.5rem;
+		box-shadow: var(--oz-shadow);
+	}
+	
+	.testimonial-content {
+		margin-bottom: 1.5rem;
+	}
+	
+	.testimonial-content p {
+		font-style: italic;
+		color: var(--oz-gray-700);
+		line-height: 1.6;
+	}
+	
+	.testimonial-author h4 {
+		color: var(--oz-navy);
+		margin: 0 0 0.25rem 0;
+	}
+	
+	.testimonial-author span {
+		color: var(--oz-gray-600);
+		font-size: 0.875rem;
 	}
 	
 	.oz-hero .cta-buttons {

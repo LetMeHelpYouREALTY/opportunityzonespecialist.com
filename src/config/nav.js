@@ -4,132 +4,132 @@ export const nav = [
 		slug: '/',
 	},
 	{
-		title: 'Investments',
-		slug: '/investments',
+		title: 'California OZ',
+		slug: '/california-oz',
 		children: [
 			{
-				title: 'Current Opportunities',
-				slug: '/investments/current-opportunities',
+				title: 'Northern California (Kelly Boyle)',
+				slug: '/kelly-boyle/northern-california',
 			},
 			{
-				title: 'Qualified Opportunity Funds',
-				slug: '/investments/qualified-opportunity-funds',
+				title: 'Southern California (Eugene Boyle)',
+				slug: '/eugene-boyle/southern-california',
 			},
 			{
-				title: 'Development Projects',
-				slug: '/investments/development-projects',
+				title: 'Bay Area OZ Properties',
+				slug: '/kelly-boyle/bay-area-oz-properties',
 			},
 			{
-				title: 'Real Estate Opportunities',
-				slug: '/investments/real-estate-opportunities',
+				title: 'Los Angeles Metro OZ',
+				slug: '/eugene-boyle/los-angeles-metro-oz',
 			},
 			{
-				title: 'Business Investments',
-				slug: '/investments/business-investments',
+				title: 'California OZ Market Reports',
+				slug: '/california-oz/market-reports',
 			},
 		],
 	},
 	{
-		title: 'Tax Benefits',
-		slug: '/tax-benefits',
+		title: 'Nevada OZ',
+		slug: '/nevada-oz',
 		children: [
 			{
-				title: 'OZ Tax Calculator',
-				slug: '/tax-benefits/calculator',
+				title: 'Las Vegas OZ Properties',
+				slug: '/dr-jan-duffy/las-vegas-oz-properties',
 			},
 			{
-				title: 'Capital Gains Deferral',
-				slug: '/tax-benefits/capital-gains-deferral',
+				title: 'Henderson Development',
+				slug: '/dr-jan-duffy/henderson-development',
 			},
 			{
-				title: '10-Year Tax Elimination',
-				slug: '/tax-benefits/10-year-tax-elimination',
+				title: 'Summerlin OZ Opportunities',
+				slug: '/dr-jan-duffy/summerlin-oz-opportunities',
+			},
+			{
+				title: 'Reno-Tahoe OZ Markets',
+				slug: '/dr-jan-duffy/reno-tahoe-oz-markets',
+			},
+			{
+				title: 'Nevada Tax Advantage',
+				slug: '/nevada-oz/tax-advantage-calculator',
+			},
+		],
+	},
+	{
+		title: 'Cross-State Strategies',
+		slug: '/cross-state-strategies',
+		children: [
+			{
+				title: 'California → Nevada Benefits',
+				slug: '/cross-state-strategies/california-nevada-benefits',
+			},
+			{
+				title: 'Tax Savings Calculator',
+				slug: '/cross-state-strategies/tax-savings-calculator',
+			},
+			{
+				title: 'State-by-State Comparison',
+				slug: '/cross-state-strategies/state-comparison',
 			},
 			{
 				title: 'Timeline & Requirements',
-				slug: '/tax-benefits/timeline-requirements',
+				slug: '/cross-state-strategies/timeline-requirements',
 			},
 			{
-				title: 'IRS Compliance Checklist',
-				slug: '/tax-benefits/irs-compliance-checklist',
-			},
-		],
-	},
-	{
-		title: 'OZ Data',
-		slug: '/oz-data',
-		children: [
-			{
-				title: 'Interactive OZ Map',
-				slug: '/oz-data/interactive-map',
-			},
-			{
-				title: 'Zone Demographics',
-				slug: '/oz-data/demographics-statistics',
-			},
-			{
-				title: 'Economic Metrics',
-				slug: '/oz-data/economic-development-metrics',
-			},
-			{
-				title: 'Market Analysis',
-				slug: '/oz-data/market-analysis-by-region',
-			},
-			{
-				title: 'Census Tract Lookup',
-				slug: '/oz-data/census-tract-lookup',
+				title: 'Success Stories',
+				slug: '/cross-state-strategies/success-stories',
 			},
 		],
 	},
 	{
-		title: 'Process',
-		slug: '/process',
+		title: 'Current Opportunities',
+		slug: '/current-opportunities',
 		children: [
 			{
-				title: 'Investor Qualification',
-				slug: '/process/investor-qualification',
+				title: 'Featured Properties This Week',
+				slug: '/current-opportunities/featured-properties',
 			},
 			{
-				title: 'Due Diligence',
-				slug: '/process/due-diligence-resources',
+				title: 'Development Pipeline',
+				slug: '/current-opportunities/development-pipeline',
 			},
 			{
-				title: 'Legal Documentation',
-				slug: '/process/legal-documentation',
+				title: 'Commercial OZ Properties',
+				slug: '/current-opportunities/commercial-properties',
 			},
 			{
-				title: 'Fund Management',
-				slug: '/process/fund-management-process',
+				title: 'Residential OZ Communities',
+				slug: '/current-opportunities/residential-communities',
 			},
 			{
-				title: 'Reporting & Compliance',
-				slug: '/process/reporting-compliance',
+				title: 'Investment Partnerships',
+				slug: '/current-opportunities/investment-partnerships',
 			},
 		],
 	},
 	{
-		title: 'Resources',
-		slug: '/resources',
+		title: 'Team',
+		slug: '/team',
 		children: [
 			{
-				title: 'Regulation Updates',
-				slug: '/resources/regulation-updates',
+				title: 'Meet the Boyle-Duffy Team',
+				slug: '/team/meet-the-team',
 			},
 			{
-				title: 'Case Studies',
-				slug: '/resources/case-studies-success-stories',
+				title: 'Kelly Boyle - Northern CA',
+				slug: '/team/kelly-boyle',
 			},
 			{
-				title: 'Webinars & Events',
-				slug: '/resources/webinars-events',
+				title: 'Eugene Boyle - Southern CA',
+				slug: '/team/eugene-boyle',
 			},
 			{
-				title: 'White Papers',
-				slug: '/resources/white-papers-research',
+				title: 'Dr. Jan Duffy - Nevada',
+				slug: '/team/dr-jan-duffy',
 			},
 			{
-				title: 'FAQ & Tax Guidance',
-				slug: '/resources/faq-tax-guidance',
+				title: 'Client Success Stories',
+				slug: '/team/client-success-stories',
 			},
 		],
 	},

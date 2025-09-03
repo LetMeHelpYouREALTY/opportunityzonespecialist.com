@@ -18,78 +18,78 @@ export const footerSocials = [
 
 export const footerLists = [
 	{
-		title: 'Investments',
+		title: 'California OZ Markets',
 		items: [
 			{
-				title: 'Current Opportunities',
-				slug: '/investments/current-opportunities',
+				title: 'Northern California (Kelly Boyle)',
+				slug: '/kelly-boyle/northern-california',
 			},
 			{
-				title: 'Qualified Opportunity Funds',
-				slug: '/investments/qualified-opportunity-funds',
+				title: 'Southern California (Eugene Boyle)',
+				slug: '/eugene-boyle/southern-california',
 			},
 			{
-				title: 'Development Projects',
-				slug: '/investments/development-projects',
+				title: 'Bay Area OZ Properties',
+				slug: '/kelly-boyle/bay-area-oz-properties',
 			},
 			{
-				title: 'Real Estate Opportunities',
-				slug: '/investments/real-estate-opportunities',
+				title: 'Los Angeles Metro OZ',
+				slug: '/eugene-boyle/los-angeles-metro-oz',
 			},
 		],
 	},
 	{
-		title: 'Tax Benefits',
+		title: 'Nevada OZ Markets',
 		items: [
 			{
-				title: 'OZ Tax Calculator',
-				slug: '/tax-benefits/calculator',
+				title: 'Las Vegas OZ Properties',
+				slug: '/dr-jan-duffy/las-vegas-oz-properties',
 			},
 			{
-				title: 'Capital Gains Deferral',
-				slug: '/tax-benefits/capital-gains-deferral',
+				title: 'Henderson Development',
+				slug: '/dr-jan-duffy/henderson-development',
 			},
 			{
-				title: '10-Year Tax Elimination',
-				slug: '/tax-benefits/10-year-tax-elimination',
+				title: 'Summerlin OZ Opportunities',
+				slug: '/dr-jan-duffy/summerlin-oz-opportunities',
 			},
 			{
-				title: 'IRS Compliance Checklist',
-				slug: '/tax-benefits/irs-compliance-checklist',
+				title: 'Nevada Tax Advantage',
+				slug: '/nevada-oz/tax-advantage-calculator',
 			},
 		],
 	},
 	{
-		title: 'Resources',
+		title: 'Cross-State Strategies',
 		items: [
 			{
-				title: 'Regulation Updates',
-				slug: '/resources/regulation-updates',
+				title: 'California → Nevada Benefits',
+				slug: '/cross-state-strategies/california-nevada-benefits',
 			},
 			{
-				title: 'Case Studies',
-				slug: '/resources/case-studies-success-stories',
+				title: 'Tax Savings Calculator',
+				slug: '/cross-state-strategies/tax-savings-calculator',
 			},
 			{
-				title: 'White Papers',
-				slug: '/resources/white-papers-research',
+				title: 'State-by-State Comparison',
+				slug: '/cross-state-strategies/state-comparison',
 			},
 			{
-				title: 'FAQ & Tax Guidance',
-				slug: '/resources/faq-tax-guidance',
+				title: 'Success Stories',
+				slug: '/cross-state-strategies/success-stories',
 			},
 		],
 	},
 	{
-		title: 'Legal & Compliance',
+		title: 'Team & Contact',
 		items: [
 			{
-				title: 'Investor Qualification',
-				slug: '/process/investor-qualification',
+				title: 'Meet the Boyle-Duffy Team',
+				slug: '/team/meet-the-team',
 			},
 			{
-				title: 'Due Diligence',
-				slug: '/process/due-diligence-resources',
+				title: 'Dr. Jan Duffy - Nevada',
+				slug: '/team/dr-jan-duffy',
 			},
 			{
 				title: 'Privacy Policy',

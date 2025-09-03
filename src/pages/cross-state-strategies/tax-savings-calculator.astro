@@ -1,0 +1,311 @@
+---
+import Layout from '../../../layouts/Page.astro';
+import '../../../styles/oz-custom.css';
+
+const seo = {
+	title: 'California-Nevada OZ Tax Savings Calculator | Cross-State Strategy Benefits',
+	description: 'Calculate your tax savings with our California-Nevada cross-state OZ strategy calculator. See how California capital gains can be optimized through Nevada OZ investments.',
+};
+---
+
+<Layout {seo}>
+	<!-- Hero Section -->
+	<section class="oz-hero">
+		<div class="oz-hero-content">
+			<h1>California-Nevada Cross-State OZ Tax Savings Calculator</h1>
+			<p class="subtitle">Calculate your potential tax savings by investing California capital gains in Nevada Opportunity Zone properties</p>
+		</div>
+	</section>
+
+	<!-- Calculator Section -->
+	<section class="oz-services">
+		<div class="oz-services-content">
+			<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem;">
+				<!-- Calculator Inputs -->
+				<div>
+					<h2>Your Investment Parameters</h2>
+					<form class="oz-form" id="cross-state-calculator-form">
+						<div class="oz-form-group">
+							<label class="oz-form-label" for="capital-gains">California Capital Gains Amount ($)</label>
+							<input type="number" id="capital-gains" name="capital-gains" class="oz-form-input" placeholder="2000000" required>
+						</div>
+						
+						<div class="oz-form-group">
+							<label class="oz-form-label" for="ca-state-rate">California State Tax Rate (%)</label>
+							<input type="number" id="ca-state-rate" name="ca-state-rate" class="oz-form-input" placeholder="13.3" value="13.3" required>
+						</div>
+						
+						<div class="oz-form-group">
+							<label class="oz-form-label" for="federal-rate">Federal Capital Gains Rate (%)</label>
+							<input type="number" id="federal-rate" name="federal-rate" class="oz-form-input" placeholder="20" value="20" required>
+						</div>
+						
+						<div class="oz-form-group">
+							<label class="oz-form-label" for="hold-period">Hold Period (Years)</label>
+							<select id="hold-period" name="hold-period" class="oz-form-input" required>
+								<option value="5">5 Years (10% Basis Step-up)</option>
+								<option value="7">7 Years (15% Basis Step-up)</option>
+								<option value="10" selected>10 Years (Tax-free Appreciation)</option>
+							</select>
+						</div>
+						
+						<div class="oz-form-group">
+							<label class="oz-form-label" for="annual-return">Expected Annual Return (%)</label>
+							<input type="number" id="annual-return" name="annual-return" class="oz-form-input" placeholder="12" value="12" step="0.1" required>
+						</div>
+						
+						<div class="oz-form-group">
+							<label class="oz-form-label" for="investment-date">Investment Date</label>
+							<input type="date" id="investment-date" name="investment-date" class="oz-form-input" required>
+						</div>
+						
+						<button type="submit" class="oz-btn oz-btn-primary" style="width: 100%;">Calculate Cross-State Savings</button>
+					</form>
+				</div>
+				
+				<!-- Calculator Results -->
+				<div>
+					<h2>Cross-State Tax Benefits Analysis</h2>
+					<div id="calculator-results" style="display: none;">
+						<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow);">
+							<h3>California Tax Elimination</h3>
+							<div class="benefit-item">
+								<span class="benefit-label">California State Tax Saved:</span>
+								<span class="benefit-value" id="ca-tax-saved">$0</span>
+							</div>
+							<div class="benefit-item">
+								<span class="benefit-label">Nevada State Tax:</span>
+								<span class="benefit-value" id="nv-tax">$0</span>
+							</div>
+							
+							<h3>Federal OZ Benefits</h3>
+							<div class="benefit-item">
+								<span class="benefit-label">Tax Deferral Amount:</span>
+								<span class="benefit-value" id="deferral-amount">$0</span>
+							</div>
+							<div class="benefit-item">
+								<span class="benefit-label">Basis Step-up %:</span>
+								<span class="benefit-value" id="basis-stepup">0%</span>
+							</div>
+							<div class="benefit-item">
+								<span class="benefit-label">Reduced Taxable Amount:</span>
+								<span class="benefit-value" id="reduced-taxable">$0</span>
+							</div>
+							
+							<h3>Long-term Benefits (10+ Years)</h3>
+							<div class="benefit-item">
+								<span class="benefit-label">Total Investment Value:</span>
+								<span class="benefit-value" id="total-value">$0</span>
+							</div>
+							<div class="benefit-item">
+								<span class="benefit-label">Appreciation Amount:</span>
+								<span class="benefit-value" id="appreciation">$0</span>
+							</div>
+							<div class="benefit-item">
+								<span class="benefit-label">Tax-free Appreciation:</span>
+								<span class="benefit-value" id="tax-free-appreciation">$0</span>
+							</div>
+							
+							<h3>Total Cross-State Savings</h3>
+							<div class="benefit-item total-savings">
+								<span class="benefit-label">Total Tax Savings:</span>
+								<span class="benefit-value" id="total-savings">$0</span>
+							</div>
+						</div>
+					</div>
+					
+					<div id="calculator-placeholder" style="background: var(--oz-gray-50); padding: 2rem; border-radius: 0.5rem; text-align: center; color: var(--oz-gray-600);">
+						<p>Enter your California capital gains to see your Nevada OZ tax savings</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Cross-State Strategy Explanation -->
+	<section class="oz-authority">
+		<div class="oz-authority-content">
+			<h2>How Cross-State OZ Strategies Work</h2>
+			<div class="oz-authority-grid">
+				<div class="oz-authority-card">
+					<h3>1. California Capital Gains</h3>
+					<p>You have significant capital gains from California sources: stock sales, real estate, business exits, or other investments. California's 13.3% state tax rate applies to these gains.</p>
+				</div>
+				<div class="oz-authority-card">
+					<h3>2. Nevada OZ Investment</h3>
+					<p>Invest your California capital gains in Nevada Opportunity Zone properties. Nevada has no state income tax, so your California capital gains tax is completely eliminated.</p>
+				</div>
+				<div class="oz-authority-card">
+					<h3>3. Federal OZ Benefits</h3>
+					<p>Still receive all federal OZ benefits: deferral until 2026, 10-15% basis step-up, and tax-free appreciation after 10 years.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Success Stories -->
+	<section class="oz-testimonials">
+		<div class="oz-testimonials-content">
+			<h2>Real Cross-State Success Stories</h2>
+			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+				<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow);">
+					<h3>Tech Executive - Palo Alto</h3>
+					<p><strong>Capital Gains:</strong> $3.2M from stock options</p>
+					<p><strong>California Tax Saved:</strong> $425,600 (13.3%)</p>
+					<p><strong>Nevada Investment:</strong> Las Vegas tech campus OZ</p>
+					<p><strong>Total Savings:</strong> $425,600 + federal OZ benefits</p>
+				</div>
+				
+				<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow);">
+					<h3>Entertainment Producer - Beverly Hills</h3>
+					<p><strong>Capital Gains:</strong> $1.8M from production sale</p>
+					<p><strong>California Tax Saved:</strong> $239,400 (13.3%)</p>
+					<p><strong>Nevada Investment:</strong> Henderson mixed-use development</p>
+					<p><strong>Total Savings:</strong> $239,400 + federal OZ benefits</p>
+				</div>
+				
+				<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow);">
+					<h3>Real Estate Developer - San Diego</h3>
+					<p><strong>Capital Gains:</strong> $5.1M from property sale</p>
+					<p><strong>California Tax Saved:</strong> $678,300 (13.3%)</p>
+					<p><strong>Nevada Investment:</strong> Summerlin residential OZ</p>
+					<p><strong>Total Savings:</strong> $678,300 + federal OZ benefits</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="oz-cta">
+		<div class="oz-cta-content">
+			<h2>Ready to Implement Your Cross-State OZ Strategy?</h2>
+			<p>Let Dr. Jan Duffy and the Boyle-Duffy team create your personalized California-Nevada OZ strategy for maximum tax benefits.</p>
+			<div class="oz-hero .cta-buttons">
+				<a href="tel:702-222-1964" class="oz-btn oz-btn-primary">Call/Text Dr. Jan: 702-222-1964</a>
+				<a href="/team/meet-the-team" class="oz-btn oz-btn-secondary">Meet the Team</a>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<script>
+	document.getElementById('investment-date').valueAsDate = new Date();
+	
+	document.getElementById('cross-state-calculator-form').addEventListener('submit', function(e) {
+		e.preventDefault();
+		calculateCrossStateSavings();
+	});
+	
+	function calculateCrossStateSavings() {
+		const capitalGains = parseFloat(document.getElementById('capital-gains').value) || 0;
+		const caStateRate = parseFloat(document.getElementById('ca-state-rate').value) || 0;
+		const federalRate = parseFloat(document.getElementById('federal-rate').value) || 0;
+		const holdPeriod = parseInt(document.getElementById('hold-period').value) || 10;
+		const annualReturn = parseFloat(document.getElementById('annual-return').value) || 0;
+		const investmentDate = new Date(document.getElementById('investment-date').value);
+		
+		if (!capitalGains || !caStateRate || !federalRate || !annualReturn) {
+			alert('Please fill in all required fields');
+			return;
+		}
+		
+		// Calculate California tax elimination
+		const caTaxSaved = capitalGains * (caStateRate / 100);
+		const nvTax = 0; // Nevada has no state income tax
+		
+		// Calculate federal OZ benefits
+		const federalTax = capitalGains * (federalRate / 100);
+		const deferralEndDate = new Date('2026-12-31');
+		const deferralYears = Math.max(0, (deferralEndDate - investmentDate) / (365.25 * 24 * 60 * 60 * 1000));
+		
+		// Calculate basis step-up
+		let basisStepup = 0;
+		if (holdPeriod >= 7) {
+			basisStepup = 15;
+		} else if (holdPeriod >= 5) {
+			basisStepup = 10;
+		}
+		
+		const reducedTaxableAmount = capitalGains * (basisStepup / 100);
+		const basisStepupTaxSavings = reducedTaxableAmount * (federalRate / 100);
+		
+		// Calculate long-term appreciation
+		const totalValue = capitalGains * Math.pow(1 + (annualReturn / 100), holdPeriod);
+		const appreciation = totalValue - capitalGains;
+		
+		// Tax-free appreciation (only if held 10+ years)
+		const taxFreeAppreciation = holdPeriod >= 10 ? appreciation : 0;
+		const taxFreeAppreciationSavings = taxFreeAppreciation * (federalRate / 100);
+		
+		// Total cross-state savings
+		const totalSavings = caTaxSaved + basisStepupTaxSavings + taxFreeAppreciationSavings;
+		
+		// Display results
+		document.getElementById('ca-tax-saved').textContent = '$' + caTaxSaved.toLocaleString();
+		document.getElementById('nv-tax').textContent = '$' + nvTax.toLocaleString();
+		document.getElementById('deferral-amount').textContent = '$' + federalTax.toLocaleString();
+		document.getElementById('basis-stepup').textContent = basisStepup + '%';
+		document.getElementById('reduced-taxable').textContent = '$' + reducedTaxableAmount.toLocaleString();
+		document.getElementById('total-value').textContent = '$' + totalValue.toLocaleString();
+		document.getElementById('appreciation').textContent = '$' + appreciation.toLocaleString();
+		document.getElementById('tax-free-appreciation').textContent = '$' + taxFreeAppreciation.toLocaleString();
+		document.getElementById('total-savings').textContent = '$' + totalSavings.toLocaleString();
+		
+		// Show results
+		document.getElementById('calculator-results').style.display = 'block';
+		document.getElementById('calculator-placeholder').style.display = 'none';
+	}
+</script>
+
+<style>
+	.benefit-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.75rem 0;
+		border-bottom: 1px solid var(--oz-gray-200);
+	}
+	
+	.benefit-item:last-child {
+		border-bottom: none;
+	}
+	
+	.benefit-label {
+		font-weight: 500;
+		color: var(--oz-gray-700);
+	}
+	
+	.benefit-value {
+		font-weight: 700;
+		color: var(--oz-navy);
+		font-size: 1.125rem;
+	}
+	
+	.total-savings {
+		background: var(--oz-gold);
+		color: var(--oz-white);
+		padding: 1rem;
+		border-radius: 0.375rem;
+		margin-top: 1rem;
+	}
+	
+	.total-savings .benefit-label,
+	.total-savings .benefit-value {
+		color: var(--oz-white);
+		font-size: 1.25rem;
+	}
+	
+	.oz-hero .cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 2rem;
+	}
+	
+	@media (max-width: 768px) {
+		.oz-services-content > div {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
