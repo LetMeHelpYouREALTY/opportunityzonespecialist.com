@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
+Sitemap: https://opportunityzonespecialist.com/sitemap.xml
 Sitemap: https://opportunityzonespecialist.com/sitemap-index.xml
 
 # Crawl-delay for respectful crawling
