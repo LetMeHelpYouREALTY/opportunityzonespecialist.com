@@ -9,7 +9,14 @@ import lit from "@astrojs/lit";
 export default defineConfig({
   site: 'https://opportunityzonespecialist.com/', // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
   sitemap: true, // Generate sitemap (set to "false" to disable)
-  integrations: [sitemap(), mdx(), lit(), icon()], // Add renderers to the config
+  integrations: [
+    sitemap({
+      filter: (page) => !page.includes('theme/') && !page.includes('landing-pages/') && !page.includes('company/'),
+    }), 
+    mdx(), 
+    lit(), 
+    icon()
+  ], // Add renderers to the config
   output: 'static', // Static site generation for better Vercel performance
   build: {
     inlineStylesheets: 'auto', // Optimize CSS loading
