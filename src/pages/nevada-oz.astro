@@ -1,0 +1,671 @@
+---
+import Layout from '../layouts/Page.astro';
+import Header from '../components/core/Header.astro';
+import Footer from '../components/core/Footer.astro';
+import Logo from '../components/Logo.astro';
+import Button from '../components/buttons/Button.astro';
+import StickyCTA from '../components/StickyCTA.astro';
+import { nav } from '../config/nav.js';
+import settings from '../config/settings.js';
+
+const seo = {
+	...settings,
+	title: 'Nevada Opportunity Zones | Dr. Jan Duffy - Boyle-Duffy OZ Team',
+	description: 'Nevada Opportunity Zone investments with Dr. Jan Duffy. Las Vegas, Henderson, Summerlin, and Reno-Tahoe OZ properties. Cross-state tax advantages for California high-net-worth clients.',
+	canonical: 'https://boyle-duffy-oz.com/nevada-oz',
+};
+---
+
+<Layout seo={seo}>
+	<Header rightMenu navData={nav} slot="header">
+		<span slot="logo">
+			<Logo />
+		</span>
+		<Button slot="action-item" href="tel:702-222-1964">Call Dr. Jan: 702-222-1964</Button>
+	</Header>
+	<div id="page">
+		<main class="oz-main">
+			<!-- Hero Section -->
+			<section class="oz-hero">
+				<div class="oz-container">
+					<div class="oz-hero-content">
+						<div class="oz-hero-text">
+							<h1>Nevada Opportunity Zones</h1>
+							<h2>Dr. Jan Duffy's Premier OZ Investment Territory</h2>
+							<p class="oz-hero-subtitle">Las Vegas, Henderson, Summerlin, and Reno-Tahoe Opportunity Zone investments with unmatched tax advantages for California high-net-worth clients.</p>
+							<div class="oz-hero-stats">
+								<div class="oz-stat">
+									<span class="oz-stat-number">500+</span>
+									<span class="oz-stat-label">Transactions Closed</span>
+								</div>
+								<div class="oz-stat">
+									<span class="oz-stat-number">$1B+</span>
+									<span class="oz-stat-label">Total Volume</span>
+								</div>
+								<div class="oz-stat">
+									<span class="oz-stat-number">0%</span>
+									<span class="oz-stat-label">State Capital Gains Tax</span>
+								</div>
+							</div>
+							<div class="oz-hero-cta">
+								<a href="tel:702-222-1964" class="oz-btn oz-btn-primary">Call Dr. Jan: 702-222-1964</a>
+								<a href="/cross-state-strategies/tax-savings-calculator" class="oz-btn oz-btn-secondary">Calculate Tax Savings</a>
+							</div>
+						</div>
+						<div class="oz-hero-image">
+							<div class="oz-nevada-map">
+								<img src="/images/nevada-oz-map.jpg" alt="Nevada Opportunity Zone Map" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Dr. Jan Duffy Section -->
+			<section class="oz-section">
+				<div class="oz-container">
+					<h2>Meet Dr. Jan Duffy</h2>
+					<div class="oz-expert-profile">
+						<div class="oz-expert-image">
+							<img src="/images/dr-jan-duffy-profile.jpg" alt="Dr. Jan Duffy - Nevada OZ Expert" />
+						</div>
+						<div class="oz-expert-content">
+							<h3>Dr. Jan Duffy</h3>
+							<h4>Nevada OZ Investment Expert</h4>
+							<p>With over 500+ transactions and $1B+ in total volume, Dr. Jan Duffy is Nevada's premier Opportunity Zone investment expert. She specializes in helping California high-net-worth clients leverage Nevada's tax advantages while maintaining federal OZ benefits.</p>
+							<div class="oz-expert-highlights">
+								<div class="oz-highlight">
+									<h5>Las Vegas Market Leader</h5>
+									<p>Deep expertise in Las Vegas, Henderson, and Summerlin OZ properties</p>
+								</div>
+								<div class="oz-highlight">
+									<h5>Cross-State Tax Specialist</h5>
+									<p>Expert in California-Nevada cross-state OZ investment strategies</p>
+								</div>
+								<div class="oz-highlight">
+									<h5>High-Net-Worth Focus</h5>
+									<p>Specialized knowledge of high-value client needs and requirements</p>
+								</div>
+							</div>
+							<div class="oz-expert-cta">
+								<a href="/team/dr-jan-duffy" class="oz-btn oz-btn-outline">View Full Profile</a>
+								<a href="tel:702-222-1964" class="oz-btn oz-btn-primary">Call Dr. Jan: 702-222-1964</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Nevada Tax Advantage Section -->
+			<section class="oz-section oz-bg-light">
+				<div class="oz-container">
+					<h2>Nevada's Unmatched Tax Advantages</h2>
+					<div class="oz-tax-advantages">
+						<div class="oz-tax-grid">
+							<div class="oz-tax-card">
+								<h3>No State Income Tax</h3>
+								<p>Nevada has no state income tax, allowing you to keep more of your investment returns.</p>
+							</div>
+							<div class="oz-tax-card">
+								<h3>No Capital Gains Tax</h3>
+								<p>Nevada has no state capital gains tax, maximizing your OZ investment benefits.</p>
+							</div>
+							<div class="oz-tax-card">
+								<h3>No Corporate Tax</h3>
+								<p>Nevada has no corporate income tax, ideal for business-related OZ investments.</p>
+							</div>
+							<div class="oz-tax-card">
+								<h3>No Estate Tax</h3>
+								<p>Nevada has no estate tax, protecting your wealth for future generations.</p>
+							</div>
+						</div>
+						<div class="oz-tax-calculator-cta">
+							<h3>Calculate Your Tax Savings</h3>
+							<p>See how much you can save with Nevada OZ investment compared to California.</p>
+							<a href="/cross-state-strategies/tax-savings-calculator" class="oz-btn oz-btn-primary">Calculate Savings</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Market Territories Section -->
+			<section class="oz-section">
+				<div class="oz-container">
+					<h2>Nevada OZ Market Territories</h2>
+					<div class="oz-market-territories">
+						<div class="oz-territory-card">
+							<h3>Las Vegas OZ Properties</h3>
+							<p>Prime Las Vegas Opportunity Zone properties in downtown, arts district, and emerging neighborhoods.</p>
+							<div class="oz-territory-stats">
+								<span>15+ OZ districts</span>
+								<span>$2B+ development pipeline</span>
+							</div>
+							<a href="/dr-jan-duffy/las-vegas-oz-properties" class="oz-btn oz-btn-outline">Explore Las Vegas</a>
+						</div>
+						<div class="oz-territory-card">
+							<h3>Henderson Development</h3>
+							<p>Henderson OZ opportunities including master-planned communities and commercial developments.</p>
+							<div class="oz-territory-stats">
+								<span>8+ OZ districts</span>
+								<span>$800M+ development pipeline</span>
+							</div>
+							<a href="/dr-jan-duffy/henderson-development" class="oz-btn oz-btn-outline">Explore Henderson</a>
+						</div>
+						<div class="oz-territory-card">
+							<h3>Summerlin OZ Opportunities</h3>
+							<p>Summerlin luxury OZ properties and high-end residential developments.</p>
+							<div class="oz-territory-stats">
+								<span>5+ OZ districts</span>
+								<span>$600M+ development pipeline</span>
+							</div>
+							<a href="/dr-jan-duffy/summerlin-oz-opportunities" class="oz-btn oz-btn-outline">Explore Summerlin</a>
+						</div>
+						<div class="oz-territory-card">
+							<h3>Reno-Tahoe OZ Markets</h3>
+							<p>Reno-Tahoe area OZ properties including industrial, residential, and mixed-use developments.</p>
+							<div class="oz-territory-stats">
+								<span>12+ OZ districts</span>
+								<span>$1.2B+ development pipeline</span>
+							</div>
+							<a href="/dr-jan-duffy/reno-tahoe-oz-markets" class="oz-btn oz-btn-outline">Explore Reno-Tahoe</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Cross-State Strategy Section -->
+			<section class="oz-section oz-bg-light">
+				<div class="oz-container">
+					<h2>California → Nevada Cross-State Strategy</h2>
+					<div class="oz-cross-state-content">
+						<div class="oz-cross-state-text">
+							<h3>Why Choose Nevada for Your OZ Investment?</h3>
+							<p>Nevada offers the perfect combination of federal OZ benefits and state tax advantages, making it the ideal destination for California high-net-worth clients seeking to optimize their capital gains.</p>
+							<div class="oz-strategy-benefits">
+								<div class="oz-benefit">
+									<h4>Federal OZ Benefits</h4>
+									<p>Capital gains deferral, reduction, and elimination</p>
+								</div>
+								<div class="oz-benefit">
+									<h4>Nevada Tax Advantages</h4>
+									<p>No state income tax, no capital gains tax</p>
+								</div>
+								<div class="oz-benefit">
+									<h4>California Tax Elimination</h4>
+									<p>Eliminate California state capital gains tax</p>
+								</div>
+							</div>
+						</div>
+						<div class="oz-cross-state-cta">
+							<h3>Ready to Optimize Your Capital Gains?</h3>
+							<p>Let Dr. Jan Duffy show you how Nevada OZ investment can maximize your returns.</p>
+							<div class="oz-cta-buttons">
+								<a href="tel:702-222-1964" class="oz-btn oz-btn-primary">Call Dr. Jan: 702-222-1964</a>
+								<a href="/cross-state-strategies/california-nevada-benefits" class="oz-btn oz-btn-secondary">Learn More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Investment Opportunities Section -->
+			<section class="oz-section">
+				<div class="oz-container">
+					<h2>Current Nevada OZ Investment Opportunities</h2>
+					<div class="oz-opportunities-grid">
+						<div class="oz-opportunity-card">
+							<h3>Featured Properties This Week</h3>
+							<p>Hand-picked Nevada OZ properties with exceptional growth potential</p>
+							<a href="/current-opportunities/featured-properties" class="oz-btn oz-btn-outline">View Properties</a>
+						</div>
+						<div class="oz-opportunity-card">
+							<h3>Development Pipeline</h3>
+							<p>Upcoming Nevada OZ development projects across all territories</p>
+							<a href="/current-opportunities/development-pipeline" class="oz-btn oz-btn-outline">View Pipeline</a>
+						</div>
+						<div class="oz-opportunity-card">
+							<h3>Commercial Properties</h3>
+							<p>Commercial OZ properties in prime Nevada locations</p>
+							<a href="/current-opportunities/commercial-properties" class="oz-btn oz-btn-outline">View Commercial</a>
+						</div>
+						<div class="oz-opportunity-card">
+							<h3>Residential Communities</h3>
+							<p>Residential OZ communities with strong growth potential</p>
+							<a href="/current-opportunities/residential-communities" class="oz-btn oz-btn-outline">View Residential</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Contact Section -->
+			<section class="oz-section oz-bg-light">
+				<div class="oz-container">
+					<h2>Get Started with Nevada OZ Investment</h2>
+					<div class="oz-contact-grid">
+						<div class="oz-contact-card">
+							<h3>Direct Contact with Dr. Jan</h3>
+							<p>For immediate assistance with your Nevada OZ strategy:</p>
+							<div class="oz-contact-info">
+								<a href="tel:702-222-1964" class="oz-contact-btn">Call Dr. Jan: 702-222-1964</a>
+								<p class="oz-contact-note">Direct line to Dr. Jan Duffy</p>
+							</div>
+						</div>
+						<div class="oz-contact-card">
+							<h3>Market Analysis Request</h3>
+							<p>Get Dr. Jan's latest Nevada OZ market analysis:</p>
+							<a href="/nevada-oz/tax-advantage-calculator" class="oz-btn oz-btn-outline">View Tax Calculator</a>
+						</div>
+						<div class="oz-contact-card">
+							<h3>Cross-State Strategy Review</h3>
+							<p>Understand how California-Nevada OZ investment can benefit you:</p>
+							<a href="/cross-state-strategies/california-nevada-benefits" class="oz-btn oz-btn-outline">Learn More</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+	<Footer navData={nav} />
+	<StickyCTA />
+</Layout>
+
+<style>
+	.oz-hero {
+		background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+		color: white;
+		padding: 4rem 0;
+	}
+
+	.oz-hero-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.oz-hero h1 {
+		font-size: 3.5rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+
+	.oz-hero h2 {
+		font-size: 1.5rem;
+		font-weight: 400;
+		margin-bottom: 1rem;
+		color: #fbbf24;
+	}
+
+	.oz-hero-subtitle {
+		font-size: 1.25rem;
+		margin-bottom: 2rem;
+		opacity: 0.9;
+	}
+
+	.oz-hero-stats {
+		display: flex;
+		gap: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.oz-stat {
+		text-align: center;
+	}
+
+	.oz-stat-number {
+		display: block;
+		font-size: 2rem;
+		font-weight: 700;
+		color: #fbbf24;
+	}
+
+	.oz-stat-label {
+		font-size: 0.875rem;
+		opacity: 0.8;
+	}
+
+	.oz-hero-cta {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.oz-nevada-map {
+		text-align: center;
+	}
+
+	.oz-nevada-map img {
+		width: 100%;
+		max-width: 500px;
+		border-radius: 8px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+	}
+
+	.oz-expert-profile {
+		display: flex;
+		gap: 3rem;
+		align-items: center;
+		background: white;
+		padding: 3rem;
+		border-radius: 12px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	}
+
+	.oz-expert-image {
+		flex-shrink: 0;
+	}
+
+	.oz-expert-image img {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		object-fit: cover;
+		border: 6px solid #fbbf24;
+	}
+
+	.oz-expert-content h3 {
+		color: #1e3a8a;
+		font-size: 2rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.oz-expert-content h4 {
+		color: #fbbf24;
+		font-size: 1.25rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.oz-expert-highlights {
+		display: grid;
+		gap: 1rem;
+		margin: 2rem 0;
+	}
+
+	.oz-highlight {
+		background: #f8fafc;
+		padding: 1rem;
+		border-radius: 8px;
+		border-left: 4px solid #fbbf24;
+	}
+
+	.oz-highlight h5 {
+		color: #1e3a8a;
+		margin-bottom: 0.5rem;
+	}
+
+	.oz-expert-cta {
+		display: flex;
+		gap: 1rem;
+		margin-top: 2rem;
+	}
+
+	.oz-tax-advantages {
+		display: grid;
+		gap: 3rem;
+	}
+
+	.oz-tax-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.oz-tax-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		text-align: center;
+	}
+
+	.oz-tax-card h3 {
+		color: #1e3a8a;
+		margin-bottom: 1rem;
+	}
+
+	.oz-tax-calculator-cta {
+		background: #1e3a8a;
+		color: white;
+		padding: 2rem;
+		border-radius: 8px;
+		text-align: center;
+	}
+
+	.oz-tax-calculator-cta h3 {
+		margin-bottom: 1rem;
+	}
+
+	.oz-market-territories {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.oz-territory-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		text-align: center;
+	}
+
+	.oz-territory-card h3 {
+		color: #1e3a8a;
+		margin-bottom: 1rem;
+	}
+
+	.oz-territory-card p {
+		color: #6b7280;
+		margin-bottom: 1.5rem;
+	}
+
+	.oz-territory-stats {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 1.5rem;
+		font-size: 0.875rem;
+		color: #059669;
+		font-weight: 600;
+	}
+
+	.oz-cross-state-content {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 3rem;
+		align-items: start;
+	}
+
+	.oz-strategy-benefits {
+		display: grid;
+		gap: 1rem;
+		margin-top: 2rem;
+	}
+
+	.oz-benefit {
+		background: white;
+		padding: 1.5rem;
+		border-radius: 8px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+
+	.oz-benefit h4 {
+		color: #1e3a8a;
+		margin-bottom: 0.5rem;
+	}
+
+	.oz-cross-state-cta {
+		background: #1e3a8a;
+		color: white;
+		padding: 2rem;
+		border-radius: 8px;
+		text-align: center;
+	}
+
+	.oz-cross-state-cta h3 {
+		margin-bottom: 1rem;
+	}
+
+	.oz-cta-buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		margin-top: 1.5rem;
+	}
+
+	.oz-opportunities-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.oz-opportunity-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		text-align: center;
+	}
+
+	.oz-opportunity-card h3 {
+		color: #1e3a8a;
+		margin-bottom: 1rem;
+	}
+
+	.oz-opportunity-card p {
+		color: #6b7280;
+		margin-bottom: 1.5rem;
+	}
+
+	.oz-contact-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.oz-contact-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		text-align: center;
+	}
+
+	.oz-contact-card h3 {
+		color: #1e3a8a;
+		margin-bottom: 1rem;
+	}
+
+	.oz-contact-info {
+		margin-top: 1rem;
+	}
+
+	.oz-contact-btn {
+		display: inline-block;
+		background: #1e3a8a;
+		color: white;
+		padding: 1rem 2rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+
+	.oz-contact-note {
+		font-size: 0.875rem;
+		color: #6b7280;
+	}
+
+	.oz-btn {
+		display: inline-block;
+		padding: 0.75rem 1.5rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		transition: all 0.3s ease;
+	}
+
+	.oz-btn-primary {
+		background: #1e3a8a;
+		color: white;
+	}
+
+	.oz-btn-primary:hover {
+		background: #1e40af;
+	}
+
+	.oz-btn-secondary {
+		background: #fbbf24;
+		color: #1e3a8a;
+	}
+
+	.oz-btn-secondary:hover {
+		background: #f59e0b;
+	}
+
+	.oz-btn-outline {
+		background: transparent;
+		color: #1e3a8a;
+		border: 2px solid #1e3a8a;
+	}
+
+	.oz-btn-outline:hover {
+		background: #1e3a8a;
+		color: white;
+	}
+
+	.oz-bg-light {
+		background: #f8fafc;
+	}
+
+	.oz-section {
+		padding: 4rem 0;
+	}
+
+	.oz-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	.oz-main h2 {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: #1e3a8a;
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+
+	@media (max-width: 768px) {
+		.oz-hero-content {
+			grid-template-columns: 1fr;
+			text-align: center;
+		}
+
+		.oz-hero-stats {
+			justify-content: center;
+		}
+
+		.oz-hero-cta {
+			justify-content: center;
+		}
+
+		.oz-expert-profile {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.oz-expert-cta {
+			justify-content: center;
+		}
+
+		.oz-cross-state-content {
+			grid-template-columns: 1fr;
+		}
+
+		.oz-cta-buttons {
+			flex-direction: column;
+		}
+	}
+</style>
