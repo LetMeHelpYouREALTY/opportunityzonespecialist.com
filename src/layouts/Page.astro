@@ -3,6 +3,7 @@ import { Header, Button, Footer } from '@components/odyssey-theme';
 import Layout from './Base.astro';
 import type { Props as BaseHeadProps } from '../components/head/BaseHead.astro';
 import Logo from '../components/Logo.astro';
+import StickyCTA from '../components/StickyCTA.astro';
 import settings from '../config/settings';
 import { footerLists, footerSocials } from '../config/footer';
 
@@ -21,7 +22,7 @@ const { seo } = Astro.props as Props;
 		<span slot="logo">
 			<Logo />
 		</span>
-		<Button slot="action-item" href="/theme/get-started">Get Started</Button>
+		<Button slot="action-item" href="/process/investor-qualification">Get Started</Button>
 	</Header>
 	<div id="page">
 		<slot />
@@ -37,4 +38,5 @@ const { seo } = Astro.props as Props;
 	>
 		<Logo slot="logo" />
 	</Footer>
+	<StickyCTA />
 </Layout>

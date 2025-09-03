@@ -1,0 +1,205 @@
+---
+import Layout from '../../layouts/Page.astro';
+import '../../styles/oz-custom.css';
+
+const seo = {
+	title: 'Opportunity Zone Investment Opportunities | Accredited Investor Platform',
+	description: 'Discover qualified opportunity zone investment opportunities, QOFs, and development projects for accredited investors. Expert guidance on OZ investments with tax benefits.',
+};
+---
+
+<Layout {seo}>
+	<!-- Hero Section -->
+	<section class="oz-hero">
+		<div class="oz-hero-content">
+			<h1>Opportunity Zone Investment Opportunities</h1>
+			<p class="subtitle">Access curated OZ investments, QOFs, and development projects for accredited investors</p>
+			<div class="oz-hero-cta">
+				<a href="/process/investor-qualification" class="oz-btn oz-btn-primary">Verify Accredited Investor Status</a>
+				<a href="/contact" class="oz-btn oz-btn-secondary">Schedule Consultation</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Investment Categories -->
+	<section class="oz-services">
+		<div class="oz-services-content">
+			<h2>Investment Categories</h2>
+			<p class="oz-section-subtitle">Explore our comprehensive portfolio of Opportunity Zone investment opportunities</p>
+			
+			<div class="oz-services-grid">
+				<div class="oz-service-card">
+					<div class="icon">🎯</div>
+					<h3>Current Investment Opportunities</h3>
+					<p>Access our curated selection of active Opportunity Zone investment opportunities with detailed due diligence and projected returns.</p>
+					<ul style="text-align: left; margin-top: 1rem;">
+						<li>Pre-vetted investment opportunities</li>
+						<li>Detailed financial projections</li>
+						<li>Risk assessment reports</li>
+						<li>Minimum investment requirements</li>
+					</ul>
+					<a href="/investments/current-opportunities" class="oz-btn oz-btn-outline">View Opportunities</a>
+				</div>
+				
+				<div class="oz-service-card">
+					<div class="icon">🏛️</div>
+					<h3>Qualified Opportunity Funds</h3>
+					<p>Invest in professionally managed QOFs with diversified portfolios across multiple Opportunity Zones and asset classes.</p>
+					<ul style="text-align: left; margin-top: 1rem;">
+						<li>Diversified fund strategies</li>
+						<li>Professional fund management</li>
+						<li>Lower minimum investments</li>
+						<li>Built-in compliance monitoring</li>
+					</ul>
+					<a href="/investments/qualified-opportunity-funds" class="oz-btn oz-btn-outline">Explore QOFs</a>
+				</div>
+				
+				<div class="oz-service-card">
+					<div class="icon">🏗️</div>
+					<h3>Development Projects</h3>
+					<p>Direct investment opportunities in ground-up development projects within designated Opportunity Zones.</p>
+					<ul style="text-align: left; margin-top: 1rem;">
+						<li>Ground-up development projects</li>
+						<li>Value-add opportunities</li>
+						<li>Construction financing</li>
+						<li>Development partnerships</li>
+					</ul>
+					<a href="/investments/development-projects" class="oz-btn oz-btn-outline">View Projects</a>
+				</div>
+				
+				<div class="oz-service-card">
+					<div class="icon">🏢</div>
+					<h3>Real Estate Opportunities</h3>
+					<p>Commercial and residential real estate investment opportunities in high-growth Opportunity Zones.</p>
+					<ul style="text-align: left; margin-top: 1rem;">
+						<li>Commercial real estate</li>
+						<li>Multi-family developments</li>
+						<li>Mixed-use projects</li>
+						<li>Industrial properties</li>
+					</ul>
+					<a href="/investments/real-estate-opportunities" class="oz-btn oz-btn-outline">Explore Real Estate</a>
+				</div>
+				
+				<div class="oz-service-card">
+					<div class="icon">💼</div>
+					<h3>Business Investments</h3>
+					<p>Operating business investments in Opportunity Zones, including startups and established companies.</p>
+					<ul style="text-align: left; margin-top: 1rem;">
+						<li>Operating business investments</li>
+						<li>Startup opportunities</li>
+						<li>Business expansion capital</li>
+						<li>Equity and debt investments</li>
+					</ul>
+					<a href="/investments/business-investments" class="oz-btn oz-btn-outline">View Businesses</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Investment Process -->
+	<section class="oz-authority">
+		<div class="oz-authority-content">
+			<h2>Investment Process</h2>
+			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+				<div style="text-align: center;">
+					<div style="width: 4rem; height: 4rem; background: var(--oz-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--oz-white); font-size: 1.5rem; font-weight: 700;">1</div>
+					<h3>Accredited Investor Verification</h3>
+					<p>Complete our accredited investor verification process to access investment opportunities.</p>
+				</div>
+				
+				<div style="text-align: center;">
+					<div style="width: 4rem; height: 4rem; background: var(--oz-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--oz-white); font-size: 1.5rem; font-weight: 700;">2</div>
+					<h3>Investment Selection</h3>
+					<p>Review and select from our curated portfolio of Opportunity Zone investments.</p>
+				</div>
+				
+				<div style="text-align: center;">
+					<div style="width: 4rem; height: 4rem; background: var(--oz-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--oz-white); font-size: 1.5rem; font-weight: 700;">3</div>
+					<h3>Due Diligence</h3>
+					<p>Access comprehensive due diligence materials and conduct your investment analysis.</p>
+				</div>
+				
+				<div style="text-align: center;">
+					<div style="width: 4rem; height: 4rem; background: var(--oz-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--oz-white); font-size: 1.5rem; font-weight: 700;">4</div>
+					<h3>Investment Execution</h3>
+					<p>Complete your investment with our streamlined documentation and compliance process.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Investment Statistics -->
+	<section class="oz-testimonials">
+		<div class="oz-testimonials-content">
+			<h2>Investment Platform Statistics</h2>
+			<div class="oz-authority-stats">
+				<div class="oz-stat">
+					<span class="oz-stat-number">$500M+</span>
+					<span class="oz-stat-label">Total Capital Deployed</span>
+				</div>
+				<div class="oz-stat">
+					<span class="oz-stat-number">150+</span>
+					<span class="oz-stat-label">Active Investments</span>
+				</div>
+				<div class="oz-stat">
+					<span class="oz-stat-number">25+</span>
+					<span class="oz-stat-label">Opportunity Zones</span>
+				</div>
+				<div class="oz-stat">
+					<span class="oz-stat-number">12.5%</span>
+					<span class="oz-stat-label">Average Annual Returns</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="oz-cta">
+		<div class="oz-cta-content">
+			<h2>Ready to Invest in Opportunity Zones?</h2>
+			<p>Join our platform of accredited investors and access exclusive Opportunity Zone investment opportunities with expert guidance and compliance support.</p>
+			<div class="oz-hero .cta-buttons">
+				<a href="/process/investor-qualification" class="oz-btn oz-btn-primary">Start Investment Process</a>
+				<a href="/contact" class="oz-btn oz-btn-secondary">Schedule Consultation</a>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FinancialService",
+  "name": "Opportunity Zone Investment Platform",
+  "description": "Access curated Opportunity Zone investment opportunities for accredited investors",
+  "provider": {
+    "@type": "Organization",
+    "name": "OZ Specialist",
+    "url": "https://www.opportunityzonespecialist.com"
+  },
+  "serviceType": "Investment Platform",
+  "areaServed": "United States",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Accredited Investors"
+  }
+}
+</script>
+
+<style>
+	.oz-hero-cta {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 2rem;
+	}
+	
+	.oz-hero .cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 2rem;
+	}
+</style>

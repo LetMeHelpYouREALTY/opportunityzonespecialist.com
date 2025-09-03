@@ -1,0 +1,239 @@
+---
+import Layout from '../../../layouts/Page.astro';
+import '../../../styles/oz-custom.css';
+
+const seo = {
+	title: 'Accredited Investor Qualification | OZ Investment Requirements',
+	description: 'Verify your accredited investor status for Opportunity Zone investments. Complete our qualification process to access exclusive OZ investment opportunities.',
+};
+---
+
+<Layout {seo}>
+	<!-- Hero Section -->
+	<section class="oz-hero">
+		<div class="oz-hero-content">
+			<h1>Accredited Investor Qualification</h1>
+			<p class="subtitle">Verify your accredited investor status to access exclusive Opportunity Zone investment opportunities</p>
+		</div>
+	</section>
+
+	<!-- Qualification Process -->
+	<section class="oz-services">
+		<div class="oz-services-content">
+			<div style="max-width: 800px; margin: 0 auto; text-align: center;">
+				<h2>Accredited Investor Requirements</h2>
+				<p style="font-size: 1.125rem; color: var(--oz-gray-600); margin-bottom: 3rem;">
+					Most Opportunity Zone investments are available only to accredited investors as defined by the SEC. Complete our qualification process to access our investment platform.
+				</p>
+			</div>
+			
+			<div class="oz-services-grid">
+				<div class="oz-service-card">
+					<div class="icon">💰</div>
+					<h3>Income-Based Qualification</h3>
+					<p>Individual income exceeding $200,000 in each of the two most recent years, or joint income with spouse exceeding $300,000 in each of those years.</p>
+					<ul style="text-align: left; margin-top: 1rem;">
+						<li>Individual: $200,000+ annually</li>
+						<li>Joint: $300,000+ annually</li>
+						<li>Two consecutive years</li>
+						<li>Reasonable expectation of same level</li>
+					</ul>
+				</div>
+				
+				<div class="oz-service-card">
+					<div class="icon">🏦</div>
+					<h3>Net Worth Qualification</h3>
+					<p>Net worth exceeding $1,000,000, either individually or jointly with spouse, excluding the value of primary residence.</p>
+					<ul style="text-align: left; margin-top: 1rem;">
+						<li>Individual or joint net worth: $1M+</li>
+						<li>Excludes primary residence</li>
+						<li>Includes liquid and illiquid assets</li>
+						<li>Minus total liabilities</li>
+					</ul>
+				</div>
+				
+				<div class="oz-service-card">
+					<div class="icon">🏢</div>
+					<h3>Entity Qualification</h3>
+					<p>Entities with assets exceeding $5,000,000 or owned entirely by accredited investors.</p>
+					<ul style="text-align: left; margin-top: 1rem;">
+						<li>Assets exceeding $5M</li>
+						<li>Owned by accredited investors</li>
+						<li>Trusts, corporations, partnerships</li>
+						<li>Investment companies</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Qualification Form -->
+	<section class="oz-authority">
+		<div class="oz-authority-content">
+			<h2>Accredited Investor Verification</h2>
+			<div style="max-width: 600px; margin: 0 auto;">
+				<form class="oz-form" id="accredited-investor-form">
+					<div class="oz-form-group">
+						<label class="oz-form-label" for="investor-type">Investor Type</label>
+						<select id="investor-type" name="investor-type" class="oz-form-input" required>
+							<option value="">Select Investor Type</option>
+							<option value="individual">Individual</option>
+							<option value="joint">Joint (with spouse)</option>
+							<option value="entity">Entity (Trust, Corporation, etc.)</option>
+						</select>
+					</div>
+					
+					<div class="oz-form-group">
+						<label class="oz-form-label" for="full-name">Full Name</label>
+						<input type="text" id="full-name" name="full-name" class="oz-form-input" required>
+					</div>
+					
+					<div class="oz-form-group">
+						<label class="oz-form-label" for="email">Email Address</label>
+						<input type="email" id="email" name="email" class="oz-form-input" required>
+					</div>
+					
+					<div class="oz-form-group">
+						<label class="oz-form-label" for="phone">Phone Number</label>
+						<input type="tel" id="phone" name="phone" class="oz-form-input" required>
+					</div>
+					
+					<div class="oz-form-group">
+						<label class="oz-form-label" for="annual-income">Annual Income (Last 2 Years)</label>
+						<input type="number" id="annual-income" name="annual-income" class="oz-form-input" placeholder="250000">
+					</div>
+					
+					<div class="oz-form-group">
+						<label class="oz-form-label" for="net-worth">Net Worth (Excluding Primary Residence)</label>
+						<input type="number" id="net-worth" name="net-worth" class="oz-form-input" placeholder="1500000">
+					</div>
+					
+					<div class="oz-form-group">
+						<label class="oz-form-label" for="investment-experience">Investment Experience</label>
+						<select id="investment-experience" name="investment-experience" class="oz-form-input" required>
+							<option value="">Select Experience Level</option>
+							<option value="beginner">Beginner (0-2 years)</option>
+							<option value="intermediate">Intermediate (3-10 years)</option>
+							<option value="advanced">Advanced (10+ years)</option>
+							<option value="professional">Professional (Investment professional)</option>
+						</select>
+					</div>
+					
+					<div class="oz-form-group">
+						<label class="oz-form-label" for="investment-amount">Intended Investment Amount</label>
+						<select id="investment-amount" name="investment-amount" class="oz-form-input" required>
+							<option value="">Select Range</option>
+							<option value="100k-500k">$100K - $500K</option>
+							<option value="500k-1m">$500K - $1M</option>
+							<option value="1m-5m">$1M - $5M</option>
+							<option value="5m-10m">$5M - $10M</option>
+							<option value="10m+">$10M+</option>
+						</select>
+					</div>
+					
+					<div class="oz-form-group">
+						<label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
+							<input type="checkbox" id="accredited-confirmation" name="accredited-confirmation" required style="margin-top: 0.25rem;">
+							<span>I confirm that I meet the accredited investor requirements as defined by the SEC and understand the risks associated with Opportunity Zone investments.</span>
+						</label>
+					</div>
+					
+					<div class="oz-form-group">
+						<label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
+							<input type="checkbox" id="disclaimer-acknowledgment" name="disclaimer-acknowledgment" required style="margin-top: 0.25rem;">
+							<span>I acknowledge that this is not investment advice and I should consult with qualified professionals before making investment decisions.</span>
+						</label>
+					</div>
+					
+					<button type="submit" class="oz-btn oz-btn-primary" style="width: 100%;">Submit Qualification</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<!-- Important Disclaimers -->
+	<section class="oz-testimonials">
+		<div class="oz-testimonials-content">
+			<h2>Important Legal Disclaimers</h2>
+			<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow); max-width: 800px; margin: 0 auto;">
+				<h3>SEC Accredited Investor Definition</h3>
+				<p>An accredited investor is defined by the SEC as someone who meets certain income or net worth requirements. This qualification is required for most private investment opportunities, including many Opportunity Zone investments.</p>
+				
+				<h3>Investment Risks</h3>
+				<p>All investments carry risk, including the potential loss of principal. Opportunity Zone investments are subject to specific regulatory requirements and may not be suitable for all investors. Past performance does not guarantee future results.</p>
+				
+				<h3>No Investment Advice</h3>
+				<p>This qualification process does not constitute investment advice, tax advice, or legal advice. Consult with qualified professionals before making any investment decisions.</p>
+				
+				<h3>Verification Process</h3>
+				<p>We may request additional documentation to verify your accredited investor status. This may include tax returns, financial statements, or other documentation as required by applicable securities laws.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Next Steps -->
+	<section class="oz-cta">
+		<div class="oz-cta-content">
+			<h2>Ready to Access Investment Opportunities?</h2>
+			<p>Once qualified, you'll gain access to our exclusive platform of Opportunity Zone investment opportunities with expert guidance and compliance support.</p>
+			<div class="oz-hero .cta-buttons">
+				<a href="/investments/current-opportunities" class="oz-btn oz-btn-primary">View Investment Opportunities</a>
+				<a href="/contact" class="oz-btn oz-btn-secondary">Schedule Consultation</a>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<script>
+	document.getElementById('accredited-investor-form').addEventListener('submit', function(e) {
+		e.preventDefault();
+		
+		const formData = new FormData(this);
+		const data = Object.fromEntries(formData);
+		
+		// Basic validation
+		if (!data['accredited-confirmation'] || !data['disclaimer-acknowledgment']) {
+			alert('Please acknowledge the required disclaimers');
+			return;
+		}
+		
+		// In production, this would submit to your backend for processing
+		alert('Thank you for your submission. We will review your qualification and contact you within 24 hours.');
+		
+		// Reset form
+		this.reset();
+	});
+	
+	// Dynamic form updates based on investor type
+	document.getElementById('investor-type').addEventListener('change', function() {
+		const investorType = this.value;
+		const incomeField = document.getElementById('annual-income');
+		const netWorthField = document.getElementById('net-worth');
+		
+		if (investorType === 'joint') {
+			incomeField.placeholder = '350000';
+			netWorthField.placeholder = '1500000';
+		} else if (investorType === 'entity') {
+			incomeField.placeholder = 'N/A for entities';
+			netWorthField.placeholder = '5000000';
+		} else {
+			incomeField.placeholder = '250000';
+			netWorthField.placeholder = '1500000';
+		}
+	});
+</script>
+
+<style>
+	.oz-hero .cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 2rem;
+	}
+	
+	.oz-form-group label {
+		font-size: 0.875rem;
+		line-height: 1.4;
+	}
+</style>

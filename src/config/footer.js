@@ -18,23 +18,44 @@ export const footerSocials = [
 
 export const footerLists = [
 	{
-		title: 'Services',
+		title: 'Investments',
 		items: [
 			{
-				title: 'Investment Consulting',
-				slug: '/investment-consulting',
+				title: 'Current Opportunities',
+				slug: '/investments/current-opportunities',
 			},
 			{
-				title: 'Property Analysis',
-				slug: '/property-analysis',
+				title: 'Qualified Opportunity Funds',
+				slug: '/investments/qualified-opportunity-funds',
 			},
 			{
-				title: 'Tax Optimization',
-				slug: '/tax-benefits',
+				title: 'Development Projects',
+				slug: '/investments/development-projects',
 			},
 			{
-				title: 'Fund Formation',
-				slug: '/qualified-opportunity-funds',
+				title: 'Real Estate Opportunities',
+				slug: '/investments/real-estate-opportunities',
+			},
+		],
+	},
+	{
+		title: 'Tax Benefits',
+		items: [
+			{
+				title: 'OZ Tax Calculator',
+				slug: '/tax-benefits/calculator',
+			},
+			{
+				title: 'Capital Gains Deferral',
+				slug: '/tax-benefits/capital-gains-deferral',
+			},
+			{
+				title: '10-Year Tax Elimination',
+				slug: '/tax-benefits/10-year-tax-elimination',
+			},
+			{
+				title: 'IRS Compliance Checklist',
+				slug: '/tax-benefits/irs-compliance-checklist',
 			},
 		],
 	},
@@ -42,37 +63,33 @@ export const footerLists = [
 		title: 'Resources',
 		items: [
 			{
-				title: 'OZ Guide Library',
-				slug: '/resources/guides',
+				title: 'Regulation Updates',
+				slug: '/resources/regulation-updates',
 			},
 			{
-				title: 'Market Updates',
-				slug: '/market-updates',
+				title: 'Case Studies',
+				slug: '/resources/case-studies-success-stories',
 			},
 			{
-				title: 'Tools & Calculators',
-				slug: '/resources/tools',
+				title: 'White Papers',
+				slug: '/resources/white-papers-research',
 			},
 			{
-				title: 'Blog',
-				slug: '/blog',
-			},
-			{
-				title: 'FAQ',
-				slug: '/faq',
+				title: 'FAQ & Tax Guidance',
+				slug: '/resources/faq-tax-guidance',
 			},
 		],
 	},
 	{
-		title: 'Company',
+		title: 'Legal & Compliance',
 		items: [
 			{
-				title: 'About',
-				slug: '/about',
+				title: 'Investor Qualification',
+				slug: '/process/investor-qualification',
 			},
 			{
-				title: 'Contact',
-				slug: '/contact',
+				title: 'Due Diligence',
+				slug: '/process/due-diligence-resources',
 			},
 			{
 				title: 'Privacy Policy',

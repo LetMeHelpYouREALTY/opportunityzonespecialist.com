@@ -1,0 +1,251 @@
+---
+import Layout from '../../../layouts/Page.astro';
+import '../../../styles/oz-custom.css';
+
+const seo = {
+	title: 'Interactive Opportunity Zone Map | OZ Census Tract Lookup Tool',
+	description: 'Explore Opportunity Zones with our interactive map. Find OZ census tracts, demographics, and investment opportunities across the United States.',
+};
+---
+
+<Layout {seo}>
+	<!-- Hero Section -->
+	<section class="oz-hero">
+		<div class="oz-hero-content">
+			<h1>Interactive Opportunity Zone Map</h1>
+			<p class="subtitle">Explore Opportunity Zones across the United States with detailed census tract data and demographics</p>
+		</div>
+	</section>
+
+	<!-- Map Section -->
+	<section class="oz-services">
+		<div class="oz-services-content">
+			<div style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; margin-top: 2rem;">
+				<!-- Map Controls -->
+				<div>
+					<h2>Map Controls</h2>
+					<div class="oz-form">
+						<div class="oz-form-group">
+							<label class="oz-form-label" for="state-filter">Filter by State</label>
+							<select id="state-filter" class="oz-form-input">
+								<option value="">All States</option>
+								<option value="CA">California</option>
+								<option value="TX">Texas</option>
+								<option value="FL">Florida</option>
+								<option value="NY">New York</option>
+								<option value="IL">Illinois</option>
+								<option value="PA">Pennsylvania</option>
+								<option value="OH">Ohio</option>
+								<option value="GA">Georgia</option>
+								<option value="NC">North Carolina</option>
+								<option value="MI">Michigan</option>
+							</select>
+						</div>
+						
+						<div class="oz-form-group">
+							<label class="oz-form-label" for="search-address">Search Address</label>
+							<input type="text" id="search-address" class="oz-form-input" placeholder="Enter address or ZIP code">
+							<button onclick="searchAddress()" class="oz-btn oz-btn-outline" style="width: 100%; margin-top: 0.5rem;">Search</button>
+						</div>
+						
+						<div class="oz-form-group">
+							<label class="oz-form-label">Map Layers</label>
+							<div style="display: flex; flex-direction: column; gap: 0.5rem;">
+								<label style="display: flex; align-items: center; gap: 0.5rem;">
+									<input type="checkbox" id="show-oz-boundaries" checked>
+									<span>Opportunity Zone Boundaries</span>
+								</label>
+								<label style="display: flex; align-items: center; gap: 0.5rem;">
+									<input type="checkbox" id="show-demographics" checked>
+									<span>Demographic Data</span>
+								</label>
+								<label style="display: flex; align-items: center; gap: 0.5rem;">
+									<input type="checkbox" id="show-investments">
+									<span>Active Investments</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Zone Information Panel -->
+					<div id="zone-info" style="background: var(--oz-white); padding: 1.5rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow); margin-top: 2rem; display: none;">
+						<h3>Zone Information</h3>
+						<div id="zone-details"></div>
+					</div>
+				</div>
+				
+				<!-- Map Container -->
+				<div>
+					<h2>Opportunity Zone Map</h2>
+					<div id="oz-map" style="height: 600px; border: 1px solid var(--oz-gray-300); border-radius: 0.5rem; background: var(--oz-gray-100); display: flex; align-items: center; justify-content: center;">
+						<div style="text-align: center; color: var(--oz-gray-600);">
+							<p>Interactive map loading...</p>
+							<p style="font-size: 0.875rem; margin-top: 1rem;">This would integrate with a mapping service like Mapbox or Google Maps</p>
+						</div>
+					</div>
+					
+					<!-- Map Legend -->
+					<div style="display: flex; gap: 2rem; margin-top: 1rem; flex-wrap: wrap;">
+						<div style="display: flex; align-items: center; gap: 0.5rem;">
+							<div style="width: 20px; height: 20px; background: #3A8DDE; border-radius: 2px;"></div>
+							<span>Opportunity Zones</span>
+						</div>
+						<div style="display: flex; align-items: center; gap: 0.5rem;">
+							<div style="width: 20px; height: 20px; background: #16B286; border-radius: 2px;"></div>
+							<span>Active Investments</span>
+						</div>
+						<div style="display: flex; align-items: center; gap: 0.5rem;">
+							<div style="width: 20px; height: 20px; background: #F59E0B; border-radius: 2px;"></div>
+							<span>High-Growth Areas</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Zone Statistics -->
+	<section class="oz-authority">
+		<div class="oz-authority-content">
+			<h2>Opportunity Zone Statistics</h2>
+			<div class="oz-authority-stats">
+				<div class="oz-stat">
+					<span class="oz-stat-number">8,764</span>
+					<span class="oz-stat-label">Total Opportunity Zones</span>
+				</div>
+				<div class="oz-stat">
+					<span class="oz-stat-number">50</span>
+					<span class="oz-stat-label">States + DC</span>
+				</div>
+				<div class="oz-stat">
+					<span class="oz-stat-number">$75B+</span>
+					<span class="oz-stat-label">Capital Deployed</span>
+				</div>
+				<div class="oz-stat">
+					<span class="oz-stat-number">35M+</span>
+					<span class="oz-stat-label">Residents in OZs</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Top Performing Zones -->
+	<section class="oz-testimonials">
+		<div class="oz-testimonials-content">
+			<h2>Top Performing Opportunity Zones</h2>
+			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+				<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow);">
+					<h3>Austin, TX - Census Tract 18.01</h3>
+					<p><strong>Investment Activity:</strong> $2.3B deployed</p>
+					<p><strong>Key Projects:</strong> Mixed-use development, tech office space</p>
+					<p><strong>Growth Rate:</strong> 15.2% annual appreciation</p>
+				</div>
+				
+				<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow);">
+					<h3>Denver, CO - Census Tract 31.01</h3>
+					<p><strong>Investment Activity:</strong> $1.8B deployed</p>
+					<p><strong>Key Projects:</strong> Residential development, retail</p>
+					<p><strong>Growth Rate:</strong> 12.7% annual appreciation</p>
+				</div>
+				
+				<div style="background: var(--oz-white); padding: 2rem; border-radius: 0.5rem; box-shadow: var(--oz-shadow);">
+					<h3>Miami, FL - Census Tract 12.02</h3>
+					<p><strong>Investment Activity:</strong> $1.5B deployed</p>
+					<p><strong>Key Projects:</strong> Luxury condos, commercial space</p>
+					<p><strong>Growth Rate:</strong> 11.9% annual appreciation</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="oz-cta">
+		<div class="oz-cta-content">
+			<h2>Ready to Invest in Opportunity Zones?</h2>
+			<p>Use our interactive map to identify investment opportunities and connect with our team for detailed analysis and due diligence.</p>
+			<div class="oz-hero .cta-buttons">
+				<a href="/investments/current-opportunities" class="oz-btn oz-btn-primary">View Investment Opportunities</a>
+				<a href="/contact" class="oz-btn oz-btn-secondary">Schedule Consultation</a>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<script>
+	// Mock map functionality - in production, this would integrate with Mapbox, Google Maps, or similar
+	function searchAddress() {
+		const address = document.getElementById('search-address').value;
+		if (!address) {
+			alert('Please enter an address or ZIP code');
+			return;
+		}
+		
+		// Mock search result
+		showZoneInfo({
+			address: address,
+			zoneId: '12345.01',
+			state: 'CA',
+			city: 'Los Angeles',
+			population: 2847,
+			medianIncome: 45230,
+			povertyRate: 18.5,
+			unemploymentRate: 6.2,
+			investmentActivity: '$2.1M deployed',
+			activeProjects: 3
+		});
+	}
+	
+	function showZoneInfo(zoneData) {
+		const zoneInfo = document.getElementById('zone-info');
+		const zoneDetails = document.getElementById('zone-details');
+		
+		zoneDetails.innerHTML = `
+			<p><strong>Address:</strong> ${zoneData.address}</p>
+			<p><strong>Zone ID:</strong> ${zoneData.zoneId}</p>
+			<p><strong>Location:</strong> ${zoneData.city}, ${zoneData.state}</p>
+			<p><strong>Population:</strong> ${zoneData.population.toLocaleString()}</p>
+			<p><strong>Median Income:</strong> $${zoneData.medianIncome.toLocaleString()}</p>
+			<p><strong>Poverty Rate:</strong> ${zoneData.povertyRate}%</p>
+			<p><strong>Unemployment Rate:</strong> ${zoneData.unemploymentRate}%</p>
+			<p><strong>Investment Activity:</strong> ${zoneData.investmentActivity}</p>
+			<p><strong>Active Projects:</strong> ${zoneData.activeProjects}</p>
+		`;
+		
+		zoneInfo.style.display = 'block';
+	}
+	
+	// Filter functionality
+	document.getElementById('state-filter').addEventListener('change', function() {
+		const selectedState = this.value;
+		// In production, this would filter the map data
+		console.log('Filtering by state:', selectedState);
+	});
+	
+	// Layer toggle functionality
+	document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+		checkbox.addEventListener('change', function() {
+			// In production, this would toggle map layers
+			console.log('Toggling layer:', this.id, this.checked);
+		});
+	});
+</script>
+
+<style>
+	.oz-hero .cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 2rem;
+	}
+	
+	@media (max-width: 768px) {
+		.oz-services-content > div {
+			grid-template-columns: 1fr;
+		}
+		
+		#oz-map {
+			height: 400px;
+		}
+	}
+</style>

@@ -1,0 +1,163 @@
+---
+// Sticky CTA component for conversion optimization
+---
+
+<div id="sticky-cta" class="sticky-cta">
+	<div class="sticky-cta-content">
+		<div class="sticky-cta-text">
+			<span class="sticky-cta-title">Ready to Invest in Opportunity Zones?</span>
+			<span class="sticky-cta-subtitle">Get expert guidance and access exclusive opportunities</span>
+		</div>
+		<div class="sticky-cta-buttons">
+			<a href="/process/investor-qualification" class="sticky-cta-btn primary">Verify Status</a>
+			<a href="/contact" class="sticky-cta-btn secondary">Schedule Call</a>
+		</div>
+		<button class="sticky-cta-close" onclick="closeStickyCTA()">×</button>
+	</div>
+</div>
+
+<script>
+	// Show sticky CTA after user scrolls 50% of page
+	window.addEventListener('scroll', function() {
+		const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+		const stickyCTA = document.getElementById('sticky-cta');
+		
+		if (scrollPercent > 50 && !localStorage.getItem('stickyCTAClosed')) {
+			stickyCTA.style.display = 'block';
+		}
+	});
+	
+	function closeStickyCTA() {
+		document.getElementById('sticky-cta').style.display = 'none';
+		localStorage.setItem('stickyCTAClosed', 'true');
+		
+		// Reset after 24 hours
+		setTimeout(() => {
+			localStorage.removeItem('stickyCTAClosed');
+		}, 24 * 60 * 60 * 1000);
+	}
+</script>
+
+<style>
+	.sticky-cta {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: var(--oz-navy);
+		color: var(--oz-white);
+		padding: 1rem;
+		box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+		z-index: 1000;
+		display: none;
+		transform: translateY(100%);
+		animation: slideUp 0.3s ease-out forwards;
+	}
+	
+	@keyframes slideUp {
+		to {
+			transform: translateY(0);
+		}
+	}
+	
+	.sticky-cta-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 1200px;
+		margin: 0 auto;
+		gap: 1rem;
+	}
+	
+	.sticky-cta-text {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+	
+	.sticky-cta-title {
+		font-weight: 600;
+		font-size: 1rem;
+	}
+	
+	.sticky-cta-subtitle {
+		font-size: 0.875rem;
+		opacity: 0.9;
+	}
+	
+	.sticky-cta-buttons {
+		display: flex;
+		gap: 0.75rem;
+	}
+	
+	.sticky-cta-btn {
+		padding: 0.75rem 1.5rem;
+		border-radius: 0.375rem;
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 0.875rem;
+		transition: all 0.2s ease;
+		white-space: nowrap;
+	}
+	
+	.sticky-cta-btn.primary {
+		background: var(--oz-gold);
+		color: var(--oz-white);
+	}
+	
+	.sticky-cta-btn.primary:hover {
+		background: #d97706;
+		transform: translateY(-1px);
+	}
+	
+	.sticky-cta-btn.secondary {
+		background: transparent;
+		color: var(--oz-white);
+		border: 1px solid var(--oz-white);
+	}
+	
+	.sticky-cta-btn.secondary:hover {
+		background: var(--oz-white);
+		color: var(--oz-navy);
+	}
+	
+	.sticky-cta-close {
+		background: none;
+		border: none;
+		color: var(--oz-white);
+		font-size: 1.5rem;
+		cursor: pointer;
+		padding: 0.25rem;
+		line-height: 1;
+		opacity: 0.7;
+		transition: opacity 0.2s ease;
+	}
+	
+	.sticky-cta-close:hover {
+		opacity: 1;
+	}
+	
+	@media (max-width: 768px) {
+		.sticky-cta-content {
+			flex-direction: column;
+			text-align: center;
+			gap: 1rem;
+		}
+		
+		.sticky-cta-buttons {
+			width: 100%;
+			justify-content: center;
+		}
+		
+		.sticky-cta-btn {
+			flex: 1;
+			text-align: center;
+		}
+		
+		.sticky-cta-close {
+			position: absolute;
+			top: 0.5rem;
+			right: 0.5rem;
+		}
+	}
+</style>
