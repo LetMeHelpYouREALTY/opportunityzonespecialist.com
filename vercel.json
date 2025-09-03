@@ -4,15 +4,6 @@
   "framework": "astro",
   "installCommand": "npm install",
   "devCommand": "npm run dev",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
   "routes": [
     {
       "src": "/rss.xml",
@@ -54,10 +45,5 @@
         }
       ]
     }
-  ],
-  "functions": {
-    "src/pages/rss.xml.js": {
-      "maxDuration": 10
-    }
-  }
+  ]
 }
