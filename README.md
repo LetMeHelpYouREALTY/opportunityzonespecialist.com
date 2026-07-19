@@ -11,6 +11,20 @@ Live domain: [opportunityzonespecialist.com](https://www.opportunityzonespeciali
 - Cloudinary images, Google Maps / open-houses embed via env
 - Deployed on Vercel
 
+## Production note (domain)
+
+The Next.js app with RealScout + Calendly is deployed on Janet Duffy’s Vercel team as project **`opportunityzonespecialist-com`**:
+
+- App URL: https://opportunityzonespecialist-com.vercel.app
+- Custom domain `www.opportunityzonespecialist.com` still pointed at an **old Astro project** (not connected to this GitHub repo), so production DNS did not pick up git pushes.
+
+**To finish production cutover in Vercel:**
+1. Open project `opportunityzonespecialist-com` → Settings → Domains  
+2. Add `opportunityzonespecialist.com` and `www.opportunityzonespecialist.com`  
+3. Remove those domains from the old Astro project (or it will conflict)  
+4. Connect GitHub repo `LetMeHelpYouREALTY/opportunityzonespecialist.com` for auto-deploys from `main`  
+5. Copy env vars (`NEXT_PUBLIC_REALSCOUT_AGENT_ID`, Cloudinary, Maps, etc.) onto this project
+
 ## Local development
 
 ```bash
