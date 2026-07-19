@@ -3,53 +3,57 @@
 @tailwind utilities;
 
 :root {
-  --background: #f3f6f8;
-  --foreground: #14283c;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --border: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --radius: 0.625rem;
 }
 
-html {
-  scroll-behavior: smooth;
+.dark {
+  --background: oklch(0.16 0.01 65);
+  --foreground: oklch(0.96 0.005 80);
+  --card: oklch(0.21 0.012 65);
+  --card-foreground: oklch(0.96 0.005 80);
+  --primary: oklch(0.75 0.16 55);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.25 0.01 65);
+  --secondary-foreground: oklch(0.96 0.005 80);
+  --muted: oklch(0.24 0.012 65);
+  --muted-foreground: oklch(0.65 0.015 70);
+  --accent: oklch(0.25 0.012 65);
+  --accent-foreground: oklch(0.96 0.005 80);
+  --border: oklch(1 0.01 70 / 10%);
+  --ring: oklch(0.75 0.16 55);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
 }
 
+.realscout-office-listings-host {
+  width: 100%;
+}
+
+.realscout-office-listings-host realscout-office-listings,
 realscout-simple-search,
 realscout-office-listings {
   display: block;
   width: 100%;
-}
-
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes ken-burns {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.06);
-  }
-}
-
-.animate-fade-up {
-  animation: fade-up 0.7s ease-out both;
-}
-
-.animate-fade-up-delay {
-  animation: fade-up 0.8s ease-out 0.15s both;
-}
-
-.animate-ken-burns {
-  animation: ken-burns 18s ease-out forwards;
 }

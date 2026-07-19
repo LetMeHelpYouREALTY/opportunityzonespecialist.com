@@ -16,8 +16,8 @@ const DEFAULT_URL = "https://calendly.com/drjanduffy/showing";
 export function CalendlyBadge({
   url = DEFAULT_URL,
   text = "Schedule a showing",
-  color = "#C4A35A",
-  textColor = "#0B1F33",
+  color = "#D4A017",
+  textColor = "#1a140c",
   branding = true,
 }: CalendlyBadgeProps) {
   useEffect(() => {

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Fraunces } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import { CalendlyBadge } from "@/components/calendly/CalendlyBadge";
 import { CalendlyScript } from "@/components/calendly/CalendlyScript";
 import { Footer } from "@/components/layouts/Footer";
@@ -10,31 +10,32 @@ import { localBusinessSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const sans = DM_Sans({
+const geistSans = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
 });
 
-const display = Fraunces({
+const geistMono = Geist_Mono({
   subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-mono",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.brand} | ${site.shortName}, REALTOR® | Las Vegas & OZ Homes`,
-    template: `%s | ${site.brand}`,
+    default: `Homes for Sale in Las Vegas, NV | ${site.shortName}`,
+    template: `%s | ${site.shortName}`,
   },
-  description: `${site.shortName} at ${site.brokerage}. Buy, sell, and invest in Las Vegas Opportunity Zone and residential real estate. Call ${site.phone.display}.`,
+  description: `${site.shortName} at ${site.brokerage}. Browse Las Vegas homes for sale with live MLS inventory and Opportunity Zone guidance. Call ${site.phone.display}.`,
   openGraph: {
-    title: `${site.brand} | ${site.shortName}`,
+    title: `Homes for Sale in Las Vegas | ${site.shortName}`,
     description: site.tagline,
     url: site.url,
     siteName: site.brand,
     type: "website",
+    images: [{ url: "/realty/heroes/hero-homes-for-sale.png" }],
   },
   robots: { index: true, follow: true },
 };
@@ -45,14 +46,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${sans.variable} ${display.variable}`}>
-      <body className="min-h-screen font-sans antialiased">
+    <html
+      lang="en"
+      className={`dark ${geistSans.variable} ${geistMono.variable}`}
+    >
+      <body className="min-h-dvh font-sans antialiased">
         <RealScoutScript />
         <CalendlyScript />
         <JsonLd data={localBusinessSchema()} />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <div className="flex min-h-dvh flex-col">
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
         <CalendlyBadge url={site.calendlyUrl} />
       </body>
     </html>

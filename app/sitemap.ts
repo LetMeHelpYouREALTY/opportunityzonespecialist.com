@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url;
   const staticRoutes = [
     "",
+    "/las-vegas-homes-for-sale",
     "/listings",
     "/about",
     "/contact",

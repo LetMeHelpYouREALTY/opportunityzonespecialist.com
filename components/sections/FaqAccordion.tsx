@@ -8,33 +8,42 @@ type FaqAccordionProps = {
 
 export function FaqAccordion({
   title = "Frequently Asked Questions",
-  subtitle,
+  subtitle = "Common Questions",
   faqs,
 }: FaqAccordionProps) {
   return (
-    <section className="bg-brand-mist py-16 md:py-20">
-      <div className="mx-auto max-w-3xl px-4 md:px-6">
-        <h2 className="font-display text-3xl text-brand-navy md:text-4xl">
-          {title}
-        </h2>
-        {subtitle ? (
-          <p className="mt-3 text-brand-ink/70">{subtitle}</p>
-        ) : null}
-        <div className="mt-8 space-y-3">
+    <section
+      aria-labelledby="faq-heading"
+      className="w-full border-b border-border bg-card/40"
+    >
+      <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-20">
+        <div className="mb-10 text-center">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+            {subtitle}
+          </p>
+          <h2
+            id="faq-heading"
+            className="text-balance text-2xl font-bold tracking-tight text-foreground sm:text-3xl"
+          >
+            {title}
+          </h2>
+        </div>
+
+        <div className="flex flex-col gap-2">
           {faqs.map((faq) => (
             <details
               key={faq.question}
-              className="group border border-brand-sand bg-white px-4 py-3"
+              className="group rounded-lg border border-border bg-card px-5"
             >
-              <summary className="cursor-pointer list-none font-medium text-brand-navy marker:content-none">
+              <summary className="cursor-pointer list-none py-4 text-left text-sm font-medium leading-snug text-foreground marker:content-none hover:text-primary">
                 <span className="flex items-center justify-between gap-3">
                   {faq.question}
-                  <span className="text-brand-gold transition group-open:rotate-45">
+                  <span className="text-primary transition group-open:rotate-45">
                     +
                   </span>
                 </span>
               </summary>
-              <p className="mt-3 text-sm leading-relaxed text-brand-ink/75">
+              <p className="pb-5 text-sm leading-relaxed text-muted-foreground">
                 {faq.answer}
               </p>
             </details>

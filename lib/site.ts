@@ -1,8 +1,9 @@
 export const site = {
   name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
   shortName: "Dr. Jan Duffy",
+  agentTitle: "REALTOR® | BHHS Nevada Properties",
   brand: "Opportunity Zone Specialist",
-  tagline: "Las Vegas real estate with Opportunity Zone expertise",
+  tagline: "Las Vegas homes for sale with Opportunity Zone expertise",
   domain: "opportunityzonespecialist.com",
   url: "https://www.opportunityzonespecialist.com",
   email: "homes@heyberkshire.com",
@@ -14,6 +15,12 @@ export const site = {
     "https://calendly.com/drjanduffy/showing",
   googleReviewsUrl:
     "https://www.google.com/maps/search/?api=1&query=Dr+Jan+Duffy+Berkshire+Hathaway+HomeServices+Las+Vegas",
+  agentPhotoSrc: "/realty/dr-jan-duffy.jpg",
+  agentPhotoAlt:
+    "Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices Nevada Properties",
+  city: "Las Vegas",
+  state: "NV",
+  region: "Greater Las Vegas Valley",
 
   phone: {
     display: "(702) 222-1964",
@@ -57,6 +64,15 @@ export const site = {
     count: "200",
   },
 } as const;
+
+export const navLinks = [
+  { label: "Homes for Sale", href: "/las-vegas-homes-for-sale" },
+  { label: "Listings", href: "/listings" },
+  { label: "Neighborhoods", href: "/neighborhoods" },
+  { label: "Buyers", href: "/buyers" },
+  { label: "Sellers", href: "/sellers" },
+  { label: "Contact", href: "/contact" },
+] as const;
 
 export function getRealscoutAgentId(): string {
   return (
@@ -119,6 +135,4 @@ export function cloudinaryUrl(
   return `https://res.cloudinary.com/${cloud}/image/upload/c_${crop},w_${width},h_${height},q_auto,f_auto/${path}`;
 }
 
-/** Fallback hero when Cloudinary is not configured */
-export const FALLBACK_HERO_IMAGE =
-  "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80";
+export const FALLBACK_HERO_IMAGE = "/realty/heroes/hero-homes-for-sale.png";

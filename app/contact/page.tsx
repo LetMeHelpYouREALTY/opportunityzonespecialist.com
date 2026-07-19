@@ -2,64 +2,65 @@ import type { Metadata } from "next";
 import { CalendlyWidget } from "@/components/calendly/CalendlyWidget";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { MapEmbed } from "@/components/sections/MapEmbed";
-import {
-  formatFullAddress,
-  getDirectionsUrl,
-  site,
-} from "@/lib/site";
+import { formatFullAddress, getDirectionsUrl, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact Dr. Jan Duffy | Las Vegas Real Estate",
-  description: `Contact ${site.shortName} at ${site.brokerage}. Call ${site.phone.display}. Office: ${formatFullAddress()}.`,
+  description: `Contact ${site.shortName} at ${site.brokerage}. Call ${site.phone.display}.`,
 };
 
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-brand-navy px-4 py-14 text-white md:px-6">
+      <section className="border-b border-border bg-card/40 px-4 py-14 sm:px-6">
         <div className="mx-auto max-w-6xl">
-          <h1 className="font-display text-4xl md:text-5xl">Contact</h1>
-          <p className="mt-4 max-w-2xl text-white/80">
+          <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+            Contact
+          </p>
+          <h1 className="mt-3 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+            Contact
+          </h1>
+          <p className="mt-4 max-w-2xl text-muted-foreground">
             Reach {site.shortName} directly. No phone tree — call or text{" "}
             {site.phone.display}.
           </p>
         </div>
       </section>
 
-      <section className="bg-white py-14">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-2 md:px-6">
+      <section className="bg-background py-14">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-2 sm:px-6">
           <div>
-            <h2 className="font-display text-2xl text-brand-navy">NAP</h2>
-            <dl className="mt-6 space-y-4 text-sm text-brand-ink/85">
+            <h2 className="text-xl font-semibold text-foreground">NAP</h2>
+            <dl className="mt-6 space-y-4 text-sm text-muted-foreground">
               <div>
-                <dt className="font-semibold text-brand-navy">Business</dt>
+                <dt className="font-semibold text-foreground">Business</dt>
                 <dd>{site.name}</dd>
               </div>
               <div>
-                <dt className="font-semibold text-brand-navy">Address</dt>
+                <dt className="font-semibold text-foreground">Address</dt>
                 <dd>{formatFullAddress()}</dd>
               </div>
               <div>
-                <dt className="font-semibold text-brand-navy">Phone</dt>
+                <dt className="font-semibold text-foreground">Phone</dt>
                 <dd>
-                  <a href={site.phone.href} className="text-brand-accent underline">
+                  <a href={site.phone.href} className="text-primary underline">
                     {site.phone.display}
                   </a>
                 </dd>
               </div>
               <div>
-                <dt className="font-semibold text-brand-navy">Email</dt>
+                <dt className="font-semibold text-foreground">Email</dt>
                 <dd>
                   <a
                     href={`mailto:${site.email}`}
-                    className="text-brand-accent underline"
+                    className="text-primary underline"
                   >
                     {site.email}
                   </a>
                 </dd>
               </div>
               <div>
-                <dt className="font-semibold text-brand-navy">Hours</dt>
+                <dt className="font-semibold text-foreground">Hours</dt>
                 <dd>
                   Mon–Fri 9:00am–6:00pm
                   <br />
@@ -73,7 +74,7 @@ export default function ContactPage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href={site.phone.href}
-                className="rounded-sm bg-brand-gold px-4 py-2 text-sm font-semibold text-brand-navy"
+                className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground"
               >
                 Call
               </a>
@@ -81,7 +82,7 @@ export default function ContactPage() {
                 href={getDirectionsUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-sm border border-brand-navy px-4 py-2 text-sm font-semibold text-brand-navy"
+                className="rounded-md border border-border px-4 py-2 text-sm font-semibold text-foreground"
               >
                 Directions
               </a>
@@ -89,7 +90,7 @@ export default function ContactPage() {
                 href={site.googleReviewsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-sm border border-brand-navy px-4 py-2 text-sm font-semibold text-brand-navy"
+                className="rounded-md border border-border px-4 py-2 text-sm font-semibold text-foreground"
               >
                 View Google Reviews
               </a>
@@ -97,7 +98,7 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <h2 className="mb-4 font-display text-2xl text-brand-navy">
+            <h2 className="mb-4 text-xl font-semibold text-foreground">
               Map & open houses
             </h2>
             <MapEmbed title="Office and open houses map" />
@@ -105,16 +106,16 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-brand-mist py-14">
-        <div className="mx-auto max-w-4xl px-4 md:px-6">
-          <h2 className="font-display text-3xl text-brand-navy">
+      <section className="border-t border-border bg-card/40 py-14">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <h2 className="text-2xl font-bold tracking-tight text-foreground">
             Schedule a showing or consult
           </h2>
-          <p className="mt-3 text-brand-ink/70">
+          <p className="mt-3 text-muted-foreground">
             Book time with {site.shortName} on Calendly — or call{" "}
             {site.phone.display}.
           </p>
-          <div className="mt-8 overflow-hidden border border-brand-sand bg-white">
+          <div className="mt-8 overflow-hidden rounded-lg border border-border bg-card">
             <CalendlyWidget url={site.calendlyUrl} />
           </div>
         </div>

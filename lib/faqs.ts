@@ -3,44 +3,41 @@ export type FaqItem = {
   answer: string;
 };
 
-export const homeFaqs: FaqItem[] = [
+export const homesForSaleFaqs: FaqItem[] = [
   {
-    question: "What areas do you serve?",
+    question: "What is the median home price in Las Vegas right now?",
     answer:
-      "We specialize in Las Vegas and Henderson, Nevada, including Summerlin, Green Valley, and surrounding communities. Services cover residential, luxury, investment, and Opportunity Zone properties throughout Southern Nevada.",
+      "As of mid-2026, the Las Vegas valley median sale price for single-family homes is roughly $486,000–$490,000. Prices vary by submarket — North Las Vegas trends lower, while Summerlin commands a premium over the valley median. Ask for a current comparative market analysis for your target area.",
   },
   {
-    question: "How long does the home buying process take?",
+    question: "How much housing inventory is available in Las Vegas?",
     answer:
-      "Most financed purchases in the Las Vegas Valley close in about 30 to 45 days after an accepted offer. Cash purchases can close faster. Timelines depend on inspections, appraisal, and lender requirements.",
+      "Active single-family listings across Clark County were running roughly 8,600–8,900 in mid-2026, plus around 3,000 attached homes, putting months-of-supply near 3.8 months for single-family — past the 3-month mark that typically signals a shift toward buyers.",
   },
   {
-    question: "Do you help with home valuations?",
+    question: "How long do homes stay on the market in Las Vegas?",
     answer:
-      "Yes. Dr. Jan Duffy provides comparative market analyses for sellers and investors, including Opportunity Zone property reviews. Call or text (702) 222-1964 for a valuation consult.",
+      "Median days on market climbed to roughly 47–51 days as of April 2026 per Las Vegas REALTORS® (GLVAR) data, up about 14.6% year-over-year — buyers have more time and leverage to negotiate than during 2021–2022.",
   },
   {
-    question: "What makes you different from other real estate agents?",
+    question: "Which Las Vegas neighborhoods should I consider?",
     answer:
-      "You get Berkshire Hathaway HomeServices backing plus specialized Opportunity Zone and investment guidance from an agent with decades of Las Vegas market experience and $127M+ in closed transactions.",
+      "It depends on your budget and priorities. Summerlin and Henderson carry a price premium for master-planned amenities. North Las Vegas offers relative value. Downtown and southeast Las Vegas can be an entry point. A local agent can match neighborhoods to your budget and commute — without regard to protected characteristics under the Fair Housing Act.",
   },
   {
-    question: "Can you help with investment properties?",
+    question: "Can you help with Opportunity Zone investment properties?",
     answer:
-      "Yes. We help investors evaluate rentals, luxury holdings, and Opportunity Zone-eligible properties with clear numbers on price, cash flow potential, and tax-deferral timelines.",
-  },
-  {
-    question: "What are your fees?",
-    answer:
-      "Buyer representation is typically covered by seller-paid compensation when available; seller listing fees are discussed up front in writing before you sign. Ask for a clear fee breakdown on your first call.",
+      "Yes. In addition to residential search, Dr. Jan Duffy helps investors evaluate Opportunity Zone-eligible properties with clear numbers on price, timelines, and tax-deferral considerations. Call (702) 222-1964.",
   },
 ];
+
+export const homeFaqs = homesForSaleFaqs;
 
 export const buyerFaqs: FaqItem[] = [
   {
     question: "Can I search MLS listings on this site?",
     answer:
-      "Yes. Use the RealScout search on the homepage or Listings page for live MLS inventory across Las Vegas, Henderson, and Summerlin.",
+      "Yes. Use the RealScout inventory on the homepage or Listings page for live MLS inventory across Las Vegas, Henderson, and Summerlin.",
   },
   {
     question: "Do you work with relocating buyers?",

@@ -15,21 +15,24 @@ export const neighborhoods = [
 
 export function NeighborhoodGrid() {
   return (
-    <section className="bg-white py-16 md:py-20">
-      <div className="mx-auto max-w-6xl px-4 md:px-6">
+    <section className="w-full border-b border-border bg-background py-14 sm:py-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
-            <h2 className="font-display text-3xl text-brand-navy md:text-4xl">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+              Neighborhoods
+            </p>
+            <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
               Las Vegas neighborhoods we serve
             </h2>
-            <p className="mt-3 max-w-2xl text-brand-ink/70">
-              Berkshire Hathaway HomeServices Nevada Properties coverage across
-              Southern Nevada — including Opportunity Zone corridors.
+            <p className="mt-3 max-w-2xl text-sm text-muted-foreground">
+              Coverage across Southern Nevada — including Opportunity Zone
+              corridors.
             </p>
           </div>
           <Link
             href="/neighborhoods"
-            className="text-sm font-semibold text-brand-accent hover:underline"
+            className="text-sm font-semibold text-primary hover:underline"
           >
             View all neighborhoods →
           </Link>
@@ -39,10 +42,10 @@ export function NeighborhoodGrid() {
             <Link
               key={n.slug}
               href={`/neighborhoods/${n.slug}`}
-              className="border border-brand-sand bg-brand-mist/50 p-4 transition hover:border-brand-gold hover:bg-white"
+              className="rounded-lg border border-border bg-card p-4 transition-colors hover:border-primary/40"
             >
-              <h3 className="font-semibold text-brand-navy">{n.name}</h3>
-              <p className="mt-1 text-sm text-brand-ink/65">{n.from}</p>
+              <h3 className="font-semibold text-foreground">{n.name}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{n.from}</p>
             </Link>
           ))}
         </div>
