@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, Fraunces } from "next/font/google";
+import { CalendlyBadge } from "@/components/calendly/CalendlyBadge";
+import { CalendlyScript } from "@/components/calendly/CalendlyScript";
 import { Footer } from "@/components/layouts/Footer";
 import { Navbar } from "@/components/layouts/Navbar";
 import { RealScoutScript } from "@/components/realscout/RealScoutScript";
@@ -46,10 +48,12 @@ export default function RootLayout({
     <html lang="en" className={`${sans.variable} ${display.variable}`}>
       <body className="min-h-screen font-sans antialiased">
         <RealScoutScript />
+        <CalendlyScript />
         <JsonLd data={localBusinessSchema()} />
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <CalendlyBadge url={site.calendlyUrl} />
       </body>
     </html>
   );

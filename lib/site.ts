@@ -9,6 +9,9 @@ export const site = {
   license: "S.0197614.LLC",
   brokerage: "Berkshire Hathaway HomeServices Nevada Properties",
   realscoutPortal: "http://drjanduffy.realscout.com/",
+  calendlyUrl:
+    process.env.NEXT_PUBLIC_CALENDLY_URL?.trim() ||
+    "https://calendly.com/drjanduffy/showing",
   googleReviewsUrl:
     "https://www.google.com/maps/search/?api=1&query=Dr+Jan+Duffy+Berkshire+Hathaway+HomeServices+Las+Vegas",
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CalendlyWidget } from "@/components/calendly/CalendlyWidget";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { MapEmbed } from "@/components/sections/MapEmbed";
 import {
@@ -100,6 +101,21 @@ export default function ContactPage() {
               Map & open houses
             </h2>
             <MapEmbed title="Office and open houses map" />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-brand-mist py-14">
+        <div className="mx-auto max-w-4xl px-4 md:px-6">
+          <h2 className="font-display text-3xl text-brand-navy">
+            Schedule a showing or consult
+          </h2>
+          <p className="mt-3 text-brand-ink/70">
+            Book time with {site.shortName} on Calendly — or call{" "}
+            {site.phone.display}.
+          </p>
+          <div className="mt-8 overflow-hidden border border-brand-sand bg-white">
+            <CalendlyWidget url={site.calendlyUrl} />
           </div>
         </div>
       </section>

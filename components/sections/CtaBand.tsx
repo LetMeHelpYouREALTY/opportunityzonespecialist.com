@@ -24,6 +24,14 @@ export function CtaBand({
           >
             Call {site.phone.display}
           </a>
+          <a
+            href={site.calendlyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-sm border border-white/40 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
+          >
+            Schedule on Calendly
+          </a>
           <Link
             href="/contact"
             className="rounded-sm border border-white/40 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
