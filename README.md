@@ -1,71 +1,46 @@
-<p align="center">
-  <img src="assets/gh-banner.png" alt="Odyssey Theme Banner">
-</p>
+# Opportunity Zone Specialist
 
-<br/>
-<div align="center">
-  <a href="https://twitter.com/jaydanurwin">
-  <img src="assets/twitter-badge.svg" alt="Follow Jaydan Urwin on Twitter"/>
-</a>
-  <a href="https://sapling.lemonsqueezy.com/checkout/buy/9b78751f-6382-442d-ac99-32c2318b70a0">
-    <img src="assets/sponsor-badge.svg" alt="Sponsor This Repo" />
-  </a>
-</div>
-<br/>
+Next.js 15 realtor site for **Dr. Jan Duffy** at Berkshire Hathaway HomeServices Nevada Properties — Opportunity Zone & Las Vegas Valley focus.
 
-# Odyssey Theme
+Live domain: [opportunityzonespecialist.com](https://www.opportunityzonespecialist.com)
 
-Odyssey Theme is a modern theme/starter for a business or startup's marketing website. It provides landing page examples, a full-featured blog, contact forms, and more. It is fully themeable to match your business' branding and style. It even includes a theme switcher component to show how easily the entire style of the site can be changed with only a few lines of CSS.
+## Stack
 
-## Features
+- Next.js 15 App Router, React 19, TypeScript, Tailwind CSS
+- RealScout web components (`em.realscout.com` + `www.realscout.com` in CSP)
+- Cloudinary images, Google Maps / open-houses embed via env
+- Deployed on Vercel
 
-<p align="center">
-  <img src="assets/lh-screenshot.png" alt="Screenshot of perfect score in Lighthouse benchmark">
-</p>
-
-
-- ✅ **A perfect score in Lighthouse**
-- ✅ **Blazing fast performance thanks to Astro 🚀**
-- ✅ **A Full Featured Blog with Tagging**
-- ✅ **Fully theme-able styles with for buttons, shapes, backgrounds, surfaces, etc.**
-- ✅ **Responsive, mobile-friendly landing pages**
-- ✅ **SEO Best Practices (Open Graph, Canonical URLs, sitemap)**
-- ✅ **Performant Local Fonts Setup**
-- ✅ **Contact Forms Setup for Netlify, Formspree, Formspark, etc.**
-- ✅ **A package of ready-to-use UI components**
-
-
-## Demo
-
-View a [live demo](https://odyssey-theme.sapling.supply/) of the Odyssey Theme.
-
-## Documentation
-
-1. View the [Theme Setup Guide](https://odyssey-theme.sapling.supply/theme/theme-setup)
-2. View the [Customizing the Theme Guide](https://odyssey-theme.sapling.supply/theme/customizing-odyssey)
-
-## Usage
+## Local development
 
 ```bash
-cd theme
-
 npm install
-
-npm start
+cp .env.example .env.local
+# fill NEXT_PUBLIC_* values from Vercel
+npm run dev
 ```
 
-## Deploy
+Or use `vercel dev` / `vercel build` when the Vercel CLI is linked.
 
-Feel free to deploy and host your site on your favorite static hosting service such as Netlify, Firebase Hosting, Vercel, GitHub Pages, etc.
+## Required env (v1)
 
-Astro has [an in-depth guide](https://docs.astro.build/en/guides/deploy/) on how to deploy an Astro project to each service.
+| Variable | Purpose |
+|----------|---------|
+| `NEXT_PUBLIC_REALSCOUT_AGENT_ID` | RealScout agent encoded id |
+| `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` | Hero / media images |
+| `CLOUDINARY_FOLDER` | Optional folder prefix |
+| `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | Office map embed fallback |
+| `NEXT_PUBLIC_OPEN_HOUSES_MAP_EMBED_URL` | Preferred map iframe URL |
 
-## Sponsor
+Deferred (reserved, not required for pages): `openaikey`, `NOTION_TOKEN`, `CLOUDFLARE_API_TOKEN`, `SMS_*`.
 
-If you find this theme useful, please consider donating to support the continued development of it with the link below
+## NAP (must match GBP)
 
-[Donate to Odyssey Theme](https://sapling.lemonsqueezy.com/checkout/buy/9b78751f-6382-442d-ac99-32c2318b70a0)
+- **Name:** Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties  
+- **Address:** 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134  
+- **Phone (client CTA):** (702) 222-1964  
+- **License:** S.0197614.LLC  
 
-## Support
+## RealScout
 
-Please feel free to post issues or submit PRs to this repo and we will do our best to respond in a timely manner, keeping in mind this template is offered for free as is on GitHub.
+Script loads once in `app/layout.tsx` via `RealScoutScript`. Widgets use `dangerouslySetInnerHTML` custom elements — do not load the script multiple times or drive widgets with React state.

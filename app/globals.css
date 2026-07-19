@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f3f6f8;
+  --foreground: #14283c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+realscout-simple-search,
+realscout-office-listings {
+  display: block;
+  width: 100%;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ken-burns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.animate-fade-up-delay {
+  animation: fade-up 0.8s ease-out 0.15s both;
+}
+
+.animate-ken-burns {
+  animation: ken-burns 18s ease-out forwards;
+}
