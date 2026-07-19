@@ -27,7 +27,7 @@ export default function HomePage() {
       <RealtyHero
         headline="Homes for Sale in Las Vegas, NV"
         subhead="A local, licensed guide to buying in the Las Vegas Valley — with current market data across every submarket, from Summerlin to Henderson to North Las Vegas."
-        imageSrc="/realty/heroes/hero-homes-for-sale.png"
+        imageSrc="/realty/heroes/hero-homes-for-sale.jpg"
         imageAlt="Modern Las Vegas single-family home at golden hour with desert mountains in the background"
       />
 

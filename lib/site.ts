@@ -135,4 +135,4 @@ export function cloudinaryUrl(
   return `https://res.cloudinary.com/${cloud}/image/upload/c_${crop},w_${width},h_${height},q_auto,f_auto/${path}`;
 }
 
-export const FALLBACK_HERO_IMAGE = "/realty/heroes/hero-homes-for-sale.png";
+export const FALLBACK_HERO_IMAGE = "/realty/heroes/hero-homes-for-sale.jpg";

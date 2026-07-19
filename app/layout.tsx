@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     url: site.url,
     siteName: site.brand,
     type: "website",
-    images: [{ url: "/realty/heroes/hero-homes-for-sale.png" }],
+    images: [{ url: "/realty/heroes/hero-homes-for-sale.jpg" }],
   },
   robots: { index: true, follow: true },
 };

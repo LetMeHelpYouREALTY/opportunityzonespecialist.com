@@ -15,7 +15,7 @@ export default function ListingsPage() {
       <RealtyHero
         headline="Las Vegas MLS homes for sale"
         subhead="Search live inventory across Las Vegas, Henderson, and Summerlin. Filter by price, property type, and status with RealScout."
-        imageSrc="/realty/heroes/hero-homes-for-sale.png"
+        imageSrc="/realty/heroes/hero-homes-for-sale.jpg"
         imageAlt="Las Vegas valley homes for sale"
         primaryCtaLabel="Jump to listings"
         primaryCtaHref="#listings"
