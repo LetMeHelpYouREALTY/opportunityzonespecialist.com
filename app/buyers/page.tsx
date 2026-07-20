@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CalendlyWidget } from "@/components/calendly/CalendlyWidget";
 import { RealScoutSimpleSearch } from "@/components/realscout/RealScoutSimpleSearch";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
@@ -68,6 +69,21 @@ export default function BuyersPage() {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-card/40 py-14">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <h2 className="text-2xl font-bold tracking-tight text-foreground">
+            Schedule a buyer consult or showing
+          </h2>
+          <p className="mt-3 text-muted-foreground">
+            Book time with {site.shortName} on Calendly — or call{" "}
+            {site.phone.display}.
+          </p>
+          <div className="mt-8 overflow-hidden rounded-lg border border-border bg-card">
+            <CalendlyWidget url={site.calendlyUrl} />
+          </div>
         </div>
       </section>
 

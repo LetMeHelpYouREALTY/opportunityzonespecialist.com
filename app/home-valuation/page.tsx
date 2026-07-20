@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { CalendlyWidget } from "@/components/calendly/CalendlyWidget";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Home Valuation | Las Vegas CMA",
-  description: `Get a comparative market analysis from ${site.shortName}. Call ${site.phone.display}.`,
+  description: `Get a comparative market analysis from ${site.shortName}. Schedule on Calendly or call ${site.phone.display}.`,
 };
 
 export default function HomeValuationPage() {
@@ -17,61 +18,42 @@ export default function HomeValuationPage() {
           </h1>
           <p className="mt-4 max-w-2xl text-muted-foreground">
             Request a CMA based on recent comps, active competition, and
-            property condition — not a generic online estimate.
+            property condition — not a generic online estimate. Book a consult
+            with {site.shortName} below, or call{" "}
+            <a href={site.phone.href} className="text-primary underline">
+              {site.phone.display}
+            </a>
+            .
           </p>
         </div>
       </section>
 
       <section className="bg-background py-14">
-        <div className="mx-auto max-w-xl px-4 sm:px-6">
-          <form
-            className="space-y-4 rounded-lg border border-border bg-card p-6"
-            action={`mailto:${site.email}`}
-            method="post"
-            encType="text/plain"
-          >
-            <h2 className="text-xl font-semibold text-foreground">
-              Valuation request
-            </h2>
-            {[
-              { name: "name", label: "Full name", type: "text", required: true },
-              { name: "email", label: "Email", type: "email", required: true },
-              {
-                name: "address",
-                label: "Property address",
-                type: "text",
-                required: true,
-              },
-              { name: "phone", label: "Phone", type: "tel", required: false },
-            ].map((field) => (
-              <label key={field.name} className="block text-sm">
-                <span className="font-medium text-foreground">{field.label}</span>
-                <input
-                  name={field.name}
-                  type={field.type}
-                  required={field.required}
-                  className="mt-1 w-full rounded-md border border-border bg-background px-3 py-2 text-foreground"
-                />
-              </label>
-            ))}
-            <button
-              type="submit"
-              className="w-full rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground"
-            >
-              Email valuation request
-            </button>
-            <p className="text-xs text-muted-foreground">
-              Or call/text{" "}
-              <a href={site.phone.href} className="underline">
-                {site.phone.display}
-              </a>{" "}
-              for a same-day consult.
-            </p>
-          </form>
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <h2 className="text-2xl font-bold tracking-tight text-foreground">
+            Schedule your valuation consult
+          </h2>
+          <p className="mt-3 text-muted-foreground">
+            Pick a time on Calendly. We&apos;ll cover your property address,
+            recent comps, and next steps for listing or refinancing.
+          </p>
+          <div className="mt-8 overflow-hidden rounded-lg border border-border bg-card">
+            <CalendlyWidget url={site.calendlyUrl} />
+          </div>
+          <p className="mt-4 text-xs text-muted-foreground">
+            Prefer a call? Text or call{" "}
+            <a href={site.phone.href} className="underline">
+              {site.phone.display}
+            </a>{" "}
+            for a same-day consult.
+          </p>
         </div>
       </section>
 
-      <CtaBand />
+      <CtaBand
+        headline="Ready for a written CMA?"
+        subheadline={`Book above or call ${site.shortName} at ${site.phone.display}.`}
+      />
     </>
   );
 }

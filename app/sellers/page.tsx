@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CalendlyWidget } from "@/components/calendly/CalendlyWidget";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -56,6 +57,24 @@ export default function SellersPage() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-card/40 py-14">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <h2 className="text-2xl font-bold tracking-tight text-foreground">
+            Schedule a listing consult
+          </h2>
+          <p className="mt-3 text-muted-foreground">
+            Book time with {site.shortName} on Calendly — or{" "}
+            <Link href="/home-valuation" className="text-primary underline">
+              request a home valuation
+            </Link>
+            .
+          </p>
+          <div className="mt-8 overflow-hidden rounded-lg border border-border bg-card">
+            <CalendlyWidget url={site.calendlyUrl} />
+          </div>
         </div>
       </section>
 
