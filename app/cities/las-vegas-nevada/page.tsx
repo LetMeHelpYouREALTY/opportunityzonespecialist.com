@@ -4,6 +4,7 @@ import { ExternalLink } from "lucide-react";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
 import { MapEmbed } from "@/components/sections/MapEmbed";
+import { OpportunityZonesMap } from "@/components/sections/OpportunityZonesMap";
 import { JsonLd } from "@/components/seo/JsonLd";
 import {
   lasVegasOzStats,
@@ -180,7 +181,7 @@ export default function LasVegasNevadaOzCityPage() {
         </div>
       </section>
 
-      {/* Map */}
+      {/* Map — official OpportunityZones.com embed */}
       <section
         id="map"
         className="scroll-mt-24 border-b border-border py-14"
@@ -190,27 +191,28 @@ export default function LasVegasNevadaOzCityPage() {
             Las Vegas Opportunity Zones Map
           </h2>
           <p className="max-w-3xl text-muted-foreground">
-            The interactive map on OpportunityZones.com shows every designated
-            Opportunity Zone in Las Vegas. Click any zone for tract-level detail,
-            or use the layer panel to explore rural and surrounding tracts.
+            The interactive map below shows every designated Opportunity Zone in
+            Las Vegas. Click any zone for tract-level detail, or use the layer
+            panel to explore rural and surrounding tracts.
           </p>
+          <OpportunityZonesMap src={ozSource.mapEmbedUrl} />
           <div className="flex flex-wrap gap-3">
             <a
               href={ozSource.mapUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90"
+              className="inline-flex items-center gap-2 rounded-md border border-border px-4 py-2 text-sm font-semibold text-foreground hover:bg-secondary"
             >
-              Open interactive OZ map
+              Open full-screen on OpportunityZones.com
               <ExternalLink className="h-4 w-4" aria-hidden />
             </a>
             <a
               href={ozSource.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-3 text-sm font-semibold text-foreground hover:bg-secondary"
+              className="inline-flex items-center gap-2 rounded-md border border-border px-4 py-2 text-sm font-semibold text-foreground hover:bg-secondary"
             >
-              View source city page
+              Source city page
             </a>
           </div>
         </div>

@@ -23,6 +23,9 @@ export const ozSource = {
   url: "https://opportunityzones.com/cities/las-vegas-nevada/",
   reviewed: "2026-07-20",
   mapUrl: "https://opportunityzones.com/map/",
+  /** Official embed used on OpportunityZones.com city/map pages */
+  mapEmbedUrl:
+    "https://opportunityzones.com/map-app/opportunity-zones-map.html?embed=1&panel=1",
   marketplaceUrl: "https://opportunityzones.com/marketplace/",
   oz2AnalysisUrl:
     "https://opportunityzones.com/2026/01/new-census-data-defines-opportunity-zone-2-0-eligible-tracts/",

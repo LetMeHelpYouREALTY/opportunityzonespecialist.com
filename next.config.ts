@@ -7,7 +7,7 @@ const csp = [
   "img-src 'self' data: blob: https: http:",
   "font-src 'self' data: https://assets.calendly.com",
   "connect-src 'self' https://em.realscout.com https://www.realscout.com https://calendly.com https://assets.calendly.com https://api.openai.com https://www.google-analytics.com https://analytics.google.com https://res.cloudinary.com",
-  "frame-src 'self' https://em.realscout.com https://www.realscout.com https://calendly.com https://assets.calendly.com https://www.google.com https://maps.google.com https://*.google.com https://www.google.com/maps",
+  "frame-src 'self' https://em.realscout.com https://www.realscout.com https://calendly.com https://assets.calendly.com https://www.google.com https://maps.google.com https://*.google.com https://www.google.com/maps https://opportunityzones.com https://*.opportunityzones.com https://cloud.cartovista.com",
   "worker-src 'self' blob:",
 ].join("; ");
 
@@ -54,7 +54,8 @@ const nextConfig: NextConfig = {
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
           {
             key: "Permissions-Policy",
-            value: "camera=(), microphone=(), geolocation=()",
+            value:
+              'camera=(), microphone=(), geolocation=(self "https://opportunityzones.com")',
           },
         ],
       },
