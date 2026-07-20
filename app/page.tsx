@@ -139,6 +139,14 @@ export default function HomePage() {
             </Link>
           </li>
           <li>
+            <Link
+              href="/las-vegas-opportunity-zones"
+              className="text-primary hover:underline"
+            >
+              Las Vegas Opportunity Zones (22 designated tracts)
+            </Link>
+          </li>
+          <li>
             <Link href="/buyers" className="text-primary hover:underline">
               Buyer representation
             </Link>
