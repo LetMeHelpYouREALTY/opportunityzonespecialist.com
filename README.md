@@ -11,29 +11,18 @@ Live domain: [opportunityzonespecialist.com](https://www.opportunityzonespeciali
 - Cloudinary images, Google Maps / open-houses embed via env
 - Deployed on Vercel
 
-## Status: already Next.js
+## Status: Next.js in production
 
-This repo is **Next.js 15 App Router** (not Astro). There is no Astro source left to convert.
+This repo is **Next.js 15 App Router**. Production cutover is complete:
 
 | Surface | What it serves |
 |---------|----------------|
-| GitHub `main` | Next.js (current) |
-| https://opportunityzonespecialist-com.vercel.app | Next.js project `opportunityzonespecialist-com` |
-| https://www.opportunityzonespecialist.com | **Still old Astro** (different Vercel project; `last-modified: Jul 2, 2026`) |
+| GitHub `main` | Next.js source |
+| Vercel project `opportunityzonespecialist-com` | Connected to this GitHub repo (`productionBranch: main`) |
+| https://www.opportunityzonespecialist.com | Next.js (custom domain on the same project) |
+| https://opportunityzonespecialist.com | 301 → www |
 
-### Why `git push` does not deploy
-
-Project **`opportunityzonespecialist-com`** (`prj_OPeHlqAs7VKjCibR3xLONmQm2LbW`) has **no GitHub connection**. Recent production deploys are CLI/MCP uploads, not commits from `main`. Pushing to GitHub therefore does not create a Vercel deployment.
-
-### Finish production cutover (do this in Vercel UI)
-
-1. Open [opportunityzonespecialist-com](https://vercel.com/janet-duffys-projects/opportunityzonespecialist-com) → **Settings → Git** → connect `LetMeHelpYouREALTY/opportunityzonespecialist.com`, production branch `main`
-2. **Settings → Domains** → add `opportunityzonespecialist.com` and `www.opportunityzonespecialist.com`
-3. Remove those domains from the **old Astro** Vercel project (otherwise assignment fails)
-4. Copy env vars (`NEXT_PUBLIC_REALSCOUT_AGENT_ID`, Cloudinary, Maps, Calendly, etc.)
-5. Optional fallback: add GitHub Actions secrets `VERCEL_TOKEN`, `VERCEL_ORG_ID` (`team_EIbjFXaDDtGMTweb5Hvo3CG3`), `VERCEL_PROJECT_ID` (`prj_OPeHlqAs7VKjCibR3xLONmQm2LbW`) so `.github/workflows/vercel-production.yml` can deploy on push
-
-Until step 2–3 are done, the public domain will keep showing Astro even though Next.js is live on `*.vercel.app`.
+`git push` to `main` triggers a Vercel production deployment via the GitHub integration.
 
 ## Local development
 
