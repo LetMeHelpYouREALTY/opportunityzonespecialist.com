@@ -11,19 +11,29 @@ Live domain: [opportunityzonespecialist.com](https://www.opportunityzonespeciali
 - Cloudinary images, Google Maps / open-houses embed via env
 - Deployed on Vercel
 
-## Production note (domain)
+## Status: already Next.js
 
-The Next.js app with RealScout + Calendly is deployed on Janet Duffy’s Vercel team as project **`opportunityzonespecialist-com`**:
+This repo is **Next.js 15 App Router** (not Astro). There is no Astro source left to convert.
 
-- App URL: https://opportunityzonespecialist-com.vercel.app
-- Custom domain `www.opportunityzonespecialist.com` still pointed at an **old Astro project** (not connected to this GitHub repo), so production DNS did not pick up git pushes.
+| Surface | What it serves |
+|---------|----------------|
+| GitHub `main` | Next.js (current) |
+| https://opportunityzonespecialist-com.vercel.app | Next.js project `opportunityzonespecialist-com` |
+| https://www.opportunityzonespecialist.com | **Still old Astro** (different Vercel project; `last-modified: Jul 2, 2026`) |
 
-**To finish production cutover in Vercel:**
-1. Open project `opportunityzonespecialist-com` → Settings → Domains  
-2. Add `opportunityzonespecialist.com` and `www.opportunityzonespecialist.com`  
-3. Remove those domains from the old Astro project (or it will conflict)  
-4. Connect GitHub repo `LetMeHelpYouREALTY/opportunityzonespecialist.com` for auto-deploys from `main`  
-5. Copy env vars (`NEXT_PUBLIC_REALSCOUT_AGENT_ID`, Cloudinary, Maps, etc.) onto this project
+### Why `git push` does not deploy
+
+Project **`opportunityzonespecialist-com`** (`prj_OPeHlqAs7VKjCibR3xLONmQm2LbW`) has **no GitHub connection**. Recent production deploys are CLI/MCP uploads, not commits from `main`. Pushing to GitHub therefore does not create a Vercel deployment.
+
+### Finish production cutover (do this in Vercel UI)
+
+1. Open [opportunityzonespecialist-com](https://vercel.com/janet-duffys-projects/opportunityzonespecialist-com) → **Settings → Git** → connect `LetMeHelpYouREALTY/opportunityzonespecialist.com`, production branch `main`
+2. **Settings → Domains** → add `opportunityzonespecialist.com` and `www.opportunityzonespecialist.com`
+3. Remove those domains from the **old Astro** Vercel project (otherwise assignment fails)
+4. Copy env vars (`NEXT_PUBLIC_REALSCOUT_AGENT_ID`, Cloudinary, Maps, Calendly, etc.)
+5. Optional fallback: add GitHub Actions secrets `VERCEL_TOKEN`, `VERCEL_ORG_ID` (`team_EIbjFXaDDtGMTweb5Hvo3CG3`), `VERCEL_PROJECT_ID` (`prj_OPeHlqAs7VKjCibR3xLONmQm2LbW`) so `.github/workflows/vercel-production.yml` can deploy on push
+
+Until step 2–3 are done, the public domain will keep showing Astro even though Next.js is live on `*.vercel.app`.
 
 ## Local development
 

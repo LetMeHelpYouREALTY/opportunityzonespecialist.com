@@ -22,7 +22,8 @@
 # misc
 .DS_Store
 *.pem
-.vercel
+.vercel/*
+!.vercel/project.json
 
 # debug
 npm-debug.log*
