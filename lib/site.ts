@@ -67,6 +67,7 @@ export const site = {
 
 export const navLinks = [
   { label: "Homes for Sale", href: "/las-vegas-homes-for-sale" },
+  { label: "Opportunity Zones", href: "/las-vegas-opportunity-zones" },
   { label: "Listings", href: "/listings" },
   { label: "Neighborhoods", href: "/neighborhoods" },
   { label: "Buyers", href: "/buyers" },

@@ -3,10 +3,16 @@ import { CtaBand } from "@/components/sections/CtaBand";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buyerFaqs, homesForSaleFaqs, sellerFaqs } from "@/lib/faqs";
+import { opportunityZoneFaqs } from "@/lib/opportunity-zones";
 import { faqPageSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
 
-const allFaqs = [...homesForSaleFaqs, ...buyerFaqs, ...sellerFaqs];
+const allFaqs = [
+  ...homesForSaleFaqs,
+  ...buyerFaqs,
+  ...sellerFaqs,
+  ...opportunityZoneFaqs,
+];
 
 export const metadata: Metadata = {
   title: "Real Estate FAQ | Las Vegas & Opportunity Zones",

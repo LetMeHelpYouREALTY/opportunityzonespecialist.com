@@ -27,7 +27,7 @@ export const homesForSaleFaqs: FaqItem[] = [
   {
     question: "Can you help with Opportunity Zone investment properties?",
     answer:
-      "Yes. In addition to residential search, Dr. Jan Duffy helps investors evaluate Opportunity Zone-eligible properties with clear numbers on price, timelines, and tax-deferral considerations. Call (702) 222-1964.",
+      "Yes. In addition to residential search, Dr. Jan Duffy helps investors evaluate Opportunity Zone-area properties with clear numbers on price, timelines, and tax-deferral considerations. Las Vegas has 22 designated OZ 1.0 tracts through December 31, 2028. Review the Las Vegas Opportunity Zones page or call (702) 222-1964.",
   },
 ];
 
