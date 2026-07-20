@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { MapEmbed } from "@/components/sections/MapEmbed";
+import { buildPageMetadata } from "@/lib/seo";
 import { formatFullAddress, getDirectionsUrl, site } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: `About ${site.shortName} | Las Vegas REALTOR®`,
   description: `Meet ${site.shortName}, ${site.brokerage}. License ${site.license}. Call ${site.phone.display}.`,
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

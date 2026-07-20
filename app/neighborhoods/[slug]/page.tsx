@@ -4,6 +4,7 @@ import { RealScoutOfficeListings } from "@/components/realscout/RealScoutOfficeL
 import { RealScoutSimpleSearch } from "@/components/realscout/RealScoutSimpleSearch";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { neighborhoods } from "@/components/sections/NeighborhoodGrid";
+import { buildPageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 type NeighborhoodPageProps = {
@@ -50,10 +51,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const n = neighborhoods.find((item) => item.slug === slug);
   if (!n) return { title: "Neighborhood" };
-  return {
+  return buildPageMetadata({
     title: `${n.name} Homes for Sale | Las Vegas Real Estate`,
     description: `Homes for sale in ${n.name}. Work with ${site.shortName}. Call ${site.phone.display}.`,
-  };
+    path: `/neighborhoods/${n.slug}`,
+  });
 }
 
 export default async function NeighborhoodDetailPage({

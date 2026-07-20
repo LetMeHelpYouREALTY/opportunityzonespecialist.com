@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { neighborhoods } from "@/components/sections/NeighborhoodGrid";
+import { buildPageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Las Vegas Neighborhoods | Homes by Area",
   description: `Explore Las Vegas and Henderson neighborhoods with ${site.shortName}.`,
-};
+  path: "/neighborhoods",
+});
 
 export default function NeighborhoodsPage() {
   return (

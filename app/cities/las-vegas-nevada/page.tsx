@@ -17,20 +17,14 @@ import {
   ozSource,
 } from "@/lib/opportunity-zones";
 import { faqPageSchema } from "@/lib/schema";
+import { buildPageMetadata } from "@/lib/seo";
 import { formatFullAddress, getDirectionsUrl, site } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Opportunity Zones in Las Vegas, NV",
   description: `The City of Las Vegas has ${lasVegasOzStats.designatedOzCount} Qualified Opportunity Zones under the original 2018 (OZ 1.0) designation round. These zones remain in effect through ${lasVegasOzStats.oz1Through}. Nevada OZ 2.0: ${lasVegasOzStats.nevadaOz2EligibleTracts} eligible tracts, nomination cap ${lasVegasOzStats.nevadaOz2NominationCap}. Local guidance from ${site.shortName}. Call ${site.phone.display}.`,
-  alternates: {
-    canonical: "/cities/las-vegas-nevada",
-  },
-  openGraph: {
-    title: "Opportunity Zones in Las Vegas, NV",
-    description: `${lasVegasOzStats.designatedOzCount} designated OZs through ${lasVegasOzStats.oz1Through}. Work with ${site.shortName} at ${site.brokerage}.`,
-    url: "/cities/las-vegas-nevada",
-  },
-};
+  path: "/cities/las-vegas-nevada",
+});
 
 export default function LasVegasNevadaOzCityPage() {
   const faqs = [...opportunityZoneFaqs];

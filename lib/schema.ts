@@ -75,3 +75,22 @@ export function localBusinessSchema() {
     "@type": ["RealEstateAgent", "LocalBusiness"],
   };
 }
+
+/** WebSite schema helps Search Console associate the brand with the domain. */
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: site.brand,
+    alternateName: site.name,
+    url: site.url,
+    description: site.tagline,
+    publisher: {
+      "@type": "RealEstateAgent",
+      name: site.name,
+      telephone: site.phone.tel,
+      url: site.url,
+    },
+    inLanguage: "en-US",
+  };
+}

@@ -6,12 +6,14 @@ import { FaqAccordion } from "@/components/sections/FaqAccordion";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buyerFaqs } from "@/lib/faqs";
 import { faqPageSchema } from "@/lib/schema";
+import { buildPageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Buy a Home in Las Vegas | Buyer Representation",
   description: `Buyer representation in Las Vegas with ${site.shortName}. Live MLS search and Opportunity Zone guidance. Call ${site.phone.display}.`,
-};
+  path: "/buyers",
+});
 
 export default function BuyersPage() {
   return (

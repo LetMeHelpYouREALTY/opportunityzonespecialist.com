@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { buyerFaqs, homesForSaleFaqs, sellerFaqs } from "@/lib/faqs";
 import { opportunityZoneFaqs } from "@/lib/opportunity-zones";
 import { faqPageSchema } from "@/lib/schema";
+import { buildPageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 const allFaqs = [
@@ -14,10 +15,11 @@ const allFaqs = [
   ...opportunityZoneFaqs,
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Real Estate FAQ | Las Vegas & Opportunity Zones",
   description: `Answers about buying, selling, and investing with ${site.shortName}. Call ${site.phone.display}.`,
-};
+  path: "/faq",
+});
 
 export default function FaqPage() {
   return (

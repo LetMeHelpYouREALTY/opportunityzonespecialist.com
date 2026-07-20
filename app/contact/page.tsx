@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { CalendlyWidget } from "@/components/calendly/CalendlyWidget";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { MapEmbed } from "@/components/sections/MapEmbed";
+import { buildPageMetadata } from "@/lib/seo";
 import { formatFullAddress, getDirectionsUrl, site } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Contact Dr. Jan Duffy | Las Vegas Real Estate",
   description: `Contact ${site.shortName} at ${site.brokerage}. Call ${site.phone.display}.`,
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

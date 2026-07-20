@@ -1,0 +1,12 @@
+Google Search Console — HTML file verification (optional)
+
+If Google gives you a file named like googleXXXXXXXX.html:
+
+1. Download it from Search Console
+2. Place it in this /public folder (same level as favicon.png)
+3. Redeploy
+4. Confirm https://www.opportunityzonespecialist.com/googleXXXXXXXX.html loads
+5. Click Verify in Search Console
+
+Prefer the meta-tag method when possible:
+set NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION in Vercel env, then redeploy.

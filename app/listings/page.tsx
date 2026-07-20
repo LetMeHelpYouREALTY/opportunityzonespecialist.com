@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { RealScoutOfficeListings } from "@/components/realscout/RealScoutOfficeListings";
 import { RealScoutSimpleSearch } from "@/components/realscout/RealScoutSimpleSearch";
 import { RealtyHero } from "@/components/realty/RealtyHero";
+import { buildPageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Las Vegas MLS Homes for Sale | Property Search",
   description: `Browse Las Vegas and Henderson homes for sale with live MLS listings. ${site.shortName}, ${site.brokerage}. Call ${site.phone.display}.`,
-};
+  path: "/listings",
+});
 
 export default function ListingsPage() {
   return (

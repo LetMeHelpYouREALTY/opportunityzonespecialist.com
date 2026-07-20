@@ -8,15 +8,16 @@ import { FaqAccordion } from "@/components/sections/FaqAccordion";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { homesForSaleFaqs } from "@/lib/faqs";
 import { faqPageSchema, realEstateAgentSchema } from "@/lib/schema";
+import { buildPageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Homes for Sale in Las Vegas, NV | Current Listings & Market Data",
-  },
+export const metadata: Metadata = buildPageMetadata({
+  title: "Homes for Sale in Las Vegas, NV | Current Listings & Market Data",
   description:
     "Browse homes for sale in Las Vegas, NV with up-to-date market data on price, inventory, and days on market. Work with Dr. Jan Duffy for every submarket — including Opportunity Zone guidance.",
-};
+  path: "/",
+  absoluteTitle: true,
+});
 
 export default function HomePage() {
   return (

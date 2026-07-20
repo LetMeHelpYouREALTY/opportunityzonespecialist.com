@@ -6,12 +6,14 @@ import { FaqAccordion } from "@/components/sections/FaqAccordion";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { sellerFaqs } from "@/lib/faqs";
 import { faqPageSchema } from "@/lib/schema";
+import { buildPageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Sell Your Las Vegas Home | Listing Services",
   description: `List with ${site.shortName} at ${site.brokerage}. Pricing strategy and MLS exposure. Call ${site.phone.display}.`,
-};
+  path: "/sellers",
+});
 
 export default function SellersPage() {
   return (

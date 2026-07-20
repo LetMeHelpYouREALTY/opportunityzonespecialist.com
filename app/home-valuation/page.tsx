@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { CalendlyWidget } from "@/components/calendly/CalendlyWidget";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { buildPageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Home Valuation | Las Vegas CMA",
   description: `Get a comparative market analysis from ${site.shortName}. Schedule on Calendly or call ${site.phone.display}.`,
-};
+  path: "/home-valuation",
+});
 
 export default function HomeValuationPage() {
   return (
