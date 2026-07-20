@@ -12,6 +12,15 @@ const csp = [
 ].join("; ");
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/las-vegas-opportunity-zones",
+        destination: "/cities/las-vegas-nevada",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [

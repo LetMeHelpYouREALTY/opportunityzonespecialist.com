@@ -1,5 +1,5 @@
 /**
- * Las Vegas Opportunity Zone reference data adapted from
+ * Las Vegas Opportunity Zone page content cloned from
  * https://opportunityzones.com/cities/las-vegas-nevada/ (reviewed 2026-07-20).
  * Verify against IRS Notice 2018-48 / CDFI Fund before relying on tract lists.
  */
@@ -10,11 +10,46 @@ export type OzTract = {
   type: "Non-Rural";
 };
 
+export type OzMarketplaceListing = {
+  category: string;
+  region: string;
+  title: string;
+  href: string;
+  minInvestment: string;
+};
+
 export const ozSource = {
   title: "Opportunity Zones in Las Vegas, NV",
   url: "https://opportunityzones.com/cities/las-vegas-nevada/",
   reviewed: "2026-07-20",
+  mapUrl: "https://opportunityzones.com/map/",
+  marketplaceUrl: "https://opportunityzones.com/marketplace/",
+  oz2AnalysisUrl:
+    "https://opportunityzones.com/2026/01/new-census-data-defines-opportunity-zone-2-0-eligible-tracts/",
+  irsNotice2018_48: "https://www.irs.gov/pub/irs-drop/n-18-48.pdf",
 } as const;
+
+export const ozJumpLinks = [
+  { label: "How to invest", href: "#how" },
+  { label: "Las Vegas OZ map", href: "#map" },
+  { label: "Current OZs (2018)", href: "#oz1" },
+  { label: "Future OZ 2.0 designations", href: "#oz2" },
+] as const;
+
+export const ozGuideLinks = [
+  {
+    label: "The Beginner's Guide to Opportunity Zones",
+    href: "https://opportunityzones.com/guide/",
+  },
+  {
+    label: "What Is a Qualified Opportunity Fund?",
+    href: "https://opportunityzones.com/faq/what-is-a-qualified-opportunity-zone-fund/",
+  },
+  {
+    label: "The Two Ways to Invest in Opportunity Zones",
+    href: "https://opportunityzones.com/guide/ways-to-invest/",
+  },
+] as const;
 
 export const ozOfficialResources = [
   {
@@ -26,14 +61,57 @@ export const ozOfficialResources = [
     href: "https://www.cdfifund.gov/opportunity-zones",
   },
   {
-    label: "OpportunityZones.com Las Vegas map & tract detail",
-    href: "https://opportunityzones.com/cities/las-vegas-nevada/",
-  },
-  {
     label: "IRS Opportunity Zones",
     href: "https://www.irs.gov/credits-deductions/businesses/opportunity-zones",
   },
+  {
+    label: "IRS Notice 2018-48 (designation list)",
+    href: "https://www.irs.gov/pub/irs-drop/n-18-48.pdf",
+  },
+  {
+    label: "Interactive Opportunity Zones map",
+    href: "https://opportunityzones.com/map/",
+  },
 ] as const;
+
+/** Third-party marketplace listings shown on the source page (external; not endorsements). */
+export const nevadaMarketplaceListings: OzMarketplaceListing[] = [
+  {
+    category: "Multifamily",
+    region: "Nevada",
+    title: "University of Nevada Reno Student Housing OZ Project",
+    href: "https://opportunityzones.com/marketplace/university-of-nevada-reno-student-housing-oz-project/",
+    minInvestment: "$5,000,000",
+  },
+  {
+    category: "Hospitality & Hotel",
+    region: "Nevada",
+    title: "Integris DLV Opportunity Zone Fund",
+    href: "https://opportunityzones.com/marketplace/integris-dlv-opportunity-zone-fund/",
+    minInvestment: "$100,000",
+  },
+  {
+    category: "Industrial",
+    region: "Arizona",
+    title: "GTIS Qualified Opportunity Zone Fund II",
+    href: "https://opportunityzones.com/marketplace/gtis-qualified-opportunity-zone-fund-ii/",
+    minInvestment: "$100,000",
+  },
+  {
+    category: "Multifamily",
+    region: "Arizona",
+    title: "Origin Opportunity Zone Fund III",
+    href: "https://opportunityzones.com/marketplace/origin-opportunity-zone-fund-iii/",
+    minInvestment: "$50,000",
+  },
+  {
+    category: "Self-Storage",
+    region: "Nevada",
+    title: "Las Vegas Self-Storage QOZ Project by YourSpace America",
+    href: "https://opportunityzones.com/marketplace/las-vegas-self-storage-qoz-project/",
+    minInvestment: "$25,000",
+  },
+];
 
 export const lasVegasOzStats = {
   designatedOzCount: 22,
@@ -44,12 +122,6 @@ export const lasVegasOzStats = {
   oz2Effective: "January 1, 2027",
   acsDataRelease: "January 29, 2026",
   acsPeriod: "2020–2024",
-  concentrationAreas: [
-    "Downtown Las Vegas (Fremont East, Arts District, and Medical District)",
-    "West Las Vegas",
-    "University District near UNLV",
-    "East Las Vegas",
-  ],
 } as const;
 
 /** Clark County census tracts designated in 2018 under IRS Notice 2018-48 (2010 tract boundaries). */
@@ -87,16 +159,16 @@ export const opportunityZoneFaqs = [
   {
     question: "What is Opportunity Zones 2.0 for Nevada?",
     answer:
-      "Under the OZ 2.0 framework, Nevada has 195 census tracts that meet statutory eligibility thresholds. The state may nominate up to 49 of those tracts. New designations take effect January 1, 2027.",
+      "Under the Opportunity Zones 2.0 framework, the State of Nevada will nominate a new round of Opportunity Zones in 2026. Nevada has 195 eligible tracts and may nominate up to 49. New designations take effect January 1, 2027.",
   },
   {
     question: "Where are Las Vegas Opportunity Zones concentrated?",
     answer:
-      "Las Vegas’s 22 Opportunity Zones are concentrated in and around the urban core, including Downtown Las Vegas (Fremont East, Arts District, and Medical District), West Las Vegas, the University District near UNLV, and East Las Vegas.",
+      "Las Vegas' 22 Opportunity Zones are concentrated in and around the urban core, including Downtown Las Vegas (the Fremont East, Arts, and Medical Districts), West Las Vegas, the University District near UNLV, and East Las Vegas.",
   },
   {
     question: "How do investors use Opportunity Zones?",
     answer:
-      "Investors reinvest eligible capital gains into a Qualified Opportunity Fund (QOF). The QOF deploys capital into qualified Opportunity Zone property or businesses in designated census tracts. This is not tax advice—confirm structure and timing with your CPA and counsel.",
+      "To qualify for the Opportunity Zone tax incentive, investors must reinvest eligible capital gains into a Qualified Opportunity Fund (QOF). The QOF must then deploy capital into qualified Opportunity Zone property or businesses located within designated census tracts. This is not tax advice—confirm structure and timing with your CPA and counsel.",
   },
 ] as const;

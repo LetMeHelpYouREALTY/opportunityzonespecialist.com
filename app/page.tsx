@@ -140,10 +140,10 @@ export default function HomePage() {
           </li>
           <li>
             <Link
-              href="/las-vegas-opportunity-zones"
+              href="/cities/las-vegas-nevada"
               className="text-primary hover:underline"
             >
-              Las Vegas Opportunity Zones (22 designated tracts)
+              Opportunity Zones in Las Vegas, NV (22 designated tracts)
             </Link>
           </li>
           <li>
