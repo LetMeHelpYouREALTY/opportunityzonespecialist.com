@@ -37,7 +37,7 @@ export default function FaqPage() {
         </div>
       </section>
       <FaqAccordion faqs={allFaqs} title="All FAQs" />
-      <CtaBand />
+      <CtaBand event="buyer" campaign="faq" />
     </>
   );
 }
