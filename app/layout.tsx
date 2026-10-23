@@ -10,6 +10,7 @@ import { localBusinessSchema, websiteSchema } from "@/lib/schema";
 import { getSiteVerificationMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 import "./globals.css";
+import { calendlyUrl } from "@/lib/calendly";
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -100,7 +101,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </div>
-        <CalendlyBadge url={site.calendlyUrl} />
+        <CalendlyBadge url={calendlyUrl("showing", "badge", "sitewide")} />
       </body>
     </html>
   );

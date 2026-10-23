@@ -119,6 +119,7 @@ export default async function NeighborhoodDetailPage({
 
       <CtaBand
         headline={`Tour ${n.name} with ${site.shortName}`}
+        campaign={`neighborhoods/${n.slug}`}
         subheadline={`Call ${site.phone.display} to schedule showings.`}
       />
     </>

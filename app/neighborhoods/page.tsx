@@ -43,7 +43,7 @@ export default function NeighborhoodsPage() {
         </div>
       </section>
 
-      <CtaBand />
+      <CtaBand campaign="neighborhoods" />
     </>
   );
 }

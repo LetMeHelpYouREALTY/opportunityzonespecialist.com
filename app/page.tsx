@@ -4,6 +4,7 @@ import { RealScoutOfficeListings } from "@/components/realscout/RealScoutOfficeL
 import { ContentLayout } from "@/components/realty/ContentLayout";
 import { RealtyHero } from "@/components/realty/RealtyHero";
 import { RealtyStatsBar } from "@/components/realty/RealtyStatsBar";
+import { CalendlyAfterListings } from "@/components/sections/CalendlyAfterListings";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { homesForSaleFaqs } from "@/lib/faqs";
@@ -38,6 +39,7 @@ export default function HomePage() {
         propertyTypes=",SFR,MF,TC"
         sortOrder="NEWEST"
       />
+      <CalendlyAfterListings campaign="home" />
 
       <RealtyStatsBar
         stats={[
