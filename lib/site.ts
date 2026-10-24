@@ -1,7 +1,7 @@
 export const site = {
   name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
   shortName: "Dr. Jan Duffy",
-  agentTitle: "REALTOR® | BHHS Nevada Properties",
+  agentTitle: "Top 1% Las Vegas REALTOR®",
   brand: "Opportunity Zone Specialist",
   tagline: "Las Vegas homes for sale with Opportunity Zone expertise",
   domain: "opportunityzonespecialist.com",
@@ -17,7 +17,7 @@ export const site = {
     "https://www.google.com/maps/search/?api=1&query=Dr+Jan+Duffy+Berkshire+Hathaway+HomeServices+Las+Vegas",
   agentPhotoSrc: "/realty/dr-jan-duffy.jpg",
   agentPhotoAlt:
-    "Dr. Jan Duffy, REALTOR® with Berkshire Hathaway HomeServices Nevada Properties",
+    "Dr. Jan Duffy, REALTOR®",
   city: "Las Vegas",
   state: "NV",
   region: "Greater Las Vegas Valley",

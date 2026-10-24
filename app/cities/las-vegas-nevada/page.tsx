@@ -354,7 +354,7 @@ export default function LasVegasNevadaOzCityPage() {
           <p className="max-w-3xl text-sm text-muted-foreground">
             Listings below appear on OpportunityZones.com&apos;s marketplace and
             are shown for research only. They are not offers, solicitations, or
-            endorsements by {site.shortName} or {site.brokerage}. Perform your
+            endorsements by {site.shortName}. Perform your
             own due diligence with licensed advisors.
           </p>
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -423,11 +423,7 @@ export default function LasVegasNevadaOzCityPage() {
               Local Opportunity Zone guidance
             </h2>
             <p className="mb-1 text-sm font-semibold text-foreground">
-              {site.shortName} · {site.brokerage}
-            </p>
-            <p className="mb-4 text-sm text-muted-foreground">
-              License {site.license}
-              <br />
+              {site.shortName}, REALTOR® </p> <p className="mb-4 text-sm text-muted-foreground">
               {formatFullAddress()}
               <br />
               Mon–Fri 9am–6pm · Sat 10am–4pm · Sun by appointment

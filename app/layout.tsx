@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     default: `Homes for Sale in Las Vegas, NV | ${site.shortName}`,
     template: `%s | ${site.shortName}`,
   },
-  description: `${site.shortName} at ${site.brokerage}. Browse Las Vegas homes for sale with live MLS inventory and Opportunity Zone guidance. Call ${site.phone.display}.`,
+  description: `${site.shortName}, REALTOR®. Browse Las Vegas homes for sale with live MLS inventory and Opportunity Zone guidance. Call ${site.phone.display}.`,
   applicationName: site.brand,
   authors: [{ name: site.shortName, url: site.url }],
   creator: site.shortName,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "Las Vegas homes for sale",
     "Opportunity Zones Las Vegas",
     "Dr. Jan Duffy",
-    "BHHS Nevada Properties",
+    
     "Summerlin real estate",
     "Henderson homes",
   ],

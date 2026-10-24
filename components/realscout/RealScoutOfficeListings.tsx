@@ -13,7 +13,7 @@ type RealScoutOfficeListingsProps = {
 
 export function RealScoutOfficeListings({
   title = "Current Homes for Sale in Las Vegas",
-  subtitle = "Live MLS inventory from Berkshire Hathaway HomeServices Nevada Properties — updated throughout the day.",
+  subtitle = "Live MLS inventory — updated throughout the day.",
   priceMin,
   priceMax,
   sortOrder = "NEWEST",

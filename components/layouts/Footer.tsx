@@ -77,12 +77,7 @@ export function Footer() {
           <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
             <div className="flex flex-col gap-1">
               <p className="text-sm font-semibold text-foreground">
-                {site.shortName} · {site.brokerage}
-              </p>
-              <p className="text-xs text-muted-foreground">
-                © {year} {site.shortName} · NV Lic. #{site.license} ·{" "}
-                {site.city}, {site.state}
-              </p>
+                {site.shortName}, REALTOR® </p> <p className="text-xs text-muted-foreground"> © {year} {site.shortName} · {site.city}, {site.state} </p> <p className="text-xs text-muted-foreground"> {site.brokerage} since September 2008 · License {site.license} </p>
             </div>
 
             <div className="flex items-center gap-2 text-xs text-muted-foreground">

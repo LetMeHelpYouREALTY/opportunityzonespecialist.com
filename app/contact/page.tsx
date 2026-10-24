@@ -7,7 +7,7 @@ import { formatFullAddress, getDirectionsUrl, site } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Contact Dr. Jan Duffy | Las Vegas Real Estate",
-  description: `Contact ${site.shortName} at ${site.brokerage}. Call ${site.phone.display}.`,
+  description: `Contact ${site.shortName}, REALTOR®. Call ${site.phone.display}.`,
   path: "/contact",
 });
 
@@ -36,7 +36,7 @@ export default function ContactPage() {
             <dl className="mt-6 space-y-4 text-sm text-muted-foreground">
               <div>
                 <dt className="font-semibold text-foreground">Business</dt>
-                <dd>{site.name}</dd>
+                <dd>{site.shortName}, REALTOR®</dd>
               </div>
               <div>
                 <dt className="font-semibold text-foreground">Address</dt>

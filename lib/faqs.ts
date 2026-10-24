@@ -55,6 +55,6 @@ export const sellerFaqs: FaqItem[] = [
   {
     question: "What marketing do sellers receive?",
     answer:
-      "Sellers get MLS exposure, RealScout syndication, professional photography coordination, and Berkshire Hathaway HomeServices marketing tools.",
+      "Sellers get MLS exposure, RealScout syndication, professional photography coordination, and professional marketing tools.",
   },
 ];

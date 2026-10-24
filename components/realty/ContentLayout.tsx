@@ -18,7 +18,7 @@ export function ContentLayout({ children }: { children: React.ReactNode }) {
                   Licensed in Nevada
                 </p>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  NV Lic. #{site.license} · Brokered by {site.brokerage}
+                  In real estate since 1983
                 </p>
               </div>
             </div>

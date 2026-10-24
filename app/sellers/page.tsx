@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Sell Your Las Vegas Home | Listing Services",
-  description: `List with ${site.shortName} at ${site.brokerage}. Pricing strategy and MLS exposure. Call ${site.phone.display}.`,
+  description: `List with ${site.shortName}, REALTOR®. Pricing strategy and MLS exposure. Call ${site.phone.display}.`,
   path: "/sellers",
 });
 
@@ -22,7 +22,7 @@ export default function SellersPage() {
       <section className="border-b border-border bg-card/40 px-4 py-14 sm:px-6">
         <div className="mx-auto max-w-6xl">
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            Sell with Berkshire Hathaway HomeServices
+            Sell with Dr. Jan Duffy
           </h1>
           <p className="mt-4 max-w-2xl text-muted-foreground">
             Pricing, preparation, and marketing built around how buyers search

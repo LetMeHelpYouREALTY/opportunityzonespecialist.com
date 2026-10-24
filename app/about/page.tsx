@@ -6,7 +6,7 @@ import { formatFullAddress, getDirectionsUrl, site } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
   title: `About ${site.shortName} | Las Vegas REALTOR®`,
-  description: `Meet ${site.shortName}, ${site.brokerage}. License ${site.license}. Call ${site.phone.display}.`,
+  description: `Meet ${site.shortName}, REALTOR® in real estate since 1983. Call ${site.phone.display}.`,
   path: "/about",
 });
 
@@ -22,8 +22,7 @@ export default function AboutPage() {
             About {site.shortName}
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-            Direct answers, real numbers, and Berkshire Hathaway HomeServices
-            support for buyers, sellers, and Opportunity Zone investors across
+            Direct answers, real numbers, and full-service support for buyers, sellers, and Opportunity Zone investors across
             Southern Nevada.
           </p>
         </div>
@@ -36,9 +35,7 @@ export default function AboutPage() {
               Credentials that show up in the work
             </h2>
             <ul className="mt-6 space-y-3 text-sm text-muted-foreground">
-              <li>License {site.license}</li>
-              <li>{site.brokerage}</li>
-              <li>500+ transactions · serving Las Vegas since 2008</li>
+              <li>Top 1% Las Vegas REALTOR®</li> <li>In real estate since 1983</li> <li>500+ transactions</li>
               <li>$127M+ career closed volume</li>
               <li>Opportunity Zone and investment property guidance</li>
             </ul>
