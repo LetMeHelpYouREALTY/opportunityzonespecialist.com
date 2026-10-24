@@ -4,6 +4,7 @@ import { CtaBand } from "@/components/sections/CtaBand";
 import { MapEmbed } from "@/components/sections/MapEmbed";
 import { buildPageMetadata } from "@/lib/seo";
 import { formatFullAddress, getDirectionsUrl, site } from "@/lib/site";
+import { calendlyUrl } from "@/lib/calendly";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Contact Dr. Jan Duffy | Las Vegas Real Estate",
@@ -118,12 +119,12 @@ export default function ContactPage() {
             {site.phone.display}.
           </p>
           <div className="mt-8 overflow-hidden rounded-lg border border-border bg-card">
-            <CalendlyWidget url={site.calendlyUrl} />
+            <CalendlyWidget url={calendlyUrl("showing", "inline", "contact")} />
           </div>
         </div>
       </section>
 
-      <CtaBand headline="Prefer to talk now?" />
+      <CtaBand headline="Prefer to talk now?" campaign="contact" />
     </>
   );
 }

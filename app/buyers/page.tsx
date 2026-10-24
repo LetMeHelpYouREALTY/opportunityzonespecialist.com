@@ -8,6 +8,7 @@ import { buyerFaqs } from "@/lib/faqs";
 import { faqPageSchema } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
+import { calendlyUrl } from "@/lib/calendly";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Buy a Home in Las Vegas | Buyer Representation",
@@ -84,13 +85,13 @@ export default function BuyersPage() {
             {site.phone.display}.
           </p>
           <div className="mt-8 overflow-hidden rounded-lg border border-border bg-card">
-            <CalendlyWidget url={site.calendlyUrl} />
+            <CalendlyWidget url={calendlyUrl("buyer", "inline", "buyers")} />
           </div>
         </div>
       </section>
 
       <FaqAccordion faqs={buyerFaqs} title="Buyer FAQ" />
-      <CtaBand />
+      <CtaBand event="buyer" campaign="buyers" />
     </>
   );
 }

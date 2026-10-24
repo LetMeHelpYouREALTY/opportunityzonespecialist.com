@@ -466,6 +466,8 @@ export default function LasVegasNevadaOzCityPage() {
       <FaqAccordion faqs={faqs} title="Opportunity Zone FAQs" />
       <CtaBand
         headline="Evaluating Opportunity Zone property in Las Vegas?"
+        event="buyer"
+        campaign="cities/las-vegas-nevada"
         subheadline={`Call ${site.shortName} at ${site.phone.display} for tract-aware search help—not tax advice.`}
       />
     </>

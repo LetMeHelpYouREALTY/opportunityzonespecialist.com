@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Phone } from "lucide-react";
 import { site } from "@/lib/site";
+import { CalendlyPopupLink } from "@/components/calendly/CalendlyPopupLink";
+import { calendlyUrl } from "@/lib/calendly";
 
 function EqualHousingIcon({ className }: { className?: string }) {
   return (
@@ -59,14 +61,12 @@ export function Footer() {
                 <Phone className="h-5 w-5" aria-hidden />
                 {site.phone.display}
               </a>
-              <a
-                href={site.calendlyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+              <CalendlyPopupLink
+                url={calendlyUrl("showing", "footer", "footer")}
                 className="text-sm text-muted-foreground hover:text-primary"
               >
                 Or schedule on Calendly
-              </a>
+              </CalendlyPopupLink>
             </div>
           </div>
         </div>

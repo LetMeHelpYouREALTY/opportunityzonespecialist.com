@@ -76,7 +76,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <CtaBand />
+      <CtaBand campaign="about" />
     </>
   );
 }

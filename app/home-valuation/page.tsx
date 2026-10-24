@@ -3,6 +3,7 @@ import { CalendlyWidget } from "@/components/calendly/CalendlyWidget";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { buildPageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
+import { calendlyUrl } from "@/lib/calendly";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Home Valuation | Las Vegas CMA",
@@ -40,7 +41,7 @@ export default function HomeValuationPage() {
             recent comps, and next steps for listing or refinancing.
           </p>
           <div className="mt-8 overflow-hidden rounded-lg border border-border bg-card">
-            <CalendlyWidget url={site.calendlyUrl} />
+            <CalendlyWidget url={calendlyUrl("seller", "inline", "home-valuation")} />
           </div>
           <p className="mt-4 text-xs text-muted-foreground">
             Prefer a call? Text or call{" "}
@@ -54,6 +55,8 @@ export default function HomeValuationPage() {
 
       <CtaBand
         headline="Ready for a written CMA?"
+        event="seller"
+        campaign="home-valuation"
         subheadline={`Book above or call ${site.shortName} at ${site.phone.display}.`}
       />
     </>

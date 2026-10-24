@@ -1,15 +1,23 @@
 import Link from "next/link";
 import { Phone } from "lucide-react";
+import { CalendlyPopupLink } from "@/components/calendly/CalendlyPopupLink";
+import { calendlyUrl, type CalendlyEvent } from "@/lib/calendly";
 import { site } from "@/lib/site";
 
 type CtaBandProps = {
   headline?: string;
   subheadline?: string;
+  /** Calendly event matching the page intent */
+  event?: CalendlyEvent;
+  /** utm_campaign — the page slug */
+  campaign?: string;
 };
 
 export function CtaBand({
   headline = "Ready to buy, sell, or invest in Las Vegas?",
   subheadline = "Dr. Jan Duffy helps with residential, luxury, and Opportunity Zone opportunities across Southern Nevada.",
+  event = "showing",
+  campaign = "cta-band",
 }: CtaBandProps) {
   return (
     <section className="w-full border-y border-border bg-card/40">
@@ -28,14 +36,12 @@ export function CtaBand({
             <Phone className="h-4 w-4" aria-hidden />
             Call {site.phone.display}
           </a>
-          <a
-            href={site.calendlyUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <CalendlyPopupLink
+            url={calendlyUrl(event, "cta-band", campaign)}
             className="inline-flex items-center rounded-md border border-border px-5 py-3 text-sm font-semibold text-foreground hover:bg-secondary"
           >
             Schedule on Calendly
-          </a>
+          </CalendlyPopupLink>
           <Link
             href="/contact"
             className="inline-flex items-center rounded-md border border-border px-5 py-3 text-sm font-semibold text-foreground hover:bg-secondary"

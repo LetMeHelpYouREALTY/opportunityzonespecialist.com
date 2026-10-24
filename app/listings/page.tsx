@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { RealScoutOfficeListings } from "@/components/realscout/RealScoutOfficeListings";
 import { RealScoutSimpleSearch } from "@/components/realscout/RealScoutSimpleSearch";
 import { RealtyHero } from "@/components/realty/RealtyHero";
+import { CalendlyAfterListings } from "@/components/sections/CalendlyAfterListings";
 import { buildPageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
@@ -45,6 +46,7 @@ export default function ListingsPage() {
         priceMin="300000"
         priceMax="1500000"
       />
+      <CalendlyAfterListings campaign="listings" />
     </>
   );
 }
