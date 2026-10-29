@@ -88,7 +88,7 @@ Deferred (reserved, not required for pages): `openaikey`, `NOTION_TOKEN`, `CLOUD
 
 - **Name:** Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties  
 - **Address:** 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134  
-- **Phone (site line, CallAction):** (702) 500-1955  
+- **Phone (site line, CallAction):** (702) 500-0729  
 - **License:** S.0197614.LLC  
 
 ## RealScout
