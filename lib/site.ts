@@ -60,8 +60,8 @@ export const site = {
   ],
 
   rating: {
-    value: "4.9",
-    count: "200",
+    value: "5.0",
+    count: "50",
   },
 } as const;
 

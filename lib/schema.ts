@@ -42,11 +42,6 @@ export function realEstateAgentSchema(pageUrl?: string) {
       "@type": "City",
       name,
     })),
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: site.rating.value,
-      reviewCount: site.rating.count,
-    },
     identifier: site.license,
     description: `${site.shortName}, ${site.brokerage}. ${site.tagline}. Office at ${formatFullAddress()}.`,
   };
