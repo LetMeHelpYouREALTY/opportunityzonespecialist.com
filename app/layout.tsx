@@ -11,6 +11,7 @@ import { getSiteVerificationMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 import "./globals.css";
 import { calendlyUrl } from "@/lib/calendly";
+import WidgetTracker from './widget-tracker'
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -102,6 +103,7 @@ export default function RootLayout({
           <Footer />
         </div>
         <CalendlyBadge url={calendlyUrl("showing", "badge", "sitewide")} />
+        <WidgetTracker />
       </body>
     </html>
   );

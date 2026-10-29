@@ -23,9 +23,9 @@ export const site = {
   region: "Greater Las Vegas Valley",
 
   phone: {
-    display: "(702) 500-0729",
-    tel: "+17025000729",
-    href: "tel:+17025000729",
+    display: "(702) 500-1955",
+    tel: "+17025001955",
+    href: "tel:+17025001955",
   },
 
   address: {
