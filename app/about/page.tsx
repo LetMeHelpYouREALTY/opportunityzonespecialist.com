@@ -6,7 +6,7 @@ import { formatFullAddress, getDirectionsUrl, site } from "@/lib/site";
 
 export const metadata: Metadata = buildPageMetadata({
   title: `About ${site.shortName} | Las Vegas REALTOR®`,
-  description: `Meet ${site.shortName}, REALTOR® in real estate since 1983. Call ${site.phone.display}.`,
+  description: `Meet ${site.shortName}, REALTOR® licensed since 2008 · 35 years in Las Vegas. Call ${site.phone.display}.`,
   path: "/about",
 });
 
@@ -35,7 +35,7 @@ export default function AboutPage() {
               Credentials that show up in the work
             </h2>
             <ul className="mt-6 space-y-3 text-sm text-muted-foreground">
-              <li>Top 1% Las Vegas REALTOR®</li> <li>In real estate since 1983</li> <li>500+ transactions</li>
+              <li>Las Vegas REALTOR®</li> <li>Licensed since 2008 · 35 years in Las Vegas</li> <li>500+ transactions</li>
               <li>$127M+ career closed volume</li>
               <li>Opportunity Zone and investment property guidance</li>
             </ul>
