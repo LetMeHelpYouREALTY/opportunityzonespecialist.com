@@ -13,6 +13,8 @@ import "./globals.css";
 import { calendlyUrl } from "@/lib/calendly";
 
 import Script from "next/script";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
+import { SpeedInsights as VercelSpeedInsights } from "@vercel/speed-insights/next";
 const geistSans = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -114,6 +116,8 @@ e.parentNode.insertBefore(t,e);})
 window.widgetTracker("create", "WT-XQHVYQWW");
 window.widgetTracker("send", "pageview");}
         `}</Script>
+  <VercelAnalytics />
+  <VercelSpeedInsights />
 </body>
     </html>
   );
