@@ -19,6 +19,13 @@ const nextConfig: NextConfig = {
         destination: "/cities/las-vegas-nevada",
         permanent: true,
       },
+      // Legacy Astro-site URLs (pre-July 2026 rebuild) -> current equivalent pages
+      { source: "/company/about", destination: "/about", permanent: true },
+      { source: "/company/contact", destination: "/contact", permanent: true },
+      { source: "/tax-benefits", destination: "/cities/las-vegas-nevada", permanent: true },
+      { source: "/qualified-opportunity-funds", destination: "/cities/las-vegas-nevada", permanent: true },
+      { source: "/investment-consulting", destination: "/cities/las-vegas-nevada", permanent: true },
+      { source: "/blog/posts/oz-tax-benefits-guide", destination: "/cities/las-vegas-nevada", permanent: true },
     ];
   },
   images: {
