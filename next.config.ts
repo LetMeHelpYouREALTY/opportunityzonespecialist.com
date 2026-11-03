@@ -6,7 +6,7 @@ const csp = [
   "style-src 'self' 'unsafe-inline' https://em.realscout.com https://www.realscout.com https://assets.calendly.com",
   "img-src https://widgetbe.com https://*.widgetbe.com 'self' data: blob: https: http:",
   "font-src 'self' data: https://assets.calendly.com",
-  "connect-src https://widgetbe.com https://*.widgetbe.com 'self' https://em.realscout.com https://www.realscout.com https://calendly.com https://assets.calendly.com https://api.openai.com https://www.google-analytics.com https://analytics.google.com https://res.cloudinary.com",
+  "connect-src https://widgetbe.com https://*.widgetbe.com 'self' https://em.realscout.com https://www.realscout.com https://calendly.com https://assets.calendly.com https://api.openai.com https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://res.cloudinary.com",
   "frame-src https://widgetbe.com https://*.widgetbe.com 'self' https://em.realscout.com https://www.realscout.com https://calendly.com https://assets.calendly.com https://www.google.com https://maps.google.com https://*.google.com https://www.google.com/maps https://opportunityzones.com https://*.opportunityzones.com https://cloud.cartovista.com",
   "worker-src 'self' blob:",
 ].join("; ");
